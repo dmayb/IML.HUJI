@@ -17,23 +17,15 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage{titlesec} % Allows customization of titles
-
 \usepackage{graphicx} % Required for including pictures
-\graphicspath{{pictures/}} % Specifies the directory where pictures are stored
-
 \usepackage{lipsum} % Inserts dummy text
-
 \usepackage{tikz} % Required for drawing custom shapes
-
 \usepackage[english]{babel} % English language/hyphenation
-
 \usepackage{enumitem} % Customize lists
 \setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
-
 \usepackage{booktabs} % Required for nicer horizontal rules in tables
-
 \usepackage{eso-pic} % Required for specifying an image background in the title page
-
+\usepackage{bbm}
 %----------------------------------------------------------------------------------------
 %	MAIN TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
@@ -47,6 +39,7 @@
 {\color{ocre!60}\contentslabel[\Large\thecontentslabel]{1cm}\color{ocre}} % Chapter number
 {}  
 {\color{ocre!60}\normalsize\sffamily\bfseries\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
+
 % Section text styling
 \titlecontents{section}[1cm] % Indentation
 {\addvspace{5pt}\sffamily\bfseries} % Spacing and font options for sections
@@ -54,6 +47,7 @@
 {}
 {\sffamily\hfill\color{black}\thecontentspage} % Page number
 []
+
 % Subsection text styling
 \titlecontents{subsection}[2cm] % Indentation
 {\addvspace{1pt}\sffamily\small} % Spacing and font options for subsections
@@ -61,10 +55,11 @@
 {}
 {\sffamily\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
 [] 
+
 % subsubsection text styling
-\titlecontents{subsubsection}[3cm] % Indentation
-{\addvspace{1pt}\sffamily\tiny} % Spacing and font options for subsections
-{\contentslabel[\thecontentslabel]{1cm}} % Subsection number
+\titlecontents{subsubsection}[3.5cm] % Indentation
+{\addvspace{1pt}\sffamily\small} % Spacing and font options for subsections
+{\contentslabel[\thecontentslabel]{1.5cm}} % Subsection number
 {}
 {\sffamily\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
 [] 
@@ -198,6 +193,8 @@
 \newtheorem{vocabulary}{Vocabulary}[chapter]
 \newtheorem{definitionT}{Definition}[section]
 \newtheorem{corollaryT}[dummy]{Corollary}
+\newtheorem{claimT}[dummy]{Claim}
+\newtheorem{lemmaT}[dummy]{Lemma}
 \theoremstyle{ocrenum}
 \newtheorem{proposition}[dummy]{Proposition}
 
@@ -243,14 +240,16 @@ rightline=false,
 leftline=true,
 topline=false,
 bottomline=false,
+backgroundcolor=gray!10,
 linecolor=ocre,
 innerleftmargin=5pt,
 innerrightmargin=5pt,
-innertopmargin=0pt,
+innertopmargin=5pt,
+innerbottommargin=5pt
 leftmargin=0cm,
 rightmargin=0cm,
 linewidth=4pt,
-innerbottommargin=0pt]{dBox}	
+]{dBox}	
 
 % Corollary box
 \newmdenv[skipabove=7pt,
@@ -260,14 +259,14 @@ leftline=true,
 topline=false,
 bottomline=false,
 linecolor=gray,
-backgroundcolor=black!5,
+backgroundcolor=gray!10,
 innerleftmargin=5pt,
 innerrightmargin=5pt,
 innertopmargin=5pt,
+innerbottommargin=10pt
 leftmargin=0cm,
 rightmargin=0cm,
-linewidth=4pt,
-innerbottommargin=5pt]{cBox}
+linewidth=4pt]{cBox}
 
 % Creates an environment for each type of theorem and assigns it a theorem text style from the "Theorem Styles" section above and a colored box from above
 \newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
@@ -275,6 +274,9 @@ innerbottommargin=5pt]{cBox}
 \newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
 \newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}		
 \newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}	
+\renewenvironment{lemma}{\begin{cBox}\begin{lemmaT}}{\end{lemmaT}\end{cBox}}
+\newenvironment{claim}{\begin{cBox}\begin{claimT}}{\end{claimT}\end{cBox}}	
+
 
 %----------------------------------------------------------------------------------------
 %	REMARK ENVIRONMENT
@@ -317,7 +319,7 @@ innerbottommargin=5pt]{cBox}
 
 % For an unclear reason, the package should be loaded now and not later
 \usepackage{hyperref}
-\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,urlcolor= ocre,bookmarks=true,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=true,linkcolor=ocre,breaklinks=true,urlcolor= ocre,bookmarks=true,bookmarksopen=false,pdftitle={Introduction to Machine Learning (67577) - Course Book},pdfauthor={Author}}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER HEADINGS
@@ -334,21 +336,21 @@ innerbottommargin=5pt]{cBox}
 \thispagestyle{empty}
 {\centering \normalfont\sffamily
 \ifnum \c@secnumdepth >\m@ne
-\if@mainmatter
-\startcontents
-\begin{tikzpicture}[remember picture,overlay]
-\node at (current page.north west)
-{\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Commenting the 3 lines below removes the small contents box in the chapter heading
-%\fill[color=ocre!10!white,opacity=.6] (1cm,0) rectangle (8cm,-7cm);
-%\node[anchor=north west] at (1.1cm,.35cm) {\parbox[t][8cm][t]{6.5cm}{\huge\bfseries\flushleft \printcontents{l}{1}{\setcounter{tocdepth}{2}}}};
-\draw[anchor=west] (5cm,-9cm) node [rounded corners=20pt,fill=ocre!10!white,text opacity=1,draw=ocre,draw opacity=1,line width=1.5pt,fill opacity=.6,inner sep=12pt]{\huge\sffamily\bfseries\textcolor{black}{\thechapter. #1\strut\makebox[22cm]{}}};
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{tikzpicture}};
-\end{tikzpicture}}
-\par\vspace*{230\p@}
+	\if@mainmatter
+		\startcontents
+		\begin{tikzpicture}[remember picture,overlay]
+		\node at (current page.north west)
+		{\begin{tikzpicture}[remember picture,overlay]
+			\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{\thechapterimage}};
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			% Commenting the 3 lines below removes the small contents box in the chapter heading
+			%\fill[color=ocre!10!white,opacity=.6] (1cm,0) rectangle (8cm,-7cm);
+			%\node[anchor=north west] at (1.1cm,.35cm) {\parbox[t][8cm][t]{6.5cm}{\huge\bfseries\flushleft \printcontents{l}{1}{\setcounter{tocdepth}{2}}}};
+			\draw[anchor=west] (5cm,-9cm) node [rounded corners=20pt,fill=ocre!10!white,text opacity=1,draw=ocre,draw opacity=1,line width=1.5pt,fill opacity=.6,inner sep=12pt]{\huge\sffamily\bfseries\textcolor{black}{\thechapter. #1\strut\makebox[22cm]{}}};
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\end{tikzpicture}};
+		\end{tikzpicture}}
+\par\vspace*{270\p@}
 \fi
 \fi}
 
