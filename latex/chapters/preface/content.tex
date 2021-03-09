@@ -1,38 +1,74 @@
 \section{Preface}
 
 
-
 \subsection{Notation}
-%TODO - add some description before table
 
 \begin{table}[h!]
 	\begin{center}
-		\caption{Notation Summary}
 		\label{tab:notation}
-		\begin{tabular}{l|l}
-			\textbf{Symbol} & \textbf{Meaning} \\
+		
+		\begin{tabular}{l|l|l}
+			\textbf{Field/Context} & \textbf{Symbol} & \textbf{Meaning} \\
 			\hline
-			$\R$ & The set of real numbers. \\
-			$\R^d$ & The set of $d$-dimensional vectors over the field of real numbers. \\
-			$\R_+$ & The set of non-negative real numbers. \\
-			$\N$ & The set of natural numbers. \\
-			$\left\{0,\ldots,m\right\}$ & The set of natural numbers between $0$ and $m$. \\
-			$\left[m\right]$ & The set of natural numbers between $1$ and $m$. \\
-			$\x,\y,\w$ & Column vectors. \\
-			$x_i,y_i,w_i$ & The $i$-th coordinate of a vector. \\
-			\\
+			General&$\R$ & The set of real numbers\\
+			Mathematics&$\R^d$ & The set of $d$-dimensional vectors over the field of real numbers\\
+			&$\R_+$ & The set of non-negative real numbers\\
+			&$\N$ & The set of natural numbers\\
+			&$\R^{m\times d}$ & The set of real matrices with $m$ rows and $d$ columns\\
+			&$\left\{0,\ldots,m\right\}$ & The set of natural numbers between $0$ and $m$\\
+			&$\left[m\right]$ & The set of natural numbers between $1$ and $m$\\
+			&$\left|S\right|$& The number of elements in the set $S$\\
+			&$a\coloneqq b$& Defining $a$ as the experssion $b$\\
+			&$a\propto b$& $a$ is of size proportional to the size of $b$\\
+			&&\\	
+			&$\x,\y,\w$ & Column vectors\\
+			&$x_i,y_i,w_i$ & The $i$-th coordinate of a vector\\
+			&$\inprod{\vv{v}}{\vv{u}}$ or $\vv{v}^\top \vv{u}$ & Standard inner product between $\vv{v}$ and $\vv{u}$\\
+			&$\vv{v}\otimes \vv{u}$ or $\vv{v}\vv{u}^\top$ & The outer product of $\vv{v}$ and $\vv{u}$\\
+			&$\norm{\cdot}_1$& $=\sum_{i=1}^d\left| x_i\right|$ (the $\ell_1$ norm of $\x$)\\ 
+			&$\norm{\cdot}_2$ or $\norm{\cdot}$& $=\sqrt{\sum_{i=1}^d x_i^2}$ (the $\ell_2$ norm of $\x$)\\
+			&$\norm{\cdot}_\infty$& $=max_i \left| x_i\right|$ (the $\ell_\infty$ norm of $\x$)\\
+			&$A_{i,j}$& The $j$th element of the $i$th row of $A$\\
+			&$A^\top$ & The transpose of $A$: $A^\top_{i,j} = A_{j,i}$\\
+			&$det\left(A\right)$ or $\left| A\right|$& The determinant of the matrix $A$\\
+			&$V^\perp$&The set of vectors that are perpendicular to the vector space $V$\\
+			&$\partial f/ \partial \x_i$& The derivative of the function $f$ w.r.t the $i$th coordinate of $\x$\\
+			&$\nabla f$& The gradient of the function $f$\\
+			&$\vv{J}_\x\left(f\right)$& The Jacobian of the function $f$ w.r.t $\x$\\
+			&&\\
+			&$\Omega$& A sample space\\
+			&$\Prob$& The probabiltiy of an event or random variable\\
+			&$\Prob_\Dc$& The probability of an event or random variable w.r.t the distribution $\Dc$\\
+			&$\E$& The expectation of a random variable\\
+			&$x\sim\Dc$& Sampling $x$ according to $\Dc$\\
 			\hline
-			$m$ & Number of samples \\
-			$d, k$ & Dimension of sample vector; Number of features \\
-			$\Xc$ & Domain set \\
-			$\Yc$ & Response set \\
-			$\Zc$ & $\left(\Xc\times\Yc\right)$ The product space of domain set and response set\\
-			$S=x_1,\ldots,x_n$ & A sequence of samples from domain set \\
-			$S=z_1,\ldots,z_n$ & A sequence of samples and corresponding responses from product space $\Zc$ \\
 		\end{tabular}
 	\end{center}
 \end{table}
 
-%TODO - additional "Rozeta Stone" table to translate from "our" notations to those in different statistics books.
+\begin{table}[h!]
+	\begin{center}
+		\begin{tabular}{l|l|l}
+			\textbf{Field/Context} & \textbf{Symbol} & \textbf{Meaning} \\
+			\hline
+			Machine&$m$ & Number of samples \\
+			Learning&$d, k$ & Dimension of sample vector; Number of features \\
+			&$\Xc$ & Domain set \\
+			&$\Yc$ & Response set \\
+			&$\Zc=\left(\Xc\times\Yc\right)$& The product space of domain set and response set\\
+			&$S=x_1,\ldots,x_n$ & A sequence of samples from domain set \\
+			&$S=z_1,\ldots,z_n$ & A sequence of samples and responses from product space $\Zc$ \\
+			&$x_1,\ldots,x_m\iid\Dc$& Sampling $m$ values independently and all according to $\Dc$\\
+			&&\\
+			&$\theta$&Scalar or vector representing some parameter of a distribution\\
+			&$\Theta$&A set of parameters\\
+			&$\widehat{\theta}$& An estimator of $\theta$\\
+			&$\Hc$&Set of functions, named hypothesis class\\
+			&$\Ac$&Learning algorithm\\
+			&$\Oc$&Big-O asymptotic notation\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
 
-\subsection{Data Sets Used in Book, Labs and Examples}
+\vspace*{\fill}
