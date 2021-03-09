@@ -21,13 +21,13 @@ or by downloading and unzipping it in `LOCAL_REPOSITORY_PATH`. Then:
 - Verify instllation by starting the Anaconda Prompt. A terminal should start with the text `(base)` written at the beginning of the line.
 - Set the IML conda environment. Start the Anaconda Prompt and write:
   ```
-  conda env create -f "LOCAL_REPOSITORY_PATH\code\environment.yml"
+  conda env create -f "LOCAL_REPOSITORY_PATH\environment.yml"
   ```
   This will create a conda envoronment named `iml.env` with the specifications defined in `environment.yml`. 
 - Activate the environment by `conda activate iml.env`.
 - To open one of the Jupyter notebooks:
   ```
-  jupyter notebook "LOCAL_REPOSITORY_PATH\code\lab\Lab 01 - A - Data Analysis In Python - First Steps.ipynb"
+  jupyter notebook "LOCAL_REPOSITORY_PATH\lab\Lab 01 - A - Data Analysis In Python - First Steps.ipynb"
   ```
 
 ### Using PyCharm
@@ -35,3 +35,6 @@ Another option is to run the Jupyter notebooks through the PyCharm IDE plug-in.
 - Install the PyCharm IDE (professional edition) as described on the [Install PyCharm](https://www.jetbrains.com/help/pycharm/installation-guide.html) page. Be sure to install the Jupyter plug-in.
 - Follow the [Configure a Conda virtual environment](https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html#conda-requirements) page.
 - Open a PyCharm project from `LOCAL_REPOSITORY` and set the project's interpreter to be the `iml.env` environment.
+
+### Using Google Colab
+One can also view and run the labs and code examples via Google Colab. It supports loading and running Jupyter notebooks and running using a specified Conda environemnt.
