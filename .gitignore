@@ -23,3 +23,8 @@ latex/main.synctex.gz
 .DS_Store
 .netrwhist
 
+code\ examples/.*png
+code\ examples/.*gif
+.idea
+__pycache__
+
