@@ -28,3 +28,4 @@ code\ examples/.*gif
 .idea
 __pycache__
 
+desktop.ini
