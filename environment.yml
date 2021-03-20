@@ -2,15 +2,19 @@ name: iml.env
 channels:
   - defaults
 dependencies:
-  - pandas
-  - python=3.7
-  - numpy
-  - scipy
   - nb_conda_kernels
-  - nb_conda
-  - scikit-learn
-  - psutil
-  - requests
-  - plotly-orca==1.2.1
+  - pandas
+  - scipy
   - plotly
-
+  - psutil
+  - nb_conda
+  - requests
+  - numpy
+  - scikit-learn
+  - python=3.7
+  - plotly-orca
+  - pip
+  - pip:
+    - gif==3.0.0
+    - kaleido==0.2.1
+    - pillow==8.1.2
