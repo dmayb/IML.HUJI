@@ -1,0 +1,964 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\date{}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+\size large
+כותרת
+\end_layout
+
+\begin_layout Standard
+ראינו בתרגול שההטלה של וקטור 
+\begin_inset Formula $v$
+\end_inset
+
+ על 
+\begin_inset Formula $w$
+\end_inset
+
+ היא 
+\begin_inset Formula 
+\[
+p=\frac{\left\langle v,w\right\rangle }{\left\Vert w\right\Vert ^{2}}w
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p=\frac{\left\langle v,w\right\rangle }{\left\Vert v\right\Vert ^{2}}w=\frac{\left[\begin{array}{c}
+1\\
+2\\
+3\\
+4
+\end{array}\right]\cdot\left[\begin{array}{c}
+0\\
+-1\\
+1\\
+2
+\end{array}\right]}{\left[\begin{array}{c}
+0\\
+-1\\
+1\\
+2
+\end{array}\right]^{2}}w=\frac{0-2+3+8}{0+1+1+4}w=\frac{9}{6}w
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p=\frac{\left\langle v,w\right\rangle }{\left\Vert v\right\Vert ^{2}}w=\frac{\left[\begin{array}{c}
+1\\
+2\\
+3\\
+4
+\end{array}\right]\cdot\left[\begin{array}{c}
+1\\
+0\\
+1\\
+-1
+\end{array}\right]}{\left[\begin{array}{c}
+1\\
+0\\
+1\\
+-1
+\end{array}\right]^{2}}w=\frac{1+0+3-4}{1+0+1+1}w=\frac{0}{3}w=\left[\begin{array}{c}
+0\\
+0\\
+0\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נרצה להראות שעבור שני וקטורים 
+\begin_inset Formula $v,w\in\mathbb{R}^{m}$
+\end_inset
+
+ שונים מאפס מתקיים שהזווית ביניהם שווה 
+\begin_inset Formula $\pm90$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $v^{T}w=0$
+\end_inset
+
+.
+ 
+\bar under
+הוכחה
+\bar default
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $:\Longleftarrow$
+\end_inset
+
+ נתון שהזווית 
+\begin_inset Formula $\theta$
+\end_inset
+
+ בין 
+\begin_inset Formula $v$
+\end_inset
+
+ ל-
+\begin_inset Formula $w$
+\end_inset
+
+ היא 
+\begin_inset Formula $\pm90$
+\end_inset
+
+.
+ בתרגול הוכחנו:
+\begin_inset Formula 
+\[
+\left\langle v,w\right\rangle =\left\Vert v\right\Vert \left\Vert w\right\Vert \cos\theta
+\]
+
+\end_inset
+
+במקרה שלנו, 
+\begin_inset Formula $\theta=\pm90$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\cos\theta=0$
+\end_inset
+
+ וכן המכפלה הפנימית היא המכפלה הפנימית הסטנדרטית, כלומר 
+\begin_inset Formula $\left\langle v,w\right\rangle =v^{T}w$
+\end_inset
+
+ ולכן מתקיים:
+\begin_inset Formula 
+\[
+v^{T}w=\left\langle v,w\right\rangle =\left\Vert v\right\Vert \left\Vert w\right\Vert \cos\theta=\left\Vert v\right\Vert \left\Vert w\right\Vert \cdot0=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow v^{T}w=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula $:\Longrightarrow$
+\end_inset
+
+ נתון 
+\begin_inset Formula $v^{T}w=0$
+\end_inset
+
+.
+ אז כמו קודם:
+\begin_inset Formula 
+\[
+\left\langle v,w\right\rangle =v^{T}w=0=\left\Vert v\right\Vert \left\Vert w\right\Vert \cos\theta
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow0=\cos\theta\Longrightarrow\theta=\pm90
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula $T:V\rightarrow W$
+\end_inset
+
+ העתקה לינארית ו-
+\begin_inset Formula $A$
+\end_inset
+
+ המטריצה המתאימה להעתקה.
+ נוכיח כי אם 
+\begin_inset Formula $A$
+\end_inset
+
+ אורתוגונלית אז מתקיים 
+\begin_inset Formula $\forall x\in V\,\,\,\Vert Ax\Vert=\Vert x\Vert$
+\end_inset
+
+.
+ 
+\bar under
+הוכחה
+\bar default
+:
+\begin_inset Newline newline
+\end_inset
+
+נתון 
+\begin_inset Formula $A$
+\end_inset
+
+ אורתוגונלית ולכן 
+\begin_inset Formula $A^{T}A=A^{T}A=I$
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula $x\in V$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\Vert x\Vert=\sqrt{x\cdot x}=\sqrt{x^{T}x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Vert Ax\Vert=\sqrt{Ax\cdot Ax}=\sqrt{\left(Ax\right)^{T}\left(Ax\right)}=\sqrt{x^{T}A^{T}\left(Ax\right)}=\sqrt{x^{T}\left(A^{T}A\right)x}=\sqrt{x^{T}Ix}=\sqrt{x^{T}x}=\Vert x\Vert
+\]
+
+\end_inset
+
+כדרוש.
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=U\Sigma V^{T}$
+\end_inset
+
+ פירוק 
+\begin_inset Formula $SVD$
+\end_inset
+
+ של 
+\begin_inset Formula $A$
+\end_inset
+
+ מטריצה הפיכה.
+ כיוון ש-
+\begin_inset Formula $U,V$
+\end_inset
+
+ הן אורתוגונליות, 
+\begin_inset Formula $U^{T}=U^{-1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $V^{T}=V^{-1}$
+\end_inset
+
+.
+ נשים לב שעבור 
+\begin_inset Formula $B=V\Sigma^{-1}U^{T}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula 
+\[
+AB=\left(U\Sigma V^{T}\right)\left(V\Sigma^{-1}U^{T}\right)=\left(U\Sigma\right)\left(V^{T}V\right)\left(\Sigma^{-1}U^{T}\right)=\left(U\Sigma\right)I\left(\Sigma^{-1}U^{T}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=U\left(\Sigma\Sigma^{-1}\right)U^{T}=UIU^{T}=UU^{T}=I
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $A^{-1}=B=V\Sigma^{-1}U^{T}$
+\end_inset
+
+.
+ כיוון שאנו יודעים את 
+\begin_inset Formula $SVD$
+\end_inset
+
+ של 
+\begin_inset Formula $A$
+\end_inset
+
+ זה יעיל יותר לחשב את 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+
+\series bold
+ )?(
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+6
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נמצא 
+\begin_inset Formula $SVD$
+\end_inset
+
+ של המטריצה 
+\begin_inset Formula 
+\[
+A=U\Sigma V^{T}=\left[\begin{array}{cc}
+5 & 5\\
+-1 & 7
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A^{T}=\left[\begin{array}{cc}
+5 & -1\\
+5 & 7
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B=A^{T}A=\left[\begin{array}{cc}
+5 & -1\\
+5 & 7
+\end{array}\right]\left[\begin{array}{cc}
+5 & 5\\
+-1 & 7
+\end{array}\right]=\left[\begin{array}{cc}
+26 & 18\\
+18 & 74
+\end{array}\right]
+\]
+
+\end_inset
+
+נמצא את הערכים העצמיים של 
+\begin_inset Formula $A^{T}A$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+0=\det\left(XI-B\right)=\det\left(\left[\begin{array}{cc}
+X & 0\\
+0 & X
+\end{array}\right]-\left[\begin{array}{cc}
+26 & 18\\
+18 & 74
+\end{array}\right]\right)=\det\left(\left[\begin{array}{cc}
+X-26 & -18\\
+-18 & X-74
+\end{array}\right]\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(X-26\right)\left(X-74\right)-18^{2}=X^{2}-100X+1600=\left(X-80\right)\left(X-20\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow X=80,20
+\]
+
+\end_inset
+
+נמצא וקטור עצמי שמתאים לערך עצמי 
+\begin_inset Formula $80$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+Bx=80x\Longrightarrow\left(80I-B\right)x=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+54 & -18\\
+-18 & 6
+\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=0
+\]
+
+\end_inset
+
+נדרג:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+54 & -18\\
+-18 & 6
+\end{array}\right]\rightarrow\left[\begin{array}{cc}
+0 & 0\\
+-18 & 6
+\end{array}\right]\rightarrow\left[\begin{array}{cc}
+0 & 0\\
+1 & \frac{-1}{3}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{1}-\frac{1}{3}x_{2}=0\overset{x_{1}=t}{\Longrightarrow}t=\frac{1}{3}x_{2}\Longrightarrow t\left[\begin{array}{c}
+1\\
+\frac{1}{3}
+\end{array}\right]
+\]
+
+\end_inset
+
+לכן עבור למשל 
+\begin_inset Formula $t=3$
+\end_inset
+
+, 
+\begin_inset Formula $v_{1}=\left[\begin{array}{c}
+3\\
+1
+\end{array}\right]$
+\end_inset
+
+ הוא וקטור עצמי לע
+\begin_inset Quotes erd
+\end_inset
+
+ע 
+\begin_inset Formula $80$
+\end_inset
+
+.
+ נמצא ו
+\begin_inset Quotes erd
+\end_inset
+
+ע עבור ע
+\begin_inset Quotes erd
+\end_inset
+
+ע
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+20
+\numeric off
+:
+\begin_inset Formula 
+\[
+Bx=20x\Longrightarrow\left(20I-B\right)x=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-6 & -18\\
+-18 & -54
+\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=0
+\]
+
+\end_inset
+
+נדרג:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-6 & -18\\
+-18 & -54
+\end{array}\right]\rightarrow\left[\begin{array}{cc}
+-6 & -18\\
+0 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{cc}
+1 & 3\\
+0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{1}+3x_{2}=0\overset{x_{1}=t}{\Longrightarrow}t=-3x_{2}\Longrightarrow t\left[\begin{array}{c}
+1\\
+-3
+\end{array}\right]
+\]
+
+\end_inset
+
+לכן עבור למשל 
+\begin_inset Formula $t=1$
+\end_inset
+
+, 
+\begin_inset Formula $v_{2}=\left[\begin{array}{c}
+1\\
+-3
+\end{array}\right]$
+\end_inset
+
+ הוא וקטור עצמי לע
+\begin_inset Quotes erd
+\end_inset
+
+ע 
+\begin_inset Formula $20$
+\end_inset
+
+.
+ נקבל
+\begin_inset Formula 
+\[
+V^{T}=\left[\begin{array}{cc}
+v_{1} & v_{2}\end{array}\right]^{T}=\left[\begin{array}{cc}
+3 & 1\\
+1 & -3
+\end{array}\right]
+\]
+
+\end_inset
+
+נשים לב כי 
+\begin_inset Formula $V=V^{T}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Sigma=\left[\begin{array}{cc}
+80 & 0\\
+0 & 20
+\end{array}\right]
+\]
+
+\end_inset
+
+כעת נמצא את 
+\begin_inset Formula $U$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+AV=U\Sigma
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+5 & 5\\
+-1 & 7
+\end{array}\right]\left[\begin{array}{cc}
+3 & 1\\
+1 & -3
+\end{array}\right]=\left[\begin{array}{cc}
+x_{1} & x_{2}\\
+x_{3} & x_{4}
+\end{array}\right]\left[\begin{array}{cc}
+80 & 0\\
+0 & 20
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+20 & -10\\
+4 & -22
+\end{array}\right]=\left[\begin{array}{cc}
+80x_{1} & 20x_{2}\\
+80x_{3} & 20x_{4}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{cases}
+80x_{1}=20\\
+20x_{2}=-10\\
+80x_{3}=4\\
+20x_{4}=-22
+\end{cases}\Longrightarrow\begin{cases}
+x_{1}=4\\
+x_{2}=-\frac{1}{2}\\
+x_{3}=\frac{1}{20}\\
+x_{4}=-\frac{11}{10}
+\end{cases}\Longrightarrow U=\left[\begin{array}{cc}
+4 & -\frac{1}{2}\\
+\frac{1}{20} & -\frac{11}{10}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

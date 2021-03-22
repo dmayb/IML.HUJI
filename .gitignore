@@ -30,3 +30,5 @@ __pycache__
 
 desktop.ini
 *.ipynb
+*.lyx~
+*.png
