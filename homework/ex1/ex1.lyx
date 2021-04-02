@@ -88,7 +88,99 @@
 
 \series bold
 \size large
-כותרת
+תרגיל
+\family roman
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\shape up
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+-
+\family roman
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+IML
+\family roman
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- מאי ביבי
 \end_layout
 
 \begin_layout Standard
@@ -551,7 +643,23 @@ AB=\left(U\Sigma V^{T}\right)\left(V\Sigma^{-1}U^{T}\right)=\left(U\Sigma\right)
 \end_inset
 
 .
- כיוון שאנו יודעים את 
+ כיוון ש- 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלכסונית קל לחשב את ההופכית שלה:
+\begin_inset Formula 
+\[
+\Sigma^{-1}=\left[\begin{array}{ccc}
+\Sigma_{11}^{-1} &  & 0\\
+ & \ddots\\
+0 &  & \Sigma_{dd}^{-1}
+\end{array}\right]
+\]
+
+\end_inset
+
+כיוון שאנו יודעים את 
 \begin_inset Formula $SVD$
 \end_inset
 
@@ -617,7 +725,39 @@ A=U\Sigma V^{T}=\left[\begin{array}{cc}
 
 \end_inset
 
+נשתמש בשתי המשוואות:
+\begin_inset Formula 
+\[
+A^{T}A=\left(U\Sigma V^{T}\right)^{T}U\Sigma V^{T}=V\Sigma^{T}U^{T}U\Sigma V^{T}=V\Sigma^{T}\Sigma V^{T}
+\]
 
+\end_inset
+
+
+\begin_inset Formula 
+\[
+AV=U\Sigma
+\]
+
+\end_inset
+
+
+\begin_inset Formula $V\Sigma^{T}\Sigma V^{T}$
+\end_inset
+
+ זה לכסון של 
+\begin_inset Formula $A^{T}A$
+\end_inset
+
+ ולכן אם נמצא את הוקטורים העצמיים של 
+\begin_inset Formula $A^{T}A$
+\end_inset
+
+, נוכל למצוא את 
+\begin_inset Formula $V$
+\end_inset
+
+, כי הם העמודות שלה.
 \begin_inset Formula 
 \[
 A^{T}=\left[\begin{array}{cc}
@@ -682,81 +822,7 @@ X-26 & -18\\
 
 \end_inset
 
-נמצא וקטור עצמי שמתאים לערך עצמי 
-\begin_inset Formula $80$
-\end_inset
-
-:
-\begin_inset Formula 
-\[
-Bx=80x\Longrightarrow\left(80I-B\right)x=0
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\left[\begin{array}{cc}
-54 & -18\\
--18 & 6
-\end{array}\right]\left[\begin{array}{c}
-x_{1}\\
-x_{2}
-\end{array}\right]=0
-\]
-
-\end_inset
-
-נדרג:
-\begin_inset Formula 
-\[
-\left[\begin{array}{cc}
-54 & -18\\
--18 & 6
-\end{array}\right]\rightarrow\left[\begin{array}{cc}
-0 & 0\\
--18 & 6
-\end{array}\right]\rightarrow\left[\begin{array}{cc}
-0 & 0\\
-1 & \frac{-1}{3}
-\end{array}\right]
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-x_{1}-\frac{1}{3}x_{2}=0\overset{x_{1}=t}{\Longrightarrow}t=\frac{1}{3}x_{2}\Longrightarrow t\left[\begin{array}{c}
-1\\
-\frac{1}{3}
-\end{array}\right]
-\]
-
-\end_inset
-
-לכן עבור למשל 
-\begin_inset Formula $t=3$
-\end_inset
-
-, 
-\begin_inset Formula $v_{1}=\left[\begin{array}{c}
-3\\
-1
-\end{array}\right]$
-\end_inset
-
- הוא וקטור עצמי לע
-\begin_inset Quotes erd
-\end_inset
-
-ע 
-\begin_inset Formula $80$
-\end_inset
-
-.
- נמצא ו
+נמצא ו
 \begin_inset Quotes erd
 \end_inset
 
@@ -796,7 +862,7 @@ x_{1}-\frac{1}{3}x_{2}=0\overset{x_{1}=t}{\Longrightarrow}t=\frac{1}{3}x_{2}\Lon
 :
 \begin_inset Formula 
 \[
-Bx=20x\Longrightarrow\left(20I-B\right)x=0
+Bx=20x\Longrightarrow\left(B-20I\right)x=0
 \]
 
 \end_inset
@@ -805,8 +871,8 @@ Bx=20x\Longrightarrow\left(20I-B\right)x=0
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
--6 & -18\\
--18 & -54
+6 & 18\\
+18 & 54
 \end{array}\right]\left[\begin{array}{c}
 x_{1}\\
 x_{2}
@@ -819,11 +885,11 @@ x_{2}
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
--6 & -18\\
--18 & -54
+6 & 18\\
+18 & 54
 \end{array}\right]\rightarrow\left[\begin{array}{cc}
--6 & -18\\
-0 & 0
+1 & 3\\
+18 & 54
 \end{array}\right]\rightarrow\left[\begin{array}{cc}
 1 & 3\\
 0 & 0
@@ -835,22 +901,22 @@ x_{2}
 
 \begin_inset Formula 
 \[
-x_{1}+3x_{2}=0\overset{x_{1}=t}{\Longrightarrow}t=-3x_{2}\Longrightarrow t\left[\begin{array}{c}
+x_{1}+3x_{2}=0\overset{x_{1}=t}{\Longrightarrow}x_{2}=-\frac{1}{3}t\Longrightarrow t\left[\begin{array}{c}
 1\\
--3
+\frac{-1}{3}
 \end{array}\right]
 \]
 
 \end_inset
 
 לכן עבור למשל 
-\begin_inset Formula $t=1$
+\begin_inset Formula $t=-3$
 \end_inset
 
 , 
-\begin_inset Formula $v_{2}=\left[\begin{array}{c}
-1\\
--3
+\begin_inset Formula $\left[\begin{array}{c}
+-3\\
+1
 \end{array}\right]$
 \end_inset
 
@@ -863,28 +929,123 @@ x_{1}+3x_{2}=0\overset{x_{1}=t}{\Longrightarrow}t=-3x_{2}\Longrightarrow t\left[
 \end_inset
 
 .
- נקבל
+ נרצה וקטור יחידה לכן נחלק בנורמה ונקבל את הוקטור העצמי 
+\begin_inset Formula $v_{1}=\left[\begin{array}{c}
+\frac{-3}{\sqrt{10}}\\
+\frac{1}{\sqrt{10}}
+\end{array}\right]$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+נמצא וקטור עצמי שמתאים לערך עצמי 
+\begin_inset Formula $80$
+\end_inset
+
+:
 \begin_inset Formula 
 \[
-V^{T}=\left[\begin{array}{cc}
-v_{1} & v_{2}\end{array}\right]^{T}=\left[\begin{array}{cc}
-3 & 1\\
-1 & -3
+Bx=80x\Longrightarrow\left(B-80I\right)x=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-54 & 18\\
+18 & -6
+\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=0
+\]
+
+\end_inset
+
+נדרג:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-54 & 18\\
+18 & -6
+\end{array}\right]\rightarrow\left[\begin{array}{cc}
+-54 & 18\\
+0 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{cc}
+1 & \frac{-1}{3}\\
+0 & 0
 \end{array}\right]
 \]
 
 \end_inset
 
-נשים לב כי 
-\begin_inset Formula $V=V^{T}$
+
+\begin_inset Formula 
+\[
+x_{1}-\frac{1}{3}x_{2}=0\overset{x_{1}=t}{\Longrightarrow}x_{2}=3t\Longrightarrow t\left[\begin{array}{c}
+1\\
+3
+\end{array}\right]
+\]
+
+\end_inset
+
+לכן עבור למשל 
+\begin_inset Formula $t=3$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+3
+\end{array}\right]$
+\end_inset
+
+ הוא וקטור עצמי לע
+\begin_inset Quotes erd
+\end_inset
+
+ע 
+\begin_inset Formula $80$
+\end_inset
+
+.
+ נרצה וקטור יחידה לכן נחלק בנורמה ונקבל את הוקטור העצמי 
+\begin_inset Formula $v_{2}=\left[\begin{array}{c}
+\frac{1}{\sqrt{10}}\\
+\frac{3}{\sqrt{10}}
+\end{array}\right]$
+\end_inset
+
+.
+ נקבל
+\begin_inset Formula 
+\[
+V=\left[\begin{array}{cc}
+v_{1} & v_{2}\end{array}\right]=\left[\begin{array}{cc}
+\frac{-3}{\sqrt{10}} & \frac{1}{\sqrt{10}}\\
+\frac{1}{\sqrt{10}} & \frac{3}{\sqrt{10}}
+\end{array}\right]=\sqrt{10}\left[\begin{array}{cc}
+-3 & 1\\
+1 & 3
+\end{array}\right]
+\]
+
 \end_inset
 
 
 \begin_inset Formula 
 \[
-\Sigma=\left[\begin{array}{cc}
-80 & 0\\
-0 & 20
+\Sigma^{2}=\left[\begin{array}{cc}
+20 & 0\\
+0 & 80
+\end{array}\right]\Longrightarrow\Sigma=\left[\begin{array}{cc}
+\sqrt{2}0 & 0\\
+0 & \sqrt{80}
 \end{array}\right]
 \]
 
@@ -905,33 +1066,19 @@ AV=U\Sigma
 
 \begin_inset Formula 
 \[
-\left[\begin{array}{cc}
+AV=\frac{1}{\sqrt{10}}\left[\begin{array}{cc}
 5 & 5\\
 -1 & 7
 \end{array}\right]\left[\begin{array}{cc}
-3 & 1\\
-1 & -3
+-3 & 1\\
+1 & 3
+\end{array}\right]=\frac{1}{\sqrt{10}}\left[\begin{array}{cc}
+-10 & 20\\
+10 & 20
 \end{array}\right]=\left[\begin{array}{cc}
-x_{1} & x_{2}\\
-x_{3} & x_{4}
-\end{array}\right]\left[\begin{array}{cc}
-80 & 0\\
-0 & 20
-\end{array}\right]
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\left[\begin{array}{cc}
-20 & -10\\
-4 & -22
-\end{array}\right]=\left[\begin{array}{cc}
-80x_{1} & 20x_{2}\\
-80x_{3} & 20x_{4}
-\end{array}\right]
+\sqrt{20}x_{1} & \sqrt{80}x_{2}\\
+\sqrt{20}x_{3} & \sqrt{80}x_{4}
+\end{array}\right]=U\Sigma
 \]
 
 \end_inset
@@ -940,24 +1087,1643 @@ x_{3} & x_{4}
 \begin_inset Formula 
 \[
 \begin{cases}
-80x_{1}=20\\
-20x_{2}=-10\\
-80x_{3}=4\\
-20x_{4}=-22
+\sqrt{2}\sqrt{10}x_{1}=-10\frac{1}{\sqrt{10}}\\
+\sqrt{8}\sqrt{10}x_{2}=20\frac{1}{\sqrt{10}}\\
+\sqrt{2}\sqrt{10}x_{3}=10\frac{1}{\sqrt{10}}\\
+\sqrt{8}\sqrt{10}x_{4}=20\frac{1}{\sqrt{10}}
 \end{cases}\Longrightarrow\begin{cases}
-x_{1}=4\\
-x_{2}=-\frac{1}{2}\\
-x_{3}=\frac{1}{20}\\
-x_{4}=-\frac{11}{10}
+x_{1}=\frac{-1}{\sqrt{2}}\\
+x_{2}=\frac{1}{\sqrt{2}}\\
+x_{3}=\frac{1}{\sqrt{2}}\\
+x_{4}=\frac{1}{\sqrt{2}}
 \end{cases}\Longrightarrow U=\left[\begin{array}{cc}
-4 & -\frac{1}{2}\\
-\frac{1}{20} & -\frac{11}{10}
+\frac{-1}{\sqrt{2}} & \frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
 \end{array}\right]
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+7
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נמצ
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+8
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נתונה 
+\begin_inset Formula $f\left(\sigma\right)=U\text{diag}\left(\sigma\right)U^{T}x$
+\end_inset
+
+.
+ נכתוב
+\begin_inset Formula 
+\[
+f\left(\sigma\right)=\sum_{i=1}^{n}u_{i}\sigma_{i}u_{i}^{T}x
+\]
+
+\end_inset
+
+מתקיים 
+\begin_inset Formula 
+\[
+f\left(\sigma\right)=\left(\begin{array}{ccc}
+f_{1}\left(\sigma\right) & \ldots & f_{n}\left(\sigma\right)\end{array}\right)^{T}=\left(\begin{array}{ccc}
+\left[\sum_{i=1}^{n}\sigma_{i}u_{i}u_{i}^{T}x\right]_{1} & \ldots & \left[\sum_{i=1}^{n}\sigma_{i}u_{i}u_{i}^{T}x\right]_{n}\end{array}\right)^{T}
+\]
+
+\end_inset
+
+לכן הנגזרת החלקית של 
+\begin_inset Formula $\left[\sum_{i=1}^{n}\sigma_{i}u_{i}u_{i}^{T}x\right]_{j}$
+\end_inset
+
+ לפי 
+\begin_inset Formula $\sigma_{k}$
+\end_inset
+
+ היא 
+\begin_inset Formula $\left[u_{k}u_{k}^{T}x\right]_{j}$
+\end_inset
+
+ )כי עבור 
+\begin_inset Formula $i\neq k$
+\end_inset
+
+ הנגזרת היא אפס וכאשר 
+\begin_inset Formula $i=k$
+\end_inset
+
+ הנגזרת היא 
+\begin_inset Formula $u_{k}u_{k}^{T}x$
+\end_inset
+
+(.
+ 
+\begin_inset Newline newline
+\end_inset
+
+אז עבור 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial f_{j}\left(\sigma\right)}{\partial\sigma_{i}}=\left[u_{i}u_{i}^{T}x\right]_{j}
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula 
+\[
+J_{\sigma}\left(f\right)=\left[\begin{array}{ccc}
+\left[u_{1}u_{1}^{T}x\right]_{1} & \cdots & \left[u_{n}u_{n}^{T}x\right]_{1}\\
+\vdots & \ddots & \vdots\\
+\left[u_{1}u_{1}^{T}x\right]_{n} & \cdots & \left[u_{n}u_{n}^{T}x\right]_{1n}
+\end{array}\right]=\left[\begin{array}{ccc}
+| &  & |\\
+u_{1}u_{1}^{T}x & \cdots & u_{n}u_{n}^{T}x\\
+| &  & |
+\end{array}\right]=U\text{diag}\left(U^{T}x\right)
+\]
+
+\end_inset
+
+המעבר האחרון נובע מכך שכפל במטריצה אלכסונית מכפיל את העמודה ה-
+\begin_inset Formula $i$
+\end_inset
+
+ בערך ה-
+\begin_inset Formula $i$
+\end_inset
+
+ באלכסון.
+ במקרה שלנו, העמודה ה-
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ מוכפלת בערך 
+\begin_inset Formula $u_{i}^{T}x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+9
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נחשב את הגרדיאנט של הפונקציה 
+\begin_inset Formula $h\left(\sigma\right)=\frac{1}{2}\left\Vert f\left(\sigma\right)-y\right\Vert ^{2}$
+\end_inset
+
+.
+ נסמן 
+\begin_inset Formula $g(x)=\left\Vert x\right\Vert ^{2}$
+\end_inset
+
+.
+ ראינו בתרגול 
+\begin_inset Formula $\nabla g\left(x\right)=2x$
+\end_inset
+
+.
+ נשתמש בכלל השרשת
+\begin_inset Formula 
+\[
+\nabla h\left(\sigma\right)=\frac{1}{2}2\left(f\left(\sigma\right)-y\right)\cdot\nabla f\left(\sigma\right)=\left(f\left(\sigma\right)-y\right)\cdot\nabla f\left(\sigma\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{aligned}\nabla h\left(\sigma\right) & =\frac{d}{d\sigma}\frac{1}{2}\left\Vert f\left(\sigma\right)-y\right\Vert ^{2}=\frac{d}{d\sigma}\frac{1}{2}\langle f\left(\sigma\right)-y\mid f\left(\sigma\right)-y\rangle=\frac{d}{d\sigma}\left(\langle f\left(\sigma\right)\mid f\left(\sigma\right)\rangle-\langle y\mid f\left(\sigma\right)\rangle-\langle f\left(\sigma\right)\mid y\rangle+\langle y\mid y\rangle\right)=\\
+ & =\frac{d}{d\sigma}\left(||f\left(\sigma\right)||^{2}-2\langle y\mid f\left(\sigma\right)\rangle+\langle y\mid y\rangle\right)=\frac{d}{d\sigma}||f\left(\sigma\right)||^{2}-\frac{d}{d\sigma}2\langle y\mid f\left(\sigma\right)\rangle+\frac{d}{d\sigma}\langle y\mid y\rangle=\\
+ & =\nabla\left(||f\left(\sigma\right)||^{2}\right)-\nabla\left(2y^{T}f\left(\sigma\right)\right)=2f\left(\sigma\right)-\nabla\left(2y^{T}f\left(\sigma\right)\right)
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נמצ
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+11
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+גרף המציג דגימות של הוקטור המקרי 
+\begin_inset Formula $\left(X,Y,Z\right)$
+\end_inset
+
+ אשר מטריצת השונות המשותפת שלו היא 
+\begin_inset Formula $I_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ex1py/forSubmission/11.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+12
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נכפיל את דגימות הוקטור הקודם במטריצת ה-
+\lang english
+scaling
+\lang hebrew
+ 
+\begin_inset Formula $\left[\begin{array}{ccc}
+0.1 & 0 & 0\\
+0 & 0.5 & 0\\
+0 & 0 & 2
+\end{array}\right]$
+\end_inset
+
+ ונציג:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/12.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+מטריצת השונות המשותפת היא כעת )ע
+\begin_inset Quotes erd
+\end_inset
+
+פ חישוב אמצעות 
+\begin_inset Formula $\text{numpy.cov}$
+\end_inset
+
+(
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+0.00995 & 0.00021 & -0.00096\\
+0.00021 & 0.25009 & 0.00158\\
+-0.000967 & 0.00158 & 4.00283
+\end{array}\right]\approx\left[\begin{array}{ccc}
+0.1^{2} & 0 & 0\\
+0 & 0.5^{2} & 0\\
+0 & 0 & 2^{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+קיבלנו בערך את ערכי מטריצת ה-
+\lang english
+scaling
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בריבוע וזה הגיוני, נראה זו בעזרת הנוסחא הבאה: 
+\begin_inset Formula 
+\[
+\text{cov}\left(AX\right)=A\text{cov}\left(X\right)A^{T}
+\]
+
+\end_inset
+
+ כאשר 
+\begin_inset Formula $A$
+\end_inset
+
+ מטריצה כלשהי ו-
+\begin_inset Formula $X$
+\end_inset
+
+ וקטור מקרי.
+ במקרה שלנו 
+\begin_inset Formula $A$
+\end_inset
+
+ זו מטריצת ה-
+\begin_inset Formula $\text{scaling}$
+\end_inset
+
+ ו-
+\begin_inset Formula $X$
+\end_inset
+
+ זה הוקטור המקרי 
+\begin_inset Formula $\left(x,y,z\right)$
+\end_inset
+
+.
+ בתרגיל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+11
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הנחנו כי
+\begin_inset Formula 
+\[
+\text{cov}\left(X\right)=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+נרצה לחשב את 
+\begin_inset Formula $\text{cov}\left(AX\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ מטריצה אלכסונית ולכן נקבל
+\begin_inset Formula 
+\[
+\text{cov}\left(AX\right)=A\text{cov}\left(X\right)A^{T}=\left[\begin{array}{ccc}
+0.1 & 0 & 0\\
+0 & 0.5 & 0\\
+0 & 0 & 2
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\cdot\left[\begin{array}{ccc}
+0.1 & 0 & 0\\
+0 & 0.5 & 0\\
+0 & 0 & 2
+\end{array}\right]=\left[\begin{array}{ccc}
+0.1 & 0 & 0\\
+0 & 0.5 & 0\\
+0 & 0 & 2
+\end{array}\right]^{2}=\left[\begin{array}{ccc}
+0.1^{2} & 0 & 0\\
+0 & 0.5^{2} & 0\\
+0 & 0 & 2^{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+כמו שראינו שקיבלנו באמצעות 
+\begin_inset Formula $\text{numpy.cov}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+13
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+כעת נכפיל את הנונים במטריצה אורתוגונלית כלשהי.
+ נקבל את גרף הדגימות הבא:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/13.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+קיבלנו 
+\begin_inset Quotes eld
+\end_inset
+
+סיבוב
+\begin_inset Quotes erd
+\end_inset
+
+ של הערכים.
+ המטריצה בה הכפלנו ומטריצת השונות של המשותפת של הנתונים החדשים:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/14matData.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+14
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נטיל את הנתונים של שאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+13
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+על המישור 
+\begin_inset Formula $xy$
+\end_inset
+
+.
+ )כלומר נציג את נתוני 
+\begin_inset Formula $x,y$
+\end_inset
+
+ בלבד, 
+\begin_inset Formula $z=0$
+\end_inset
+
+, הטלה אורתוגונלית(
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/14.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+15
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נטיל את כל הערכים בהם 
+\begin_inset Formula $0.1>z>-0.4$
+\end_inset
+
+ על מישור ה-
+\begin_inset Formula $xy$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/15.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+16
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+סעיף 
+\lang english
+a
+\bar default
+\lang hebrew
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+כיוון ש- 
+\begin_inset Formula $\overline{X_{m}}=\frac{1}{m}\sum_{i=1}^{m}X_{i}$
+\end_inset
+
+ הוא אומד חסר הטייה עבור התוחלת, נצפה לראות שככל ש-
+\begin_inset Formula $m$
+\end_inset
+
+ עולה כך התוחלת תתקרב לתוחלת של 
+\begin_inset Formula $X$
+\end_inset
+
+ אשר מתפלג 
+\begin_inset Formula $\text{Ber}\left(0.25\right)$
+\end_inset
+
+, ולכן נצפה שהערכים יתקרבו ל-
+\begin_inset Formula $0.25$
+\end_inset
+
+.
+ ואכן כך:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/16a.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+סעיף
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+b
+\bar default
+\lang hebrew
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+בסעיף זה נחשב את הדיוק של אומד חסר ההטייה עבור התוחלת.
+ נבדוק עבור מספר ספים: 
+\begin_inset Formula $\varepsilon=0.5,0.25,0.1,0.01,0.001$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+בחישוב בעזרת א
+\begin_inset Quotes erd
+\end_inset
+
+ש צ'בישב השתמשתי בכך ש-
+\begin_inset Formula 
+\[
+\text{Var}\left(X\right)=p\left(1-p\right)\leq\frac{1}{4}
+\]
+
+\end_inset
+
+ולכן לפי מסקנה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1.3.9
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בספר א
+\begin_inset Quotes erd
+\end_inset
+
+ש צ'בישב נתן את החסם 
+\begin_inset Formula 
+\[
+\mathbb{P}\left(\left|\overline{X_{m}}-\mathbb{E}\left(X\right)\right|\geq\varepsilon\right)\leq\frac{\text{Var}\left(X\right)}{m\varepsilon^{2}}\leq\frac{1}{4m\varepsilon^{2}}
+\]
+
+\end_inset
+
+ועבור א
+\begin_inset Quotes erd
+\end_inset
+
+ש הופדינג, לפי מסקנה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1.3.12
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ועם החסמים 
+\begin_inset Formula $a=0,b=1$
+\end_inset
+
+ עבור 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ )כי הערכים שלהם הם 
+\begin_inset Formula $1$
+\end_inset
+
+ או 
+\begin_inset Formula $0$
+\end_inset
+
+( נקבל את החסם:
+\begin_inset Formula 
+\[
+\mathbb{P}\left(\left|\overline{X_{m}}-\mathbb{E}\left(X\right)\right|\geq\varepsilon\right)\leq2\exp\left(\frac{-2m\varepsilon^{2}}{\left(b-a\right)^{2}}\right)=2\exp\left(-2m\varepsilon^{2}\right)
+\]
+
+\end_inset
+
+נציג את הגרפים:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/16b_eps0.001.png
+	lyxscale 45
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/16b_eps0.01.png
+	lyxscale 45
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/16b_eps0.1.png
+	lyxscale 45
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/16b_eps0.25.png
+	lyxscale 45
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/16b_eps0.5.png
+	lyxscale 45
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+מסקנות
+\bar default
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\numeric on
+1
+\numeric off
+.
+ עבור 
+\begin_inset Formula $\varepsilon=0.001,0.01$
+\end_inset
+
+ החסמים לא עוזרים לנו כי אנו יודעים שהסתברות תמיד קטנה או שווה ל-
+\numeric on
+1
+\numeric off
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\numeric on
+2
+\numeric off
+.
+ עבור 
+\begin_inset Formula $\varepsilon=0.1,0.25,0.5$
+\end_inset
+
+ , נשים לב שככל ש-
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ גדול יותר, כך ההסתברות שהאומד סוטה ביותר מ-
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ שואפת לאפס מהר יותר וכן צריך פחות דגימות כדי שזה יקרה.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\numeric on
+3
+\numeric off
+.
+ החסם העליון מא
+\begin_inset Quotes erd
+\end_inset
+
+ש הופדינג שואף מהר יותר לאפס מאשר החסם של א
+\begin_inset Quotes erd
+\end_inset
+
+ש צ'בישב - הוא נותן חסם הדוק יותר.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+סעיף
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+c
+\bar default
+\lang hebrew
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+גילוי נאות: הרצתי רק על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10000
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+דגימות )שגם לקחו זמן( כי להריץ על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+100000
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+דגימות לקח המון זמן )חישוב ה-
+\lang english
+mean
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לקח זמן(.
+\begin_inset Newline newline
+\end_inset
+
+בהנתן התוצאות של סעיף
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+b, מה שמצופה לראות בגרפים זה שעבור 
+\begin_inset Formula $\varepsilon=0.1,0.25,0.5$
+\end_inset
+
+, ככל שמספר הדגימות )
+\begin_inset Formula $m$
+\end_inset
+
+( יעלה כך האחוזים יצנחו, כיוון שראינו שההסתברות של האומד לסטות מ-
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ שואפת לאפס ככל שמספר הדגימות עולה, ולכן גם אחוז הדגימות עבורן האומד חורג
+ מ-
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ צפוי להתנהג כך.
+ לגבי 
+\begin_inset Formula $\varepsilon=0.001,0.01$
+\end_inset
+
+ אין השערה כי לא הסקנו לגביהם מידע בסעיף הקודם.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/16c_eps0.001.png
+	lyxscale 45
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/16c_eps0.01.png
+	lyxscale 45
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/16c_eps0.1.png
+	lyxscale 45
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/16c_eps0.25.png
+	lyxscale 45
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename ex1py/forSubmission/16c_eps0.5.png
+	lyxscale 45
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+מסקנות:
+\begin_inset Newline newline
+\end_inset
+
+
+\numeric on
+1
+\numeric off
+.
+ צדקנו לגבי 
+\begin_inset Formula $\varepsilon=0.1,0.25,0.5$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\numeric on
+2
+\numeric off
+.
+ עבור 
+\begin_inset Formula $\varepsilon=0.001,0.01$
+\end_inset
+
+, בסעיף הקודם לא הצלחנו לקבל הערכה לאומד עבור ערכים אלו.
+ כאן, ניתן לראות שעבור 
+\begin_inset Formula $\varepsilon=0.001$
+\end_inset
+
+ האחוזים נשארים גבוהים - האומד חורג ברוב הדגימות.
+ עבור 
+\begin_inset Formula $\varepsilon=0.01$
+\end_inset
+
+, רואים דווקא שהאחוזים יורדים כאשר מספר הדגימות המחושב עולה.
+ הסקנו כאן מידע שלא הצלחנו להסיק בסעיף הקודם.
+ 
 \end_layout
 
 \end_body

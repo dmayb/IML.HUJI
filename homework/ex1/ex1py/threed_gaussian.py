@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 from scipy.linalg import qr
 
 mean = [0, 0, 0]
@@ -13,7 +12,7 @@ def get_orthogonal_matrix(dim):
     return Q
 
 
-def plot_3d(x_y_z):
+def plot_3d(x_y_z, path):
     '''
     plot points in 3D
     :param x_y_z: the points. numpy array with shape: 3 X num_samples (first dimension for x, y, z
@@ -28,10 +27,10 @@ def plot_3d(x_y_z):
     ax.set_xlabel('x')
     ax.set_ylabel('y')
     ax.set_zlabel('z')
-    return fig
+    # fig.show()
+    fig.savefig(path)
 
-
-def plot_2d(x_y):
+def plot_2d(x_y, path):
     '''
     plot points in 2D
     :param x_y_z: the points. numpy array with shape: 2 X num_samples (first dimension for x, y
@@ -44,8 +43,9 @@ def plot_2d(x_y):
     ax.set_ylim(-5, 5)
     ax.set_xlabel('x')
     ax.set_ylabel('y')
+    fig.savefig(path)
 
-cov = np.array([[0.1,0,0],[0,0.5,0],[0,0,2]])*get_orthogonal_matrix(3)
-x_y_z = np.random.multivariate_normal(mean, cov, 50000).T
-fig = plot_3d(x_y_z)
-fig.savefig("G:\\My Drive\\Uni\\SecondYear\\SemesterB\\IML\\HUJI.IML\\homework\\ex1\\ex1py\\covOrt")
+
+# cov = np.array([[0.1,0,0],[0,0.5,0],[0,0,2]])*get_orthogonal_matrix(3)
+# x_y_z = np.random.multivariate_normal(mean, cov, 50000).T
+
