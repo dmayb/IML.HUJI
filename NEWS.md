@@ -1,3 +1,11 @@
+# IML.HUJI 0.2.0 (05-04-20201)
+## Added
+- Chapter 2 - Linear Regression
+## Changes
+- Lab 02 - in last block, estimator is of the variance and not standard deviation.
+- Minor typos and notation mistakes in chapter 1.
+
+
 # IML.HUJI 0.0.3 (26-03-20201)
 ## Added
 - Added definition of outer product.
