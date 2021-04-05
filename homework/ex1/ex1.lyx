@@ -593,6 +593,7 @@ v^{T}w=\left\langle v,w\right\rangle =\left\Vert v\right\Vert \left\Vert w\right
 \end_layout
 
 \begin_layout Standard
+יהיה 
 \begin_inset Formula $A=U\Sigma V^{T}$
 \end_inset
 
@@ -667,13 +668,12 @@ AB=\left(U\Sigma V^{T}\right)\left(V\Sigma^{-1}U^{T}\right)=\left(U\Sigma\right)
 \begin_inset Formula $A$
 \end_inset
 
- זה יעיל יותר לחשב את 
+ ניתן לחשב את 
 \begin_inset Formula $A^{-1}$
 \end_inset
 
-
-\series bold
- )?(
+ ביעילות.
+ 
 \end_layout
 
 \begin_layout Section*
@@ -1029,7 +1029,7 @@ V=\left[\begin{array}{cc}
 v_{1} & v_{2}\end{array}\right]=\left[\begin{array}{cc}
 \frac{-3}{\sqrt{10}} & \frac{1}{\sqrt{10}}\\
 \frac{1}{\sqrt{10}} & \frac{3}{\sqrt{10}}
-\end{array}\right]=\sqrt{10}\left[\begin{array}{cc}
+\end{array}\right]=\frac{1}{\sqrt{10}}\left[\begin{array}{cc}
 -3 & 1\\
 1 & 3
 \end{array}\right]
@@ -1044,9 +1044,12 @@ v_{1} & v_{2}\end{array}\right]=\left[\begin{array}{cc}
 20 & 0\\
 0 & 80
 \end{array}\right]\Longrightarrow\Sigma=\left[\begin{array}{cc}
-\sqrt{2}0 & 0\\
+\sqrt{20} & 0\\
 0 & \sqrt{80}
-\end{array}\right]
+\end{array}\right]=\left[\begin{array}{cc}
+\sqrt{2}\sqrt{10} & 0\\
+0 & 2\sqrt{2}\sqrt{10}
+\end{array}\right]=
 \]
 
 \end_inset
@@ -1058,7 +1061,7 @@ v_{1} & v_{2}\end{array}\right]=\left[\begin{array}{cc}
 :
 \begin_inset Formula 
 \[
-AV=U\Sigma
+AV=U\Sigma\Longrightarrow AV\Sigma^{-1}=U\Sigma\Sigma^{-1}=U
 \]
 
 \end_inset
@@ -1066,19 +1069,30 @@ AV=U\Sigma
 
 \begin_inset Formula 
 \[
-AV=\frac{1}{\sqrt{10}}\left[\begin{array}{cc}
+\Sigma^{-1}=\left[\begin{array}{cc}
+\frac{1}{\sqrt{2}\sqrt{10}} & 0\\
+0 & \frac{1}{2\sqrt{2}\sqrt{10}}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+AV\Sigma^{-1}=\frac{1}{\sqrt{10}}\left[\begin{array}{cc}
 5 & 5\\
 -1 & 7
 \end{array}\right]\left[\begin{array}{cc}
 -3 & 1\\
 1 & 3
+\end{array}\right]\left[\begin{array}{cc}
+\frac{1}{\sqrt{2}\sqrt{10}} & 0\\
+0 & \frac{1}{2\sqrt{2}\sqrt{10}}
 \end{array}\right]=\frac{1}{\sqrt{10}}\left[\begin{array}{cc}
--10 & 20\\
-10 & 20
-\end{array}\right]=\left[\begin{array}{cc}
-\sqrt{20}x_{1} & \sqrt{80}x_{2}\\
-\sqrt{20}x_{3} & \sqrt{80}x_{4}
-\end{array}\right]=U\Sigma
+-\frac{10}{\sqrt{2}\sqrt{10}} & \frac{20}{2\sqrt{2}\sqrt{10}}\\
+\frac{10}{\sqrt{2}\sqrt{10}} & \frac{20}{2\sqrt{2}\sqrt{10}}
+\end{array}\right]=
 \]
 
 \end_inset
@@ -1086,20 +1100,10 @@ AV=\frac{1}{\sqrt{10}}\left[\begin{array}{cc}
 
 \begin_inset Formula 
 \[
-\begin{cases}
-\sqrt{2}\sqrt{10}x_{1}=-10\frac{1}{\sqrt{10}}\\
-\sqrt{8}\sqrt{10}x_{2}=20\frac{1}{\sqrt{10}}\\
-\sqrt{2}\sqrt{10}x_{3}=10\frac{1}{\sqrt{10}}\\
-\sqrt{8}\sqrt{10}x_{4}=20\frac{1}{\sqrt{10}}
-\end{cases}\Longrightarrow\begin{cases}
-x_{1}=\frac{-1}{\sqrt{2}}\\
-x_{2}=\frac{1}{\sqrt{2}}\\
-x_{3}=\frac{1}{\sqrt{2}}\\
-x_{4}=\frac{1}{\sqrt{2}}
-\end{cases}\Longrightarrow U=\left[\begin{array}{cc}
-\frac{-1}{\sqrt{2}} & \frac{1}{\sqrt{2}}\\
+=\left[\begin{array}{cc}
+-\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}\\
 \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
-\end{array}\right]
+\end{array}\right]=U
 \]
 
 \end_inset
@@ -1141,7 +1145,158 @@ x_{4}=\frac{1}{\sqrt{2}}
 \end_layout
 
 \begin_layout Standard
-נמצ
+תהי 
+\begin_inset Formula $A\in\mathbb{R}^{m\times n}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{0}=A^{T}A$
+\end_inset
+
+.
+ יהיו 
+\begin_inset Formula $\lambda_{1}\geq...\geq\lambda_{n}$
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $C_{0}$
+\end_inset
+
+ ו- 
+\begin_inset Formula $v_{1},...,v_{n}$
+\end_inset
+
+ ו
+\begin_inset Quotes erd
+\end_inset
+
+ע מנורמלים מתאימים.
+ 
+\begin_inset Formula $\lambda_{1}>\lambda_{2}$
+\end_inset
+
+.
+ נגדיר 
+\begin_inset Formula $b_{k+1}=\frac{C_{0}b_{k}}{\left\Vert C_{0}b_{k}\right\Vert }$
+\end_inset
+
+ ו- 
+\begin_inset Formula $b_{0}=\sum_{i=1}^{n}\alpha_{i}v_{i}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $\alpha_{i}\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{1}\neq0$
+\end_inset
+
+.
+ נרצה להראות 
+\begin_inset Formula $\underset{k\rightarrow\infty}{\lim}b_{k}=\pm v_{1}$
+\end_inset
+
+.
+ נפתח את נוסחאת הרקורסיה
+\begin_inset Formula 
+\[
+b_{k+1}=\frac{C_{0}b_{k}}{\left\Vert C_{0}b_{k}\right\Vert }=C_{0}^{2}\frac{\frac{b_{k-1}}{\left\Vert C_{0}b_{k-1}\right\Vert }}{\left\Vert \frac{C_{0}^{2}b_{k-1}}{\left\Vert C_{0}b_{k-1}\right\Vert }\right\Vert }\overset{*}{=}C_{0}^{2}\frac{\frac{b_{k-1}}{\left\Vert C_{0}b_{k-1}\right\Vert }}{\frac{\left\Vert C_{0}^{2}b_{k-1}\right\Vert }{\left\Vert C_{0}b_{k-1}\right\Vert }}=\frac{C_{0}^{2}b_{k-1}}{\left\Vert C_{0}^{2}b_{k-1}\right\Vert }=...=\frac{C_{0}^{k+1}b_{0}}{\left\Vert C_{0}^{k+1}b_{0}\right\Vert }
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow b_{k}=\frac{C_{0}^{k}b_{0}}{\left\Vert C_{0}^{k}b_{0}\right\Vert }
+\]
+
+\end_inset
+
+המעבר 
+\begin_inset Formula $*$
+\end_inset
+
+ מהומוגניות של נורמה.
+ מתקיים
+\begin_inset Formula 
+\begin{align*}
+C_{0}^{k}b_{0} & =C_{0}^{k}\sum_{i=1}^{n}\alpha_{i}v_{i}=\sum_{i=1}^{n}\alpha_{i}C_{0}^{k}v_{i}=\sum_{i=1}^{n}\alpha_{i}\left(C_{0}\right)^{k-1}C_{0}v_{i}=\\
+ & \overset{*}{=}\sum_{i=1}^{n}\alpha_{i}\left(C_{0}\right)^{k-1}\lambda_{i}v_{i}=\sum_{i=1}^{n}\alpha_{i}\lambda_{i}\left(C_{0}\right)^{k-2}C_{0}v_{i}=\\
+ & =\sum_{i=1}^{n}\alpha_{i}\lambda_{i}^{2}\left(C_{0}\right)^{k-2}v_{i}=...=\sum_{i=1}^{n}\alpha_{i}\lambda_{i}^{k}v_{i}=\\
+ & =\alpha_{1}\lambda_{1}^{k}v_{1}+\sum_{i=2}^{n}\alpha_{i}\lambda_{i}^{k}v_{i}\overset{\alpha_{1}\neq0}{=}\alpha_{1}\lambda_{1}^{k}\left(v_{1}+\sum_{i=2}^{n}\frac{\alpha_{i}}{\alpha_{1}}\left(\frac{\lambda_{i}}{\lambda_{1}}\right)^{k}v_{i}\right)
+\end{align*}
+
+\end_inset
+
+המעבר 
+\begin_inset Formula $*$
+\end_inset
+
+ מכך ש- 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ הוא ו
+\begin_inset Quotes erd
+\end_inset
+
+ע המתאים לע
+\begin_inset Quotes erd
+\end_inset
+
+ע 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+כיוון ש- 
+\begin_inset Formula $\lambda_{1}>\lambda_{2}\geq...\geq\lambda_{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\frac{\lambda_{i}}{\lambda_{1}}<1$
+\end_inset
+
+ עבור 
+\begin_inset Formula $2\leq i\leq n$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\underset{k\rightarrow\infty}{\lim}\left(\frac{\lambda_{i}}{\lambda_{1}}\right)^{k}=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{align*}
+\underset{k\rightarrow\infty}{\lim}b_{k}=\underset{k\rightarrow\infty}{\lim}\frac{C_{0}^{k}b_{0}}{\left\Vert C_{0}^{k}b_{0}\right\Vert } & =\underset{k\rightarrow\infty}{\lim}\frac{\alpha_{1}\lambda_{1}^{k}\left(v_{1}+\sum_{i=2}^{n}\frac{\alpha_{i}}{\alpha_{1}}\left(\frac{\lambda_{i}}{\lambda_{1}}\right)^{k}v_{i}\right)}{\left\Vert \alpha_{1}\lambda_{1}^{k}\left(v_{1}+\sum_{i=2}^{n}\frac{\alpha_{i}}{\alpha_{1}}\left(\frac{\lambda_{i}}{\lambda_{1}}\right)^{k}v_{i}\right)\right\Vert }=\\
+ & =\underset{k\rightarrow\infty}{\lim}\frac{\alpha_{1}\lambda_{1}^{k}\left(v_{1}+\sum_{i=2}^{n}\frac{\alpha_{i}}{\alpha_{1}}\left(\frac{\lambda_{i}}{\lambda_{1}}\right)^{k}v_{i}\right)}{\left|\alpha_{1}\lambda_{1}^{k}\right|\left\Vert \left(v_{1}+\sum_{i=2}^{n}\frac{\alpha_{i}}{\alpha_{1}}\left(\frac{\lambda_{i}}{\lambda_{1}}\right)^{k}v_{i}\right)\right\Vert }=\\
+ & =\underset{k\rightarrow\infty}{\lim}\pm\frac{\left(v_{1}+\sum_{i=2}^{n}\frac{\alpha_{i}}{\alpha_{1}}\left(\frac{\lambda_{i}}{\lambda_{1}}\right)^{k}v_{i}\right)}{\left\Vert \left(v_{1}+\sum_{i=2}^{n}\frac{\alpha_{i}}{\alpha_{1}}\left(\frac{\lambda_{i}}{\lambda_{1}}\right)^{k}v_{i}\right)\right\Vert }=\\
+ & =\pm\frac{\left(v_{1}+\sum_{i=2}^{n}\frac{\alpha_{i}}{\alpha_{1}}\cdot0\cdot v_{i}\right)}{\left\Vert \left(v_{1}+\sum_{i=2}^{n}\frac{\alpha_{i}}{\alpha_{1}}\cdot0\cdot v_{i}\right)\right\Vert }=\pm\frac{v_{1}}{\left\Vert v_{1}\right\Vert }\\
+ & \overset{*}{=}\pm\frac{v_{1}}{1}=\pm v_{1}
+\end{align*}
+
+\end_inset
+
+כאשר מעבר 
+\begin_inset Formula $*$
+\end_inset
+
+ מכך ש-
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ וקטור יחידה.
 \end_layout
 
 \begin_layout Section*
@@ -1267,11 +1422,11 @@ u_{1}u_{1}^{T}x & \cdots & u_{n}u_{n}^{T}x\\
 \end_inset
 
  באלכסון.
- במקרה שלנו, העמודה ה-
+ במקרה שלנו, העמודה 
 \begin_inset Formula $u_{i}$
 \end_inset
 
- מוכפלת בערך 
+ מוכפלת בסקאלר 
 \begin_inset Formula $u_{i}^{T}x$
 \end_inset
 
@@ -1319,19 +1474,32 @@ u_{1}u_{1}^{T}x & \cdots & u_{n}u_{n}^{T}x\\
 
 .
  נסמן 
-\begin_inset Formula $g(x)=\left\Vert x\right\Vert ^{2}$
+\begin_inset Formula $g(\sigma)=\frac{1}{2}\left\Vert \sigma\right\Vert ^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\ell\left(\sigma\right)=f\left(\sigma\right)-y$
 \end_inset
 
 .
- ראינו בתרגול 
-\begin_inset Formula $\nabla g\left(x\right)=2x$
+ מתקיים 
+\begin_inset Formula $h\left(\sigma\right)=\left(g\circ\ell\right)\left(\sigma\right)$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+ראינו בתרגול 
+\begin_inset Formula $\nabla g\left(\sigma\right)=\frac{1}{2}\cdot2\sigma=\sigma$
 \end_inset
 
 .
  נשתמש בכלל השרשת
 \begin_inset Formula 
 \[
-\nabla h\left(\sigma\right)=\frac{1}{2}2\left(f\left(\sigma\right)-y\right)\cdot\nabla f\left(\sigma\right)=\left(f\left(\sigma\right)-y\right)\cdot\nabla f\left(\sigma\right)
+\left(\nabla h\left(\sigma\right)\right)^{T}=J_{\sigma}\left(h\right)=J_{\sigma}\left(g\circ\ell\right)=J_{\ell\left(\sigma\right)}\left(g\right)J_{\sigma}\left(\ell\right)=\left(\nabla g\left(\ell\left(\sigma\right)\right)\right)^{T}J_{\sigma}\left(\ell\right)=
 \]
 
 \end_inset
@@ -1339,10 +1507,15 @@ u_{1}u_{1}^{T}x & \cdots & u_{n}u_{n}^{T}x\\
 
 \begin_inset Formula 
 \[
-\begin{aligned}\nabla h\left(\sigma\right) & =\frac{d}{d\sigma}\frac{1}{2}\left\Vert f\left(\sigma\right)-y\right\Vert ^{2}=\frac{d}{d\sigma}\frac{1}{2}\langle f\left(\sigma\right)-y\mid f\left(\sigma\right)-y\rangle=\frac{d}{d\sigma}\left(\langle f\left(\sigma\right)\mid f\left(\sigma\right)\rangle-\langle y\mid f\left(\sigma\right)\rangle-\langle f\left(\sigma\right)\mid y\rangle+\langle y\mid y\rangle\right)=\\
- & =\frac{d}{d\sigma}\left(||f\left(\sigma\right)||^{2}-2\langle y\mid f\left(\sigma\right)\rangle+\langle y\mid y\rangle\right)=\frac{d}{d\sigma}||f\left(\sigma\right)||^{2}-\frac{d}{d\sigma}2\langle y\mid f\left(\sigma\right)\rangle+\frac{d}{d\sigma}\langle y\mid y\rangle=\\
- & =\nabla\left(||f\left(\sigma\right)||^{2}\right)-\nabla\left(2y^{T}f\left(\sigma\right)\right)=2f\left(\sigma\right)-\nabla\left(2y^{T}f\left(\sigma\right)\right)
-\end{aligned}
+=\left(\ell\left(\sigma\right)\right)^{T}\cdot J_{\sigma}\left(\ell\right)=\left(f\left(\sigma\right)-y\right)^{T}\cdot J_{\sigma}\left(f\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow\nabla h\left(\sigma\right)=J_{\sigma}\left(f\right)^{T}\left(f\left(\sigma\right)-y\right)
 \]
 
 \end_inset
@@ -1384,7 +1557,149 @@ u_{1}u_{1}^{T}x & \cdots & u_{n}u_{n}^{T}x\\
 \end_layout
 
 \begin_layout Standard
-נמצ
+נחשב את היעקוביאן של פונקציית
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+softmax
+\lang hebrew
+, 
+\begin_inset Formula $S:\mathbb{R}^{d}\rightarrow\left(0,1\right)^{d}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+S\left(a\right)_{i}=\frac{e^{a_{i}}}{\sum_{k=1}^{d}e^{a_{k}}}
+\]
+
+\end_inset
+
+כמו בתרגול נסמן 
+\begin_inset Formula $g_{i}\left(a\right)=e^{a_{i}}$
+\end_inset
+
+, 
+\begin_inset Formula $h\left(a\right)=\sum_{k=1}^{d}e^{a_{k}}$
+\end_inset
+
+.
+ יהיו 
+\begin_inset Formula $i,j\in[d]$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\frac{\partial S_{i}\left(a\right)}{\partial a_{j}}=\frac{\partial}{\partial a_{j}}\frac{e^{a_{i}}}{\sum_{k=1}^{d}e^{a_{k}}}=\frac{\partial}{\partial a_{j}}\frac{g_{i}\left(a\right)}{h\left(a\right)}
+\]
+
+\end_inset
+
+הנגזרת של 
+\begin_inset Formula $h$
+\end_inset
+
+ לפי 
+\begin_inset Formula $a_{j}$
+\end_inset
+
+ היא 
+\begin_inset Formula $e^{a_{j}}$
+\end_inset
+
+.
+ הנגזרת של 
+\begin_inset Formula $g_{i}$
+\end_inset
+
+ לפי 
+\begin_inset Formula $a_{j}$
+\end_inset
+
+ היא 
+\begin_inset Formula $e^{a_{j}}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $i=j$
+\end_inset
+
+ ו-
+\begin_inset Formula $0$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+ עבור 
+\begin_inset Formula $i=j$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial a_{j}}\frac{e^{a_{i}}}{\sum_{k=1}^{d}e^{a_{k}}} & =\frac{\partial}{\partial a_{i}}\frac{e^{a_{i}}\left(\sum_{k=1}^{d}e^{a_{k}}\right)-e^{a_{i}}e^{a_{i}}}{\left(\sum_{k=1}^{d}e^{a_{k}}\right)^{2}}=\frac{e^{a_{i}}\left(\left(\sum_{k=1}^{d}e^{a_{k}}\right)-e^{a_{i}}\right)}{\left(\sum_{k=1}^{d}e^{a_{k}}\right)^{2}}\\
+ & =\frac{e^{a_{i}}}{\sum_{k=1}^{d}e^{a_{k}}}\frac{\left(\sum_{k=1}^{d}e^{a_{k}}\right)-e^{a_{i}}}{\sum_{k=1}^{d}e^{a_{k}}}=S_{i}\left(a\right)\left(1-S_{i}(a)\right)
+\end{align*}
+
+\end_inset
+
+עבור 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial a_{j}}\frac{e^{a_{i}}}{\sum_{k=1}^{d}e^{a_{k}}} & =\frac{\partial}{\partial a_{j}}\frac{0\left(\sum_{k=1}^{d}e^{a_{k}}\right)-e^{a_{i}}e^{a_{j}}}{\left(\sum_{k=1}^{d}e^{a_{k}}\right)^{2}}=\frac{-e^{a_{i}}e^{a_{j}}}{\left(\sum_{k=1}^{d}e^{a_{k}}\right)^{2}}\\
+ & =\frac{-e^{a_{i}}}{\sum_{k=1}^{d}e^{a_{k}}}\frac{e^{a_{j}}}{\sum_{k=1}^{d}e^{a_{k}}}=-S_{i}(a)S_{j}(a)
+\end{align*}
+
+\end_inset
+
+סה
+\begin_inset Quotes erd
+\end_inset
+
+כ קיבלנו 
+\begin_inset Formula 
+\[
+J_{a}\left(S\right)_{ij}=\begin{cases}
+-S_{i}(a)S_{j}(a) & i\neq j\\
+S_{i}\left(a\right)\left(1-S_{i}(a)\right) & i=j
+\end{cases}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -1509,7 +1824,7 @@ scaling
 \begin_inset Quotes erd
 \end_inset
 
-פ חישוב אמצעות 
+פ חישוב נומרי באמצעות 
 \begin_inset Formula $\text{numpy.cov}$
 \end_inset
 
@@ -1736,7 +2051,7 @@ scaling
 \end_layout
 
 \begin_layout Standard
-כעת נכפיל את הנונים במטריצה אורתוגונלית כלשהי.
+כעת נכפיל את הנתונים במטריצה אורתוגונלית כלשהי.
  נקבל את גרף הדגימות הבא:
 \begin_inset Newline newline
 \end_inset
@@ -1757,7 +2072,7 @@ scaling
 \begin_inset Quotes eld
 \end_inset
 
-סיבוב
+הזזה
 \begin_inset Quotes erd
 \end_inset
 
@@ -2093,7 +2408,7 @@ b
 \begin_inset Quotes erd
 \end_inset
 
-ש צ'בישב השתמשתי בכך ש-
+ש צ'בישב נשתמש בכך ש-
 \begin_inset Formula 
 \[
 \text{Var}\left(X\right)=p\left(1-p\right)\leq\frac{1}{4}
@@ -2159,7 +2474,7 @@ b
 \begin_inset Quotes erd
 \end_inset
 
-ש צ'בישב נתן את החסם 
+ש צ'בישב נותן את החסם 
 \begin_inset Formula 
 \[
 \mathbb{P}\left(\left|\overline{X_{m}}-\mathbb{E}\left(X\right)\right|\geq\varepsilon\right)\leq\frac{\text{Var}\left(X\right)}{m\varepsilon^{2}}\leq\frac{1}{4m\varepsilon^{2}}
@@ -2428,147 +2743,6 @@ c
 \begin_inset Newline newline
 \end_inset
 
-גילוי נאות: הרצתי רק על
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-10000
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-דגימות )שגם לקחו זמן( כי להריץ על
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-100000
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-דגימות לקח המון זמן )חישוב ה-
-\lang english
-mean
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-לקח זמן(.
-\begin_inset Newline newline
-\end_inset
-
 בהנתן התוצאות של סעיף
 \family roman
 \series medium
@@ -2623,7 +2797,7 @@ b, מה שמצופה לראות בגרפים זה שעבור
 
 
 \begin_inset Graphics
-	filename ex1py/forSubmission/16c_eps0.001.png
+	filename ex1py/16c_eps0.001.png
 	lyxscale 45
 	scale 45
 
@@ -2635,7 +2809,7 @@ b, מה שמצופה לראות בגרפים זה שעבור
 
 
 \begin_inset Graphics
-	filename ex1py/forSubmission/16c_eps0.01.png
+	filename ex1py/16c_eps0.01.png
 	lyxscale 45
 	scale 45
 
@@ -2647,7 +2821,7 @@ b, מה שמצופה לראות בגרפים זה שעבור
 
 
 \begin_inset Graphics
-	filename ex1py/forSubmission/16c_eps0.1.png
+	filename ex1py/16c_eps0.1.png
 	lyxscale 45
 	scale 45
 
@@ -2659,7 +2833,7 @@ b, מה שמצופה לראות בגרפים זה שעבור
 
 
 \begin_inset Graphics
-	filename ex1py/forSubmission/16c_eps0.25.png
+	filename ex1py/16c_eps0.25.png
 	lyxscale 45
 	scale 45
 
@@ -2671,7 +2845,7 @@ b, מה שמצופה לראות בגרפים זה שעבור
 
 
 \begin_inset Graphics
-	filename ex1py/forSubmission/16c_eps0.5.png
+	filename ex1py/16c_eps0.5.png
 	lyxscale 45
 	scale 45
 
