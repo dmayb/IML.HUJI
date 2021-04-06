@@ -15,18 +15,16 @@ def a(plot=False):
         return
 
     fig = plt.figure()
-    plt.suptitle("The mean as function of m for X~Ber(0.25)")
+    colors = ["red", "blue", "green", "purple", "orange"]
+    plt.title("The mean as function of m for X~Ber(0.25)")
+    ax = fig.add_subplot(111)
     for i in range(N_SAMPLES):
-        ax = fig.add_subplot(N_SAMPLES, 1, i+1)
-        ax.plot(m, meanData[i, :])
-        ax.set_ylim(0, 1)
-        ax.tick_params(labelbottom=False)
-    ax.tick_params(labelbottom=True)
+        ax.plot(m, meanData[i, :], color=colors[i])
+    ax.set_ylim(0, 1)
+    ax.legend(["Sample "+ str(i+1) for i in range(N_SAMPLES)])
     mng = plt.get_current_fig_manager()
     mng.window.showMaximized()
-    fig.show()
-    fig.savefig("16a.png")
-    print()
+    fig.savefig("16a.png",  bbox_inches='tight',pad_inches=0)
 
 
 def b(plot=False):
@@ -57,20 +55,15 @@ def b(plot=False):
 
     for i, epsilon in enumerate(epsilons):
         fig = plt.figure()
-        # fig.show()
-        plt.suptitle("epsilon: " + str(epsilon))
-        ax1 = fig.add_subplot(2, 1, 1)
-        plt.title("chebyshev upper bound as function of m")
-        ax1.plot(m, chebyshev[i, :])  # plot chevishev
-
-        ax2 = fig.add_subplot(2, 1, 2)
-        plt.title("Hoeffding upper bound as function of m")
-        ax2.plot(m, hoeffding[i, :], color="red")  # plot chevishev
-
+        plt.title("$\epsilon$ =" + str(epsilon))
+        ax = fig.add_subplot(111)
+        ax.plot(m, chebyshev[i, :])  # plot chevishev
+        ax.plot(m, hoeffding[i, :], color="red")  # plot chevishev
+        ax.legend(["Chebyshev upper bound", "Hoeffding upper bound"])
         mng = plt.get_current_fig_manager()
         mng.window.showMaximized()
 
-        fig.savefig("16b_eps" + str(epsilon) + ".png")
+        fig.savefig("16b_eps" + str(epsilon) + ".png", bbox_inches='tight',pad_inches=0)
     return chebyshev, hoeffding
 
 
@@ -99,35 +92,15 @@ def c(chebyshev, hoeffding, plot=False):
 
     for i, epsilon in enumerate(epsilons):
         fig = plt.figure()
-        plt.suptitle("epsilon: " + str(epsilon))
+        plt.title("$\epsilon$ = " + str(epsilon))
 
-        color = "tab:blue"
-        ax1 = fig.add_subplot(2, 1, 1)
-        plt.title("chebyshev upper bound as function of m")
-        ax1.plot(m, chebyshev[i, :],  color=color)  # plot chevishev
-        ax1.set_ylabel('upper bound', color=color)
-        ax1.tick_params(axis='y', labelcolor=color)
+        ax = fig.add_subplot(111)
+        ax.plot(m, chebyshev[i, :])  # plot chevishev
+        ax.plot(m, hoeffding[i, :], color="red")  # plot hoeffding
+        ax.plot(m, epsilonPercent[i,:], color="green")
+        ax.legend(["Chebyshev upper bound", "Hoeffding upper bound", "$\epsilon$ percent"])
 
-        color = "tab:red"
-        ax2 = fig.add_subplot(2, 1, 2)
-        plt.title("Hoeffding upper bound as function of m")
-        ax2.plot(m, hoeffding[i, :], color=color)  # plot chevishev
-        ax2.tick_params(axis='y', labelcolor=color)
-        ax2.set_ylabel('upper bound', color=color)
-
-        ax3 = ax1.twinx()
-        color = "tab:green"
-        ax3.set_ylabel('percent', color=color)  # we already handled the x-label with ax1
-        ax3.plot(m, epsilonPercent[i,:], color=color)
-        ax3.tick_params(axis='y', labelcolor=color)
-
-        ax4 = ax2.twinx()
-        color = "tab:orange"
-        ax4.set_ylabel('percent', color=color)  # we already handled the x-label with ax1
-        ax4.plot(m, epsilonPercent[i,:], color=color)
-        ax4.tick_params(axis='y', labelcolor=color)
-
-        fig.tight_layout()  # otherwise the right y-label is slightly clipped
+        # fig.tight_layout()  # otherwise the right y-label is slightly clipped
 
         mng = plt.get_current_fig_manager()
         mng.window.showMaximized()
@@ -135,6 +108,6 @@ def c(chebyshev, hoeffding, plot=False):
 
 
 if __name__ == '__main__':
-        # a()
-        chebyshev, hoeffding = b()
+        a(plot=True)
+        chebyshev, hoeffding = b(plot=True)
         c(chebyshev, hoeffding, plot=True)

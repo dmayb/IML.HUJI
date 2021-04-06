@@ -2343,9 +2343,9 @@ a
 
 
 \begin_inset Graphics
-	filename ex1py/forSubmission/16a.png
+	filename ex1py/16a.png
 	lyxscale 50
-	scale 45
+	scale 60
 
 \end_inset
 
@@ -2570,7 +2570,7 @@ b
 
 
 \begin_inset Graphics
-	filename ex1py/forSubmission/16b_eps0.001.png
+	filename ex1py/16b_eps0.001.png
 	lyxscale 45
 	scale 45
 
@@ -2582,7 +2582,7 @@ b
 
 
 \begin_inset Graphics
-	filename ex1py/forSubmission/16b_eps0.01.png
+	filename ex1py/16b_eps0.01.png
 	lyxscale 45
 	scale 45
 
@@ -2594,7 +2594,7 @@ b
 
 
 \begin_inset Graphics
-	filename ex1py/forSubmission/16b_eps0.1.png
+	filename ex1py/16b_eps0.1.png
 	lyxscale 45
 	scale 45
 
@@ -2606,7 +2606,7 @@ b
 
 
 \begin_inset Graphics
-	filename ex1py/forSubmission/16b_eps0.25.png
+	filename ex1py/16b_eps0.25.png
 	lyxscale 45
 	scale 45
 
@@ -2618,7 +2618,7 @@ b
 
 
 \begin_inset Graphics
-	filename ex1py/forSubmission/16b_eps0.5.png
+	filename ex1py/16b_eps0.5.png
 	lyxscale 45
 	scale 45
 
