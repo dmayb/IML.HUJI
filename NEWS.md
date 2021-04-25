@@ -1,11 +1,16 @@
-# IML.JUHI 0.3.0 (20-04-2021)
+#IML.JUHI 0.3.1 (25-04-20201)
+## Changes
+- Fixed indexing typos in Lab 04 - Polynomial Fitting.
+
+
+# IML.HUJI 0.3.0 (20-04-2021)
 ## Added
 - Chapter 3 - Classification.
 - Chapter 2 - Bias and variance of estimators to linear regression.
 - Chapter 1 - Convexity and second order approximations of functions.
 
 ## Changes
-- Refectoring of Chapter 3 code examples and move of AdaBoost example to chapter 5 code examples
+- Refectoring of Chapter 3 code examples and move of AdaBoost example to chapter 5 code examples.
 
 
 
