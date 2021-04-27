@@ -1,4 +1,10 @@
-#IML.JUHI 0.3.1 (25-04-20201)
+#IML.HUJI 0.4.0 (27-04.2021
+## Added
+- Chapter 4 - PAC Theory of Statistical Learning
+
+
+
+#IML.JUHI 0.3.1 (25-04-2021)
 ## Changes
 - Fixed indexing typos in Lab 04 - Polynomial Fitting.
 
