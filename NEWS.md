@@ -1,4 +1,9 @@
-# IML.HUJI 0.4.0 (27-04.2021
+# IML.HUJI 0.4.1 (28-04-2021)
+## Changes
+- Refactoring of code and adding explanations to Lab 05 - Logistic Regression
+
+
+# IML.HUJI 0.4.0 (27-04-2021)
 ## Added
 - Chapter 4 - PAC Theory of Statistical Learning
 
