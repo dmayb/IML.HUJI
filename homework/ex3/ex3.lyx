@@ -1,0 +1,1181 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\date{}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+תרגיל
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+-
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+IML
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- מאי ביבי
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\forall x\in{\cal X}\,\,h_{{\cal D}}\left(x\right)=\begin{cases}
++1 & \text{Pr}\left(y=1\mid x\right)\geq\frac{1}{2}\\
+-1 & \text{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+נרצה להראות 
+\begin_inset Formula 
+\[
+h_{{\cal D}}\left(x\right)=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\text{Pr}\left(x\mid y\right)\text{Pr}\left(y\right)
+\]
+
+\end_inset
+
+מכלל בייס מתקיים:
+\begin_inset Formula 
+\[
+\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\text{Pr}\left(x\mid y\right)\text{Pr}\left(y\right)=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\text{Pr}\left(y\mid x\right)\text{Pr}\left(x\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\text{argmax}_{y}\left\{ \text{Pr}\left(y=1\mid x\right)\text{Pr}\left(x\right),\text{Pr}\left(y=-1\mid x\right)\text{Pr}\left(x\right)\right\} \,(*)
+\]
+
+\end_inset
+
+כיוון שהמאורעות 
+\begin_inset Formula $y=1$
+\end_inset
+
+, 
+\begin_inset Formula $y=-1$
+\end_inset
+
+ זרים ומהווים חלוקה של מרחב ההסתברות, מנוחסאת ההסתברות השלמה
+\begin_inset Formula 
+\[
+\text{Pr}\left(y=1\mid x\right)\text{Pr}\left(x\right)+\text{Pr}\left(y=-1\mid x\right)\text{Pr}\left(x\right)=\text{Pr}\left(x\right)
+\]
+
+\end_inset
+
+כיוון ש- 
+\begin_inset Formula $\text{Pr}\left(x\right)>0$
+\end_inset
+
+ )אחרת 
+\begin_inset Formula $\text{Pr}\left(y\mid x\right)$
+\end_inset
+
+ לא מוגדר(, נחלק בו:
+\begin_inset Formula 
+\[
+\Longrightarrow\text{Pr}\left(y=1\mid x\right)+\text{Pr}\left(y=-1\mid x\right)=1
+\]
+
+\end_inset
+
+ ולכן בהכרח או 
+\begin_inset Formula $\text{Pr}\left(y=1\mid x\right)\geq\frac{1}{2}$
+\end_inset
+
+ או 
+\begin_inset Formula $\text{Pr}\left(y=-1\mid x\right)\geq\frac{1}{2}$
+\end_inset
+
+.
+ כלומר לעשות 
+\begin_inset Formula $\max$
+\end_inset
+
+ במקרה הזה שקול לבדיקה 
+\begin_inset Formula $\geq\frac{1}{2}$
+\end_inset
+
+, ולכן נקבל
+\begin_inset Formula 
+\[
+(*)=\begin{cases}
+1 & \text{Pr}\left(y=1\mid x\right)\geq\frac{1}{2}\\
+-1 & \text{else}
+\end{cases}=h_{{\cal D}}\left(x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+פונקצית הצפיפות:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(\mathbf{x}\mid y)=\frac{1}{\sqrt{(2\pi)^{d}\text{det}(\Sigma)}}\exp\left\{ -\frac{1}{2}\left(\mathbf{x}-\mu_{y}\right)^{\top}\Sigma^{-1}\left(\mathbf{x}-\mu_{y}\right)\right\} 
+\]
+
+\end_inset
+
+נרצה להראות שאם היינו יודעים את 
+\begin_inset Formula $\mu_{-1},\mu_{+1}$
+\end_inset
+
+ אז 
+\begin_inset Formula 
+\[
+h_{{\cal D}}\left(x\right)=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\delta_{y}\left(\boldsymbol{\mathbf{x}}\right)
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula 
+\[
+\delta_{y}(\mathbf{x})=\mathbf{x}^{\top}\Sigma^{-1}\mu_{y}-\frac{1}{2}\mu_{y}^{\top}\Sigma^{-1}\mu_{y}+\ln\text{Pr}(y)\quad y\in\{\pm1\}
+\]
+
+\end_inset
+
+מהשאלה הקודמת אנחנו יודעים כי 
+\begin_inset Formula $h_{{\cal D}}\left(\mathbf{x}\right)=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\text{Pr}\left(\mathbf{x}\mid y\right)\text{Pr}\left(y\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+h_{{\cal D}}\left(\mathbf{x}\right)=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\text{Pr}\left(\mathbf{x}\mid y\right)\text{Pr}\left(y\right)\overset{1}{=}\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}f(\mathbf{x}\mid y)\text{Pr}\left(y\right)\overset{2}{=}\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\ln\left(f(\mathbf{x}\mid y)\text{Pr}\left(y\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\ln f(\mathbf{x}\mid y)+\ln\text{Pr}\left(y\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\ln\left(\frac{1}{\sqrt{(2\pi)^{d}\text{det}(\Sigma)}}\exp\left\{ -\frac{1}{2}\left(\mathbf{x}-\mu_{y}\right)^{\top}\Sigma^{-1}\left(\mathbf{x}-\mu_{y}\right)\right\} \right)+\ln\text{Pr}\left(y\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\ln\left(\frac{1}{\sqrt{(2\pi)^{d}\text{det}(\Sigma)}}\right)-\frac{1}{2}\left(\mathbf{x}-\mu_{y}\right)^{\top}\Sigma^{-1}\left(\mathbf{x}-\mu_{y}\right)+\ln\text{Pr}\left(y\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}-\ln\sqrt{(2\pi)^{d}\text{det}(\Sigma)}-\frac{1}{2}\left(\mathbf{x}-\mu_{y}\right)^{\top}\Sigma^{-1}\left(\mathbf{x}-\mu_{y}\right)+\ln\text{Pr}\left(y\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\overset{3}{=}\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}-\frac{1}{2}\left(\mathbf{x}-\mu_{y}\right)^{\top}\Sigma^{-1}\left(\mathbf{x}-\mu_{y}\right)+\ln\text{Pr}\left(y\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\overset{4}{=}\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}-\frac{1}{2}\left(\mathbf{x^{\top}}-\mu_{y}^{\top}\right)\Sigma^{-1}\left(\mathbf{x}-\mu_{y}\right)+\ln\text{Pr}\left(y\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}-\frac{1}{2}\mathbf{x^{\top}}\Sigma^{-1}\mathbf{x}+\frac{1}{2}\mathbf{x^{\top}}\Sigma^{-1}\mu_{y}+\frac{1}{2}\mu_{y}^{\top}\Sigma^{-1}\mathbf{x}-\frac{1}{2}\mu_{y}^{\top}\Sigma^{-1}\mu_{y}+\ln\text{Pr}\left(y\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\overset{5}{=}\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\frac{1}{2}\mathbf{x^{\top}}\Sigma^{-1}\mu_{y}+\frac{1}{2}\mu_{y}^{\top}\Sigma^{-1}\mathbf{x}-\frac{1}{2}\mu_{y}^{\top}\Sigma^{-1}\mu_{y}+\ln\text{Pr}\left(y\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\overset{6}{=}\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\mathbf{x}^{\top}\Sigma^{-1}\mu_{y}-\frac{1}{2}\mu_{y}^{\top}\Sigma^{-1}\mu_{y}+\ln\text{Pr}\left(y\right)=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\delta_{y}\left(\boldsymbol{\mathbf{x}}\right)
+\]
+
+\end_inset
+
+כאשר:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $1$
+\end_inset
+
+ ממונוטוניות האינטגרל
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $2$
+\end_inset
+
+ ממונטוניות 
+\begin_inset Formula $\ln$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $3$
+\end_inset
+
+ 
+\begin_inset Formula $-\ln\sqrt{(2\pi)^{d}\text{det}(\Sigma)}$
+\end_inset
+
+ קבוע ולא משפיע על 
+\begin_inset Formula $\text{argmax}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $4$
+\end_inset
+
+ 
+\begin_inset Formula $\left(\mathbf{x}-\mu_{y}\right)^{\top}=\left(\mathbf{x^{\top}}-\mu_{y}^{\top}\right)$
+\end_inset
+
+ מתכונות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+transpose
+\lang hebrew
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $5$
+\end_inset
+
+ 
+\begin_inset Formula $-\frac{1}{2}\mathbf{x^{\top}}\Sigma^{-1}\mathbf{x}$
+\end_inset
+
+ קבוע ולא משפיע על 
+\begin_inset Formula $\text{argmax}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $6$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{x^{\top}}\Sigma^{-1}\mu_{y}=\mu_{y}^{\top}\Sigma^{-1}\mathbf{x}$
+\end_inset
+
+ - 
+\series bold
+לכתוב הסבר אחר כך
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נשתמש באומדים על מנת להעריך את ההסתברויות:
+\begin_inset Formula 
+\[
+\text{Pr}(y)=\frac{1}{m}\sum_{i=1}^{m}\mathbb{I}\left\{ y_{i}=y\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mu_{y}=\frac{\sum_{i=1}^{m}\mathbf{x}_{i}\mathbb{I}\left\{ y_{i}=y\right\} }{\sum_{i=1}^{m}\mathbb{I}\left\{ y_{i}=y\right\} }
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Sigma=\frac{1}{m}\sum_{y\in\{\pm1\}}\sum_{i\in[m]:y_{i}=y}\left(\mathbf{x}_{i}-\mu_{y}\right)\left(\mathbf{x}_{i}-\mu_{y}\right)^{\top}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+יש לנו שתי שגיאות: סיווג אימייל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ ספאם כלא ספאם וסיווג אימייל לא ספאם כספאם.
+ השגיאה היותר חמורה היא סיווג אימייל לא ספאם כספאם - כי אז האימייל החשוב
+ לא יקרא.
+ סיווג אימייל ספאם כלא ספאם הוא פחות חמור כי בסך הכל יגיע אימייל ספאם ליעד.
+ לכן ה-
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+negative
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+יהיה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+not-spam
+\lang hebrew
+, ואז ה-
+\lang english
+false-negative
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תהיה השגיאה הפחות חמורה, וה-
+\lang english
+positive
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+יהיה ה-
+\lang english
+spam
+\lang hebrew
+, כך שה-
+\lang english
+false-positive
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+חמור יותר.
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+ & \arg\min_{(\boldsymbol{w},b)}\|\boldsymbol{w}\|^{2}\\
+\text{ s.t. } & \forall i,y_{i}\left(\left\langle \boldsymbol{w},x_{i}\right\rangle +b\right)\geqslant1\\
+ & \quad\arg\min_{(\boldsymbol{w},b)}\left(\begin{array}{c}
+\boldsymbol{w}\\
+b
+\end{array}\right)^{T}\boldsymbol{I}\left(\begin{array}{c}
+\boldsymbol{w}\\
+b
+\end{array}\right)\\
+= & \left(\begin{array}{cccc}
+( & y_{1}x_{1} & ) & y_{1}\\
+\vdots & \vdots\\
+( & y_{m}x_{m} & ) & y_{m}
+\end{array}\right)\left(\begin{array}{c}
+\boldsymbol{w}\\
+b
+\end{array}\right)\geqslant\left(\begin{array}{c}
+1\\
+\vdots\\
+1
+\end{array}\right)\\
+\text{ s.t. } & \left(\begin{array}{cc}
+\boldsymbol{w}\\
+b
+\end{array}\right)+\mathbf{0}^{T}\left(\begin{array}{c}
+\boldsymbol{w}\\
+b
+\end{array}\right)\\
+ & \arg\min_{(\boldsymbol{w},b)}\frac{1}{2}\left(\begin{array}{c}
+\boldsymbol{w}\\
+b
+\end{array}\right)^{T}[2\cdot\boldsymbol{I}]\left(\begin{array}{cccc}
+( & y_{1}x_{1} & ) & y_{1}\\
+\vdots &  & \vdots\\
+( & y_{m}x_{m} & ) & y_{m}
+\end{array}\right)\left(\begin{array}{c}
+\boldsymbol{w}\\
+b
+\end{array}\right)\leqslant\left(\begin{array}{c}
+-1\\
+\vdots\\
+-1
+\end{array}\right)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+6
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נרצה להראות שהבעיה הבאה 
+\begin_inset Formula 
+\[
+\arg\min_{\mathbf{w}}\frac{\lambda}{2}\|\mathbf{w}\|^{2}+\frac{1}{m}\sum_{i=1}^{m}\ell^{\text{hinge }}\left(y_{i}\left\langle \mathbf{w},\mathbf{x}_{i}\right\rangle \right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{ where }\ell^{\text{hinge }}(a)=\max\{0,1-a\}
+\]
+
+\end_inset
+
+שקולה לבעית ה-
+\lang english
+soft SVM
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כפי שהגדרנו:
+\begin_inset Formula 
+\[
+\arg\min_{\mathbf{w},\left\{ \xi_{i}\right\} }\frac{\lambda}{2}\|\mathbf{w}\|^{2}+\frac{1}{m}\sum_{i=1}^{m}\xi_{i}\text{ s.t. }\forall_{i},y_{i}\left\langle \mathbf{w},\mathbf{x}_{i}\right\rangle \geqslant1-\xi_{i}\text{ and }\xi_{i}\geqslant0
+\]
+
+\end_inset
+
+נגדיר את 
+\begin_inset Formula $\xi_{i}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $i=1,...,m$
+\end_inset
+
+ להיות:
+\begin_inset Formula 
+\[
+\xi_{i}:=\left\{ \begin{array}{ll}
+0 & y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle >1\\
+1-y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle  & \text{ otherwise }
+\end{array}\right.
+\]
+
+\end_inset
+
+נראה כי 
+\begin_inset Formula $\xi_{i}$
+\end_inset
+
+ עומד באילוצים 
+\begin_inset Formula $\xi_{i}\geqslant0$
+\end_inset
+
+ ו- 
+\begin_inset Formula $\xi_{i}\geqslant1-y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle \iff y_{i}\left\langle \mathbf{w},\mathbf{x}_{i}\right\rangle \geqslant1-\xi_{i}$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+אם 
+\begin_inset Formula $y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle >1$
+\end_inset
+
+ אז 
+\begin_inset Formula $\xi_{i}=0$
+\end_inset
+
+ וכן מתקיים 
+\begin_inset Formula $1-y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle <0$
+\end_inset
+
+ ולכן גם האילוץ השני מתקיים.
+\begin_inset Newline newline
+\end_inset
+
+אחרת, 
+\begin_inset Formula $1-y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle \geq0$
+\end_inset
+
+, ואנו מגדירים 
+\begin_inset Formula $\xi_{i}=1-y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle $
+\end_inset
+
+ וזה בפרט עומד באילוץ השני.
+\begin_inset Newline newline
+\end_inset
+
+נשים לב שהגדרנו את 
+\begin_inset Formula $\xi_{i}$
+\end_inset
+
+ להיות המספר המינימלי שעומד באילוצים - אם 
+\begin_inset Formula $y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle >1$
+\end_inset
+
+, 
+\begin_inset Formula $0$
+\end_inset
+
+ הוא המינ' ש-
+\begin_inset Formula $\xi_{i}$
+\end_inset
+
+ יכול להיות מהאילוץ 
+\begin_inset Formula $\xi_{i}\geqslant0$
+\end_inset
+
+, ואחרת, מהאילוץ השני המספר המינ' עבור 
+\begin_inset Formula $\xi_{i}$
+\end_inset
+
+ הוא 
+\begin_inset Formula $1-y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle $
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+כעת נראה כי 
+\begin_inset Formula $\ell^{\text{hinge }}\left(y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle \right)=\xi_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\ell^{\text{hinge }}\left(y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle \right)=\max\left\{ 0,1-y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle \right\} =\left\{ \begin{array}{ll}
+0 & y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle >1\\
+1-y_{i}\left\langle \mathbf{x}_{i},\mathbf{w}\right\rangle  & \text{ otherwise }
+\end{array}\right.=\xi_{i}
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula 
+\[
+\frac{1}{m}\sum_{i=1}^{m}\ell^{\text{hinge }}\left(y_{i}\left\langle \mathbf{w},\mathbf{x}_{i}\right\rangle \right)=\frac{1}{m}\sum_{i=1}^{m}\xi_{i}
+\]
+
+\end_inset
+
+הגדרנו 
+\begin_inset Formula $\xi_{i}$
+\end_inset
+
+ מינימליים שעומדים באילוצים, וזה מתאים לבעיה המקורית בה אנו רוצים למזער
+ אותם.
+ ממה שהראנו קודם מתקיים 
+\begin_inset Formula 
+\[
+\arg\min_{\mathbf{w},\left\{ \xi_{i}\right\} }\frac{\lambda}{2}\|\mathbf{w}\|^{2}+\frac{1}{m}\sum_{i=1}^{m}\xi_{i}=\arg\min_{\mathbf{w}}\frac{\lambda}{2}\|\mathbf{w}\|^{2}+\frac{1}{m}\sum_{i=1}^{m}\ell^{\text{hinge }}\left(y_{i}\left\langle \mathbf{w},\mathbf{x}_{i}\right\rangle \right)
+\]
+
+\end_inset
+
+ולכן הבעיות שקולות.
+\end_layout
+
+\end_body
+\end_document
