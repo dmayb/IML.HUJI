@@ -1,3 +1,13 @@
+# IML.HUJI 0.5.0 (08-05-2021)
+## Added
+- Chapter 5 - Ensemble Methods
+
+## Changes
+- Chapter 3 - Classification - corrections to proof of Hard-SVM and typos in Soft-SVM.
+- Chapter 5 - code examples code updated.
+- Updated environment.yml to include installation of `statsmodels` needed for changes in chapter 5 code examples.
+
+
 # IML.HUJI 0.4.1 (28-04-2021)
 ## Changes
 - Refactoring of code and adding explanations to Lab 05 - Logistic Regression
