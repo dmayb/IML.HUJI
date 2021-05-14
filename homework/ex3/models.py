@@ -33,14 +33,17 @@ class Perceptron:
         :param y: m length vector of tags (1 or -1)
         :return: stores w (the halfspace) in self.model
         """
-        w = np.zeros(y.shape[0])  # init w
+        ones = np.ones((X.shape[0], X.shape[1]+1))
+        ones[:, :-1] = X
+        X = ones
+        w = np.zeros(X.shape[1])  # init w
         while True:
             condition = y*(X@w)  # check if there is a mis-labled sample
             wrongLabelIdx = np.where(condition <= 0)[0]
-            if wrongLabelIdx.size > 0 :
+            if wrongLabelIdx.size > 0:
                 w = w + y[wrongLabelIdx[0]] * X[wrongLabelIdx[0], :]
             else:
-                self.model = w
+                self.model = w  # store (w,b)
                 return
 
     def predict(self, X):
@@ -50,8 +53,8 @@ class Perceptron:
         :param X: unlabeled test set
         :return: predicted labels
         """
-        if not self.model:
-            return np.sign(X@self.model)
+        if self.model:
+            return np.sign((X@self.model[:-1]) + self.model[-1])
 
     def score(self, X, y):
         """
