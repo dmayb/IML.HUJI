@@ -1,3 +1,10 @@
+# IML.HUJI 0.6.1 (16-05-2021)
+## Changes
+- Fixed bug in bias-variance tradeoff graph - lab 7 and code example chapter 5.
+- Updated bias-variance in book chapter 5.
+- Fixed typos in AdaBoost pseudocode.
+
+
 # IML.HUJI 0.6.0 (16-05-2021)
 ## Added
 - Chapter 6 - Regularization & Models Selection and Evaluation
