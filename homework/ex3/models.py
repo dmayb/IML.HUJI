@@ -6,9 +6,9 @@ from sklearn.tree import DecisionTreeClassifier
 
 def score(y, predicted_y):
     FP = np.sum(predicted_y > y)
-    TP = np.sum((predicted_y == y) & predicted_y == 1)
+    TP = np.sum(np.logical_and(predicted_y == y, predicted_y == 1))
     FN = np.sum(predicted_y < y)
-    TN = np.sum((predicted_y == y) & predicted_y == -1)
+    TN = np.sum(np.logical_and(predicted_y == y, predicted_y <= 0))  # <= 0 -> so it can be either 0 or -1
     P = TP + FN
     N = TN + FP
     scores = dict()
@@ -24,7 +24,7 @@ def score(y, predicted_y):
 
 class Perceptron:
     def __init__(self):
-        self.model = []
+        self.model = np.empty(0)
 
     def fit(self, X, y):
         """
@@ -38,7 +38,7 @@ class Perceptron:
         X = ones
         w = np.zeros(X.shape[1])  # init w
         while True:
-            condition = y*(X@w)  # check if there is a mis-labled sample
+            condition = y*(X@w)  # check if there is a mis-labeled sample
             wrongLabelIdx = np.where(condition <= 0)[0]
             if wrongLabelIdx.size > 0:
                 w = w + y[wrongLabelIdx[0]] * X[wrongLabelIdx[0], :]
@@ -53,7 +53,7 @@ class Perceptron:
         :param X: unlabeled test set
         :return: predicted labels
         """
-        if self.model:
+        if self.model.size > 0:
             return np.sign((X@self.model[:-1]) + self.model[-1])
 
     def score(self, X, y):
@@ -65,7 +65,7 @@ class Perceptron:
         """
         scores = dict()
         predicted_y = self.predict(X)
-        if not predicted_y:
+        if predicted_y is None:
             return scores
         return score(y, predicted_y)
 
@@ -96,10 +96,10 @@ class LDA:
         self.model["mu1"] = mu1
         self.model["mu_m1"] = mu_m1
 
-        tmp = (X[y1] - mu1)[:, :, np.newaxis]
-        sigma_1 = np.matmul(tmp, tmp).sum(axis=0)
-        tmp = (X[ym1] - mu_m1)[:, :, np.newaxis]
-        sigma_m1 = np.matmul(tmp, tmp).sum(axis=0)
+        tmp1, tmp2 = (X[y1] - mu1)[:, :, np.newaxis], (X[y1] - mu1)[:, np.newaxis, :]
+        sigma_1 = np.matmul(tmp1, tmp2).sum(axis=0)
+        tmp1, tmp2 = (X[ym1] - mu_m1)[:, :, np.newaxis], (X[ym1] - mu_m1)[:, np.newaxis, :]
+        sigma_m1 = np.matmul(tmp1, tmp2).sum(axis=0)
         self.model["sigma"] = (sigma_1 + sigma_m1) / m
 
     def predict(self, X):
@@ -111,15 +111,15 @@ class LDA:
         """
         sigma_inverse = np.linalg.inv(self.model["sigma"])
         sigma_inv_mul_mu1 = sigma_inverse@self.model["mu1"]
-        delta1 = X@sigma_inv_mul_mu1 - 0.5*self.model["mu"]@sigma_inv_mul_mu1 + np.log(self.model["p_y1"])
-        sigma_inv_mul_mu_m1 = sigma_inverse@self.model["mu1"]
+        delta1 = X@sigma_inv_mul_mu1 - 0.5*self.model["mu1"]@sigma_inv_mul_mu1 + np.log(self.model["p_y1"])
+        sigma_inv_mul_mu_m1 = sigma_inverse@self.model["mu_m1"]
         delta_m1 = X@sigma_inv_mul_mu_m1 - 0.5*self.model["mu_m1"]@sigma_inv_mul_mu_m1 + np.log(self.model["p_ym1"])
         return np.where(delta1 >= delta_m1, np.ones(X.shape[0]), np.full(X.shape[0], -1))
 
     def score(self, X, y):
         scores = dict()
         predicted_y = self.predict(X)
-        if not predicted_y:
+        if predicted_y is None:
             return scores
         return score(y, predicted_y)
 
@@ -154,7 +154,7 @@ class SVM:
         """
         scores = dict()
         predicted_y = self.predict(X)
-        if not predicted_y:
+        if predicted_y is None:
             return scores
         return score(y, predicted_y)
 
@@ -189,14 +189,14 @@ class Logistic:
         """
         scores = dict()
         predicted_y = self.predict(X)
-        if not predicted_y:
+        if predicted_y is None:
             return scores
         return score(y, predicted_y)
 
 
 class DecisionTree:
-    def __init__(self):
-        self.model = DecisionTreeClassifier(max_depth=5)
+    def __init__(self, max_depth=5):
+        self.model = DecisionTreeClassifier(max_depth=max_depth)
 
     def fit(self, X, y):
         """
@@ -224,6 +224,6 @@ class DecisionTree:
         """
         scores = dict()
         predicted_y = self.predict(X)
-        if not predicted_y:
+        if predicted_y is None:
             return scores
         return score(y, predicted_y)

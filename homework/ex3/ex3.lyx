@@ -621,26 +621,54 @@ transpose
 \end_layout
 
 \begin_layout Standard
-נשתמש באומדים על מנת להעריך את ההסתברויות:
-\begin_inset Formula 
-\[
-\text{Pr}(y)=\frac{1}{m}\sum_{i=1}^{m}\mathbb{I}\left\{ y_{i}=y\right\} 
-\]
+נשתמש באומדים על מנת להעריך את ההסתברויות: )כאשר 
+\begin_inset Formula $\boldsymbol{1}_{y_{i}=y}$
+\end_inset
 
+ הוא המציין של המאורע 
+\begin_inset Formula $\left\{ y_{i}=y\right\} $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+את 
+\begin_inset Formula $\text{Pr}(y)$
+\end_inset
+
+ נקבע כאחוז הפעמים שהוא מופיע ב-
+\begin_inset Formula $y_{1},...,y_{m}$
 \end_inset
 
 
 \begin_inset Formula 
 \[
-\mu_{y}=\frac{\sum_{i=1}^{m}\mathbf{x}_{i}\mathbb{I}\left\{ y_{i}=y\right\} }{\sum_{i=1}^{m}\mathbb{I}\left\{ y_{i}=y\right\} }
+\text{Pr}(y)=\frac{1}{m}\sum_{i=1}^{m}\boldsymbol{1}_{y_{i}=y}
 \]
 
 \end_inset
 
+עבור התוחלות של 
+\begin_inset Formula $\text{\textbf{x}}\mid y$
+\end_inset
 
+ נחשב את ממוצע כל הדגימות המתויגות 
+\begin_inset Formula $y$
+\end_inset
+
+ )אומד מוכר מקורס הסתברות(:
 \begin_inset Formula 
 \[
-\Sigma=\frac{1}{m}\sum_{y\in\{\pm1\}}\sum_{i\in[m]:y_{i}=y}\left(\mathbf{x}_{i}-\mu_{y}\right)\left(\mathbf{x}_{i}-\mu_{y}\right)^{\top}
+\mu_{y}=\frac{\sum_{i=1}^{m}\mathbf{x}_{i}\boldsymbol{1}_{y_{i}=y}}{\sum_{i=1}^{m}\boldsymbol{1}_{y_{i}=y}}
+\]
+
+\end_inset
+
+עבור מטריצת השונות, נשמש באומד המוכר הבא:
+\begin_inset Formula 
+\[
+\Sigma=\frac{1}{m}\sum_{y\in\{\pm1\}}\sum_{i\in[m]:y_{i}=y}\left(\mathbf{x}_{i}-\mu_{y}\right)^{\top}\left(\mathbf{x}_{i}-\mu_{y}\right)
 \]
 
 \end_inset
@@ -897,53 +925,231 @@ false-positive
 \end_layout
 
 \begin_layout Standard
+נכתוב את בעיית ה-
+\lang english
+Hard-SVM
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הבאה בצורה הקנונית של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+QP
+\lang hebrew
+:
 \begin_inset Formula 
-\[
-\begin{array}{ll}
- & \arg\min_{(\boldsymbol{w},b)}\|\boldsymbol{w}\|^{2}\\
-\text{ s.t. } & \forall i,y_{i}\left(\left\langle \boldsymbol{w},x_{i}\right\rangle +b\right)\geqslant1\\
- & \quad\arg\min_{(\boldsymbol{w},b)}\left(\begin{array}{c}
-\boldsymbol{w}\\
+\begin{align*}
+ & =\underset{(\text{\textbf{w}},b)}{\text{argmin}}\|\text{\textbf{w}}\|^{2}\,\,\text{ s.t. }\forall i,y_{i}\left(\left\langle \text{\textbf{w}},x_{i}\right\rangle +b\right)\geqslant1\\
+ & =\underset{(\text{\textbf{w}},b)}{\text{argmin}}\left(\begin{array}{c}
+\text{\textbf{w}}\\
 b
-\end{array}\right)^{T}\boldsymbol{I}\left(\begin{array}{c}
-\boldsymbol{w}\\
+\end{array}\right)^{T}I\left(\begin{array}{c}
+\text{\textbf{w}}\\
 b
-\end{array}\right)\\
-= & \left(\begin{array}{cccc}
-( & y_{1}x_{1} & ) & y_{1}\\
-\vdots & \vdots\\
-( & y_{m}x_{m} & ) & y_{m}
+\end{array}\right)\,\,\text{ s.t. }\left(\begin{array}{c}
+y_{1}\\
+\vdots\\
+y_{m}
+\end{array}\right)\cdot\left(\begin{array}{cccc}
+- & x_{1} & - & 1\\
+ & \vdots &  & \vdots\\
+- & x_{m} & - & 1
 \end{array}\right)\left(\begin{array}{c}
-\boldsymbol{w}\\
+\text{\textbf{w}}\\
 b
 \end{array}\right)\geqslant\left(\begin{array}{c}
 1\\
 \vdots\\
 1
 \end{array}\right)\\
-\text{ s.t. } & \left(\begin{array}{cc}
-\boldsymbol{w}\\
+ & =\underset{(\text{\textbf{w}},b)}{\text{argmin}}\left(\begin{array}{c}
+\text{\textbf{w}}\\
 b
-\end{array}\right)+\mathbf{0}^{T}\left(\begin{array}{c}
-\boldsymbol{w}\\
+\end{array}\right)^{T}I\left(\begin{array}{c}
+\text{\textbf{w}}\\
 b
-\end{array}\right)\\
- & \arg\min_{(\boldsymbol{w},b)}\frac{1}{2}\left(\begin{array}{c}
-\boldsymbol{w}\\
-b
-\end{array}\right)^{T}[2\cdot\boldsymbol{I}]\left(\begin{array}{cccc}
-( & y_{1}x_{1} & ) & y_{1}\\
-\vdots &  & \vdots\\
-( & y_{m}x_{m} & ) & y_{m}
+\end{array}\right)\,\,\text{ s.t. }\left(\begin{array}{cccc}
+y_{1}x_{1}^{1} & \cdots & y_{1}x_{d}^{1} & 1\\
+\vdots & \ddots & \vdots & \vdots\\
+y_{m}x_{1}^{m} & \cdots & y_{m}x_{d}^{m} & 1
 \end{array}\right)\left(\begin{array}{c}
-\boldsymbol{w}\\
+\text{\textbf{w}}\\
 b
-\end{array}\right)\leqslant\left(\begin{array}{c}
+\end{array}\right)\geqslant\left(\begin{array}{c}
+1\\
+\vdots\\
+1
+\end{array}\right)\\
+ & =\underset{(\text{\textbf{w}},b)}{\text{argmin}}\frac{1}{2}\left(\begin{array}{c}
+\text{\textbf{w}}\\
+b
+\end{array}\right)^{T}2\cdot I\left(\begin{array}{c}
+\text{\textbf{w}}\\
+b
+\end{array}\right)+\overrightarrow{0}^{T}\left(\begin{array}{c}
+\text{\textbf{w}}\\
+b
+\end{array}\right)\,\,\text{ s.t. }\left(\begin{array}{cccc}
+y_{1}x_{1}^{1} & \cdots & y_{1}x_{d}^{1} & 1\\
+\vdots & \ddots & \vdots & \vdots\\
+y_{m}x_{1}^{m} & \cdots & y_{m}x_{d}^{m} & 1
+\end{array}\right)\left(\begin{array}{c}
+\text{\textbf{w}}\\
+b
+\end{array}\right)\geqslant\left(\begin{array}{c}
+1\\
+\vdots\\
+1
+\end{array}\right)\\
+ & =\underset{(\text{\textbf{w}},b)}{\text{argmin}}\frac{1}{2}\left(\begin{array}{c}
+\text{\textbf{w}}\\
+b
+\end{array}\right)^{T}2\cdot I\left(\begin{array}{c}
+\text{\textbf{w}}\\
+b
+\end{array}\right)+\overrightarrow{0}^{T}\left(\begin{array}{c}
+\text{\textbf{w}}\\
+b
+\end{array}\right)\,\,\text{ s.t. }-\left(\begin{array}{cccc}
+y_{1}x_{1}^{1} & \cdots & y_{1}x_{d}^{1} & 1\\
+\vdots & \ddots & \vdots & \vdots\\
+y_{m}x_{1}^{m} & \cdots & y_{m}x_{d}^{m} & 1
+\end{array}\right)\left(\begin{array}{c}
+\text{\textbf{w}}\\
+b
+\end{array}\right)\leq\left(\begin{array}{c}
 -1\\
 \vdots\\
 -1
 \end{array}\right)
-\end{array}
+\end{align*}
+
+\end_inset
+
+וקיבלנו שהשורה האחרונה היא בצורת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+QP
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+קנונית עם 
+\begin_inset Formula 
+\[
+\text{\textbf{v}}=\left(\begin{array}{c}
+\text{\textbf{w}}\\
+b
+\end{array}\right),\,Q=2\cdot I,\,\text{\textbf{a}}=\overrightarrow{0}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A=-\left(\begin{array}{cccc}
+y_{1}x_{1}^{1} & \cdots & y_{1}x_{d}^{1} & 1\\
+\vdots & \ddots & \vdots & \vdots\\
+y_{m}x_{1}^{m} & \cdots & y_{m}x_{d}^{m} & 1
+\end{array}\right),\,\text{\textbf{d}}=\left(\begin{array}{c}
+-1\\
+\vdots\\
+-1
+\end{array}\right)
 \]
 
 \end_inset
@@ -1175,6 +1381,1186 @@ soft SVM
 \end_inset
 
 ולכן הבעיות שקולות.
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+9
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename q9.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+גרף של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+mean accuracy
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כפונקציה של 
+\begin_inset Formula $m$
+\end_inset
+
+ עבור שלושת המסווגים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+perceptron
+\lang hebrew
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+SVM
+\lang hebrew
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+LDA
+\lang hebrew
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename q10.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ניתן לראות שה-
+\lang english
+SVM
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא בעל ה-
+\lang english
+mean accuracy
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הכי גבוה, וה-
+\lang english
+LDA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הכי נמוך
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+11
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+כיוון ש-
+\lang english
+LDA
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מניח הנחה שגויה לגבי התפלגות הדגימות )הוא מניח ש-
+\begin_inset Formula $X,y$
+\end_inset
+
+ באים מהתפלגות משותפת ותלויים אחד בשני, בעוד שדגמנו רק את 
+\begin_inset Formula $X$
+\end_inset
+
+ באופן בלתי תלוי וגאוסייני, ואינו תלוי ב-
+\begin_inset Formula $y$
+\end_inset
+
+( רואים שהוא מסווג הכי פחות טוב )
+\lang english
+accuracy
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נמוך יותר(.
+\begin_inset Newline newline
+\end_inset
+
+
+\lang english
+SVM
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Perceptron
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לא מניחים הנחה שגויה כזו ולכן מסווגים טוב יותר )
+\lang english
+accuracy
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+גבוה יותר(.
+ ניתן לראות ש-
+\lang english
+SVM
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+סיווג טוב יותר וזאת כי הוא בוחר על-מישור )קו ההפרדה( עם שול מקסימלי, בעוד
+ שה-
+\lang english
+perceptron
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בוחר על-מישור כלשהו שעובד.
+ 
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+12
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+ציור של אחדות ואפסים מ-
+\lang english
+mnist dataset
+\lang hebrew
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename q12.png
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+14
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename q14.png
+	lyxscale 45
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+רואים כי שככל שמספר הדגימות עולה, 
+\lang english
+Logistic
+\lang hebrew
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+SVM
+\lang hebrew
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Nearset Neighbors
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מסווגים טוב, לעומת זאת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Decision tree
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+קצת פחות טוב.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+זמני הריצה:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename meanRunningTimes.png
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ניתן לראות שככל שמספר הדגימות עולה כך גם זמן הריצה.
+ בנוסף ניתן לראות ש-
+\lang english
+Logistic
+\lang hebrew
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+SVM
+\lang hebrew
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Decision Tree
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ לוקחים בערך אותו זמן בעוד ש-
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Nearest Neighbors
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לוקח יותר זמן.
+ ראינו בכיתה שמסווג זה פחות יעיל כי עבור כל דגימה שהוא מסווג )ב-
+\lang english
+predict
+\lang hebrew
+( צריך לעבור על כל ה-
+\lang english
+training set
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ולמצוא את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+K
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+השכנים הכי קרובים.
+ לחלופין, גם אם ב-
+\lang english
+fit
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא מכניס את ה-
+\lang english
+training set
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+למבנה נתונים שנותן לו יעילות ב-
+\lang english
+predict
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)נאמר בהרצאה שניתן לעשות זאת( זה תהליך שלוקח זמן ולכן, כנראה, ההבדל בזמנים.
 \end_layout
 
 \end_body
