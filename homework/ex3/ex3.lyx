@@ -2185,7 +2185,61 @@ Nearset Neighbors
 \uwave default
 \noun default
 \color inherit
-מסווגים טוב, לעומת זאת
+מסווגים פחות או יותר עם אותו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+accuracy
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+גבוה, לעומתם
 \family roman
 \series medium
 \shape up
@@ -2241,6 +2295,10 @@ Decision tree
 \color inherit
 קצת פחות טוב.
  
+\series bold
+למה?
+\series default
+
 \begin_inset Newline newline
 \end_inset
 
