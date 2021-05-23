@@ -230,6 +230,39 @@ IML
 \end_layout
 
 \begin_layout Standard
+מסווג
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Bayes optimal
+\lang hebrew
+:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \forall x\in{\cal X}\,\,h_{{\cal D}}\left(x\right)=\begin{cases}
@@ -310,7 +343,7 @@ h_{{\cal D}}\left(x\right)=\underset{y\in\left\{ \pm1\right\} }{\text{argmax}}\t
 \end_inset
 
  במקרה הזה שקול לבדיקה 
-\begin_inset Formula $\geq\frac{1}{2}$
+\begin_inset Formula $\text{Pr}\left(y=1\mid x\right)\geq\frac{1}{2}$
 \end_inset
 
 , ולכן נקבל
@@ -582,9 +615,15 @@ transpose
 \begin_inset Formula $\mathbf{x^{\top}}\Sigma^{-1}\mu_{y}=\mu_{y}^{\top}\Sigma^{-1}\mathbf{x}$
 \end_inset
 
- - 
-\series bold
-לכתוב הסבר אחר כך
+ - כי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלכסונית כי המשתנים בלתי תלויים והשונות המשותפת שלהם 
+\begin_inset Formula $0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section*
@@ -629,7 +668,7 @@ transpose
 \begin_inset Formula $\left\{ y_{i}=y\right\} $
 \end_inset
 
-
+(
 \begin_inset Newline newline
 \end_inset
 
@@ -657,7 +696,7 @@ transpose
 \begin_inset Formula $y$
 \end_inset
 
- )אומד מוכר מקורס הסתברות(:
+:
 \begin_inset Formula 
 \[
 \mu_{y}=\frac{\sum_{i=1}^{m}\mathbf{x}_{i}\boldsymbol{1}_{y_{i}=y}}{\sum_{i=1}^{m}\boldsymbol{1}_{y_{i}=y}}
@@ -665,7 +704,7 @@ transpose
 
 \end_inset
 
-עבור מטריצת השונות, נשמש באומד המוכר הבא:
+עבור מטריצת השונות, נשמש באומד המוכר הבא )מויקיפדיה(:
 \begin_inset Formula 
 \[
 \Sigma=\frac{1}{m}\sum_{y\in\{\pm1\}}\sum_{i\in[m]:y_{i}=y}\left(\mathbf{x}_{i}-\mu_{y}\right)^{\top}\left(\mathbf{x}_{i}-\mu_{y}\right)
@@ -1614,7 +1653,7 @@ LDA
 \begin_inset Graphics
 	filename q10.png
 	lyxscale 50
-	scale 45
+	scale 65
 
 \end_inset
 
@@ -1779,7 +1818,11 @@ LDA
 \begin_inset Formula $X,y$
 \end_inset
 
- באים מהתפלגות משותפת ותלויים אחד בשני, בעוד שדגמנו רק את 
+ באים מהתפלגות משותפת וכן ש-
+\begin_inset Formula $X$
+\end_inset
+
+ מגיע משני גאוסיאניים, בעוד שדגמנו רק את 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2086,7 +2129,7 @@ mnist dataset
 \begin_inset Graphics
 	filename q14.png
 	lyxscale 45
-	scale 45
+	scale 65
 
 \end_inset
 
@@ -2294,11 +2337,6 @@ Decision tree
 \noun default
 \color inherit
 קצת פחות טוב.
- 
-\series bold
-למה?
-\series default
-
 \begin_inset Newline newline
 \end_inset
 
@@ -2358,35 +2396,6 @@ Logistic
 \noun default
 \color inherit
 \lang english
-SVM
-\lang hebrew
-,
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang english
 Decision Tree
 \family roman
 \series medium
@@ -2401,7 +2410,61 @@ Decision Tree
 \noun off
 \color none
 \lang hebrew
- לוקחים בערך אותו זמן בעוד ש-
+ לוקחים בערך אותו זמן, 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+SVM
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לוקח קצת יותר ו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-
 \family default
 \series default
 \shape default
@@ -2442,8 +2505,15 @@ Nearest Neighbors
 \uwave default
 \noun default
 \color inherit
-לוקח יותר זמן.
- ראינו בכיתה שמסווג זה פחות יעיל כי עבור כל דגימה שהוא מסווג )ב-
+לוקח הרבה יותר זמן.
+\begin_inset Newline newline
+\end_inset
+
+לגבי 
+\lang english
+Nearest Neighbors
+\lang hebrew
+: ראינו בכיתה שמסווג זה פחות יעיל כי עבור כל דגימה שהוא מסווג )ב-
 \lang english
 predict
 \lang hebrew
@@ -2618,7 +2688,7 @@ predict
 \uwave default
 \noun default
 \color inherit
-)נאמר בהרצאה שניתן לעשות זאת( זה תהליך שלוקח זמן ולכן, כנראה, ההבדל בזמנים.
+)נאמר בהרצאה שניתן לעשות זאת( זה תהליך שלוקח זמן ולכן ההבדל בזמנים.
 \end_layout
 
 \end_body
