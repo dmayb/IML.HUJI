@@ -1,3 +1,23 @@
+# IML.HUJI 0.6.1 (16-05-2021)
+## Changes
+- Fixed bug in bias-variance tradeoff graph - lab 7 and code example chapter 5.
+- Updated bias-variance in book chapter 5.
+- Fixed typos in AdaBoost pseudocode.
+
+
+# IML.HUJI 0.6.0 (16-05-2021)
+## Added
+- Chapter 6 - Regularization & Models Selection and Evaluation
+- Code Examples - Chapter 6
+
+## Changes
+- Corrected mistakes in Lemma 5.2.2.
+- Better explanations of Hard-SVM equivalent form derivation.
+- Improved notations and added pseudocode for CART algorithm.
+- Minor changes to code examples chapters.
+- Minor changes to labs 7,9.
+
+
 # IML.HUJI 0.5.0 (08-05-2021)
 ## Added
 - Chapter 5 - Ensemble Methods
