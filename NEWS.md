@@ -1,3 +1,12 @@
+# IML.HUJI 0.7.0 (26-05-2021)
+## Added
+- Chapter 7 - Unsupervised Learning
+
+## Changes
+- Corrected typos and errors in previous chapters.
+- Minor changes to labs and code examples
+
+
 # IML.HUJI 0.6.1 (16-05-2021)
 ## Changes
 - Fixed bug in bias-variance tradeoff graph - lab 7 and code example chapter 5.
