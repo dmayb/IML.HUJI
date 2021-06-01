@@ -1,0 +1,834 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\date{}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+תרגיל
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+-
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+IML
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נראה שקילות:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $a\Longleftarrow b$
+\end_inset
+
+: נתון 
+\begin_inset Formula $\lim_{m\rightarrow\infty}\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]=0$
+\end_inset
+
+.
+ מתקיים
+\begin_inset Formula 
+\begin{align*}
+ & \lim_{m\rightarrow\infty}\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]=0\iff\forall\varepsilon_{0}>0\,\,\exists m_{0}\text{ }\forall m>m_{0}\,\,\left|\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]\right|<\varepsilon_{0}\\
+\iff & \lim_{m\rightarrow\infty}\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]=0\iff\forall\varepsilon_{0}>0\,\,\exists m_{0}\text{ }\forall m>m_{0}\,\,\,\,\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]<\varepsilon_{0}\\
+\end{align*}
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $\delta,\varepsilon>0$
+\end_inset
+
+.
+ נבחר 
+\begin_inset Formula $\varepsilon_{0}=\varepsilon\delta$
+\end_inset
+
+.
+ אז קיים 
+\begin_inset Formula $m_{0}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $m>m_{0}$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]<\varepsilon\delta
+\]
+
+\end_inset
+
+ממרקוב )
+\begin_inset Formula $L_{{\cal D}}\left({\cal A}\left(S\right)\right)$
+\end_inset
+
+ הינו משתנה מקרי אי שלילי כי 
+\begin_inset Formula $L_{{\cal D}}$
+\end_inset
+
+ מוגדר להיות תוחלת של פונקציית
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+loss
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שהיא אי שלילית( מתקיים
+\begin_inset Formula 
+\begin{align*}
+ & \mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)>\varepsilon\right)\leq\frac{\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]}{\varepsilon}<\frac{\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]}{\varepsilon}=\frac{\varepsilon\delta}{\varepsilon}=\delta\\
+\iff & \mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)\geq\varepsilon\right)\leq1-\delta
+\end{align*}
+
+\end_inset
+
+נסמן 
+\begin_inset Formula $m\left(\varepsilon,\delta\right)=m_{0}$
+\end_inset
+
+ ונקבל את הדרוש.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $b\Longleftarrow a$
+\end_inset
+
+: נתון שלכל 
+\begin_inset Formula $\varepsilon,\delta>0$
+\end_inset
+
+ קיים 
+\begin_inset Formula $m\left(\varepsilon,\delta\right)$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $m\geq m\left(\varepsilon,\delta\right)$
+\end_inset
+
+ מתקיים:
+\begin_inset Formula 
+\[
+\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)\leq\varepsilon\right)\geq1-\delta
+\]
+
+\end_inset
+
+יהי 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+.
+ אז לכל 
+\begin_inset Formula $m\geq m\left(\frac{\varepsilon}{2},\frac{\varepsilon}{2}\right)$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\left(*\right)\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)>\frac{\varepsilon}{2}\right)<\frac{\varepsilon}{2}
+\]
+
+\end_inset
+
+כעת:
+\begin_inset Formula 
+\begin{align*}
+\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]= & \int_{x=0}^{x=1}x\cdot\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)=x\right)\\
+= & \int_{x=0}^{x=\frac{\varepsilon}{2}}x\cdot\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)=x\right)+\int_{x=\frac{\varepsilon}{2}}^{x=1}x\cdot\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)=x\right)\\
+\leq & \int_{x=0}^{x=\frac{\varepsilon}{2}}\frac{\varepsilon}{2}\cdot\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)=x\right)+\int_{x=\frac{\varepsilon}{2}}^{x=1}1\cdot\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)=x\right)\\
+= & \frac{\varepsilon}{2}\int_{x=0}^{x=\frac{\varepsilon}{2}}\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)=x\right)+\int_{x=\frac{\varepsilon}{2}}^{x=1}\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)=x\right)\\
+= & \frac{\varepsilon}{2}\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)\leq\frac{\varepsilon}{2}\right)+\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D}}\left({\cal A}\left(S\right)\right)>\frac{\varepsilon}{2}\right)\\
+< & \frac{\varepsilon}{2}\cdot1+\frac{\varepsilon}{2}=\varepsilon
+\end{align*}
+
+\end_inset
+
+כאשר המעבר האחרון נובע מ-
+\begin_inset Formula $(*)$
+\end_inset
+
+ ומכך שהסתברות חסומה ע
+\begin_inset Quotes erd
+\end_inset
+
+י
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+ סה
+\begin_inset Quotes erd
+\end_inset
+
+כ הראינו שבהנתן 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ קיים 
+\begin_inset Formula $m_{0}=m\left(\frac{\varepsilon}{2},\frac{\varepsilon}{2}\right)$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $m\geq m_{0}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]<\varepsilon$
+\end_inset
+
+ וכיוון ש- 
+\begin_inset Formula $L_{{\cal D}}\left({\cal A}\left(S\right)\right)$
+\end_inset
+
+ אי שלילי זה שקול לכך ש- 
+\begin_inset Formula $\left|\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]\right|<\varepsilon$
+\end_inset
+
+, וכל זה שקול ל- 
+\begin_inset Formula $\lim_{m\rightarrow\infty}\mathbb{E}_{S\sim{\cal D}^{m}}\left[L_{{\cal D}}\left({\cal A}\left(S\right)\right)\right]=0$
+\end_inset
+
+ כדרוש.
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+:
+\end_layout
+
+\begin_layout Description
+א.
+ 
+\end_layout
+
+\begin_layout Description
+ב.
+ 
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+תהי 
+\begin_inset Formula ${\cal H}=\left\{ h_{1},...,h_{N}\right\} $
+\end_inset
+
+ מחלקת היפוטזות סופית.
+ מימד ה-
+\lang english
+VC
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שלה בהכרח סופי )לא יתכן שקיימת תת קבוצה של 
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+ בגודל יותר מ-
+\begin_inset Formula $\left|{\cal H}\right|$
+\end_inset
+
+ שמנתצת(.
+ נסמן 
+\begin_inset Formula $VC-dim\left({\cal H}\right)=x$
+\end_inset
+
+.
+ אז בהכרח 
+\begin_inset Formula $2^{x}\leq\left|{\cal H}\right|$
+\end_inset
+
+ )מהגדרת ניתוץ(.
+
+\series bold
+ האם אפשר להניח ש- 
+\begin_inset Formula ${\cal Y}=\left\{ 0,1\right\} $
+\end_inset
+
+?(
+\series default
+ ולכן 
+\begin_inset Formula $x\leq\log_{2}\left|{\cal H}\right|$
+\end_inset
+
+ וכיוון ש-
+\begin_inset Formula $x$
+\end_inset
+
+ מספר שלם מתקיים 
+\begin_inset Formula $x\leq\left\lfloor \log_{2}\left|{\cal H}\right|\right\rfloor $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נטען כי 
+\begin_inset Formula $VC-dim\left({\cal H}_{\text{parity}}\right)=n$
+\end_inset
+
+.
+ מתרגיל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אנו יודעים שמתקיים
+\begin_inset Formula 
+\[
+VC-dim\left({\cal H}_{\text{parity}}\right)\leq\left\lfloor \log_{2}\left|{\cal {\cal H}_{\text{parity}}}\right|\right\rfloor =\log_{2}2^{n}=n
+\]
+
+\end_inset
+
+כעת נראה שקיימת תת קבוצה 
+\begin_inset Formula $C\subset{\cal H}$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $n$
+\end_inset
+
+ אשר מנתצת ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+.
+ נגדיר 
+\begin_inset Formula 
+\[
+C=\left\{ \left(x_{1},...,x_{n}\right)\in\left\{ 0,1\right\} ^{n}\mid\forall i\in\left[n\right],\forall j\neq i,x_{i}=1,x_{j}=0\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+:
+\end_layout
+
+\begin_layout Description
+א.
+ 
+\end_layout
+
+\begin_layout Description
+ב.
+ 
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+6
+\numeric off
+:
+\end_layout
+
+\begin_layout Description
+א.
+ 
+\end_layout
+
+\begin_layout Description
+ב.
+ 
+\end_layout
+
+\end_body
+\end_document
