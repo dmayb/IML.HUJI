@@ -495,14 +495,344 @@ loss
 :
 \end_layout
 
-\begin_layout Description
-א.
- 
-\end_layout
+\begin_layout Standard
+יהיו 
+\begin_inset Formula ${\cal X}=\mathbb{R}^{2},{\cal Y}=\{0,1\}$
+\end_inset
 
-\begin_layout Description
-ב.
+, 
+\begin_inset Formula ${\cal H}=\{h_{r}\mid r\in\mathbb{R}_{+}\}$
+\end_inset
+
+ ו
+\begin_inset Formula $h_{r}(x)=1_{[||x||_{2}\leq r]}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל ש-
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+ היא למידה 
+\begin_inset Formula $PAC$
+\end_inset
+
+ ושמתקיים:
+\begin_inset Formula 
+\[
+m_{{\cal H}}(\varepsilon,\delta)\leq\frac{\log(\frac{1}{\delta})}{\varepsilon}
+\]
+
+\end_inset
+
+נגדיר את 
+\begin_inset Formula ${\cal A}$
+\end_inset
+
+ להיות אלגוריתם ה-
+\begin_inset Formula $ERM$
+\end_inset
+
+ הבא: בהנתן
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
  
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+training set
+\lang hebrew
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ מחזיר את 
+\begin_inset Formula $h_{S}$
+\end_inset
+
+ - המעגל עם הרדיוס הקטן ביותר שמכיל את כל הדגימות 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ ב
+\begin_inset Formula $S$
+\end_inset
+
+ עם 
+\begin_inset Formula $y_{i}=1$
+\end_inset
+
+.
+ נסמן את רדיוסו ב- 
+\begin_inset Formula $r_{S}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+נניח ריאלייזביליות.
+ יהי 
+\begin_inset Formula $h^{*}$
+\end_inset
+
+ מעגל עם שגיאת הכללה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+.
+ נסמן את הרדיוס של 
+\begin_inset Formula $h^{*}$
+\end_inset
+
+ ב
+\begin_inset Formula $r^{*}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+יהיו 
+\begin_inset Formula $\varepsilon,\delta>0$
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula $r\leq r^{*}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula ${\cal D_{X}}\left(\left\{ x\mid r\leq||x||\leq r^{*}\right\} \right)=\varepsilon$
+\end_inset
+
+.
+ נגדיר 
+\begin_inset Formula $E=\left\{ x\in\mathbb{R}^{2}\mid r\leq||x||\leq r^{*}\right\} $
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+כעת, ההסתברות ש-
+\begin_inset Formula $L_{{\cal D}}\left(h_{S}\right)\geq\varepsilon$
+\end_inset
+
+ חסומה מלמעלה ע
+\begin_inset Quotes erd
+\end_inset
+
+י ההסתברות שאף דגימה ב-
+\begin_inset Formula $S$
+\end_inset
+
+ לא נמצאת ב-
+\begin_inset Formula $E$
+\end_inset
+
+.
+ כלומר כל הנקודות ב-
+\begin_inset Formula $S$
+\end_inset
+
+ נדגמו ברדיוס שקטן מ-
+\begin_inset Formula $r$
+\end_inset
+
+, כלומר שגיאה גדולה יותר מ-
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ )לא יתכן שידגמו נקודות ברדיוס שגדול מ-
+\begin_inset Formula $r^{*}$
+\end_inset
+
+ בגלל ש
+\begin_inset Formula $h^{*}$
+\end_inset
+
+ אופטימלית(.
+ הסתברות לנקודה ב
+\begin_inset Formula $E$
+\end_inset
+
+ היא 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+, ולכן ההסתברות לא ליפול שם היא 
+\begin_inset Formula $1-\varepsilon$
+\end_inset
+
+.
+ סה
+\begin_inset Quotes erd
+\end_inset
+
+כ, כיוון שיש 
+\begin_inset Formula $m$
+\end_inset
+
+ דגימות ב-
+\begin_inset Formula $S$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+{\cal D}_{{\cal X}}\left(L_{{\cal D}}\left(h_{S}\right)\geq\varepsilon\right)\leq\left(1-\varepsilon\right)^{m}
+\]
+
+\end_inset
+
+מהתכונה הנתונה לנו בתרגיל: 
+\begin_inset Formula $1-\varepsilon\leq e^{-\varepsilon}$
+\end_inset
+
+ נקבל 
+\begin_inset Formula $\left(1-\varepsilon\right)^{m}\leq e^{-\varepsilon m}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+אנחנו רוצים שההסתברות תהיה קטנה מ-
+\begin_inset Formula $\delta$
+\end_inset
+
+, נמצא איזה 
+\begin_inset Formula $m$
+\end_inset
+
+ נצטרך לפי החסם הזה:
+\begin_inset Formula 
+\[
+\delta\geq e^{-\varepsilon m}\iff\delta e^{\varepsilon m}\geq1\iff e^{\varepsilon m}\geq\frac{1}{\delta}\iff\log_{e}\left(e^{\varepsilon m}\right)\geq\log_{e}\left(\frac{1}{\delta}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff\varepsilon m\geq\log_{e}\left(\frac{1}{\delta}\right)\iff m\geq\frac{\log_{e}\left(\frac{1}{\delta}\right)}{\varepsilon}
+\]
+
+\end_inset
+
+לכן מהמינימליות של 
+\begin_inset Formula $m_{{\cal H}}$
+\end_inset
+
+ נקבל ש
+\begin_inset Formula $m_{{\cal H}}\left(\varepsilon,\delta\right)\leq\frac{\log_{e}\left(\frac{1}{\delta}\right)}{\varepsilon}$
+\end_inset
+
+.
+ סה
+\begin_inset Quotes erd
+\end_inset
+
+כ הראינו שלכל 
+\begin_inset Formula $\varepsilon,\delta>0$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $m\geq\frac{\log_{e}\left(\frac{1}{\delta}\right)}{\varepsilon}\geq m_{{\cal H}}\left(\varepsilon,\delta\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula ${\cal D}_{{\cal X}}\left(L_{{\cal D}}\left(h_{S}\right)\geq\varepsilon\right)\leq\delta$
+\end_inset
+
+ ולכן 
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+ היא למידה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+PAC
+\lang hebrew
+.
 \end_layout
 
 \begin_layout Section*
@@ -649,7 +979,37 @@ VC
 \end_layout
 
 \begin_layout Standard
-נטען כי 
+יהיו 
+\begin_inset Formula ${\cal X}=\{0,1\}^{n}$
+\end_inset
+
+ ו
+\begin_inset Formula ${\cal Y}=\{0,1\}$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $I\subseteq[n]$
+\end_inset
+
+ נגדיר את ה
+\begin_inset Formula $\text{parity function}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+h_{I}(x)=\left(\sum_{i\in I}x_{i}\right)\mod2
+\]
+
+\end_inset
+
+
+\begin_inset Formula ${\cal H}_{\text{parity}}=\left\{ h_{I}\mid I\subseteq[n]\right\} $
+\end_inset
+
+.
+ נטען כי 
 \begin_inset Formula $VC-dim\left({\cal H}_{\text{parity}}\right)=n$
 \end_inset
 
@@ -717,14 +1077,14 @@ VC-dim\left({\cal H}_{\text{parity}}\right)\leq\left\lfloor \log_{2}\left|{\cal 
 \end_inset
 
 כעת נראה שקיימת תת קבוצה 
-\begin_inset Formula $C\subset{\cal H}$
+\begin_inset Formula $C\subset{\cal X}$
 \end_inset
 
  בגודל 
 \begin_inset Formula $n$
 \end_inset
 
- אשר מנתצת ע
+ אשר מנותצת ע
 \begin_inset Quotes erd
 \end_inset
 
@@ -736,12 +1096,191 @@ VC-dim\left({\cal H}_{\text{parity}}\right)\leq\left\lfloor \log_{2}\left|{\cal 
  נגדיר 
 \begin_inset Formula 
 \[
-C=\left\{ \left(x_{1},...,x_{n}\right)\in\left\{ 0,1\right\} ^{n}\mid\forall i\in\left[n\right],\forall j\neq i,x_{i}=1,x_{j}=0\right\} 
+C=\left\{ \left(x_{1},...,x_{n}\right)\in\left\{ 0,1\right\} ^{n}\mid\forall i\in\left[n\right],\forall j\neq i,x_{i}=1,x_{j}=0\right\} =\left\{ e_{1},...,e_{n}\right\} 
 \]
 
 \end_inset
 
+מספר הפונקציות 
+\begin_inset Formula $h:C\rightarrow{\cal Y}$
+\end_inset
 
+ הוא 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $I\subseteq\left[n\right]$
+\end_inset
+
+ הפונקצייה 
+\begin_inset Formula $h_{I}\in{\cal H}$
+\end_inset
+
+ מקיימת 
+\begin_inset Formula 
+\[
+h_{I}\left(x\right)=\left(\sum_{i\in I}x_{i}\right)\mod2
+\]
+
+\end_inset
+
+נטען שהצמצום של 
+\begin_inset Formula $h_{I}$
+\end_inset
+
+ ל-
+\begin_inset Formula $C$
+\end_inset
+
+ מקיים
+\begin_inset Formula 
+\[
+h_{I}\left(x\right)=\begin{cases}
+1 & x\in C_{I}:=\left\{ e_{i}\mid i\in I\right\} \\
+0 & x\in C\setminus C_{I}
+\end{cases}
+\]
+
+\end_inset
+
+וכך נראה ש-
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+ מנתצת את 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ עבור 
+\begin_inset Formula $I\subseteq\left[n\right]$
+\end_inset
+
+, לכל 
+\begin_inset Formula $e_{j}\in C$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula 
+\[
+h_{I}\left(e_{j}\right)=\left(\sum_{i\in I}x_{i}\right)\mod2=\begin{cases}
+1 & j\in I\\
+0 & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+ולכן בהנתן 
+\begin_inset Formula $I\subseteq\left[n\right]$
+\end_inset
+
+, הפונקציה ששולחת את הוקטורים 
+\begin_inset Formula $C_{I}:=\left\{ e_{i}\mid i\in I\right\} $
+\end_inset
+
+ ל-
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ואת שאר הוקטורים ב-
+\begin_inset Formula $C$
+\end_inset
+
+ ל-
+\numeric on
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היא בדיוק 
+\begin_inset Formula $h_{I}$
+\end_inset
+
+ )מצומצמת ל-
+\begin_inset Formula $C$
+\end_inset
+
+(.
+ סה
+\begin_inset Quotes erd
+\end_inset
+
+כ הראינו שכל הפונקציות 
+\begin_inset Formula $h:C\rightarrow{\cal Y}$
+\end_inset
+
+ קיימות ב-
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+ )אחרי צמצום ל-
+\begin_inset Formula $C$
+\end_inset
+
+( ולכן 
+\begin_inset Formula $C$
+\end_inset
+
+ מנותצת ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section*
@@ -777,14 +1316,296 @@ C=\left\{ \left(x_{1},...,x_{n}\right)\in\left\{ 0,1\right\} ^{n}\mid\forall i\i
 :
 \end_layout
 
-\begin_layout Description
-א.
- 
-\end_layout
+\begin_layout Standard
+בהנתן מספר 
+\begin_inset Formula $k$
+\end_inset
 
-\begin_layout Description
-ב.
+, תהי 
+\begin_inset Formula $\left(\left[a_{i},b_{i}\right]\right)_{i=1}^{k}$
+\end_inset
+
+ קבוצה של 
+\begin_inset Formula $k$
+\end_inset
+
+ אינטרוולים על 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ ונגדיר את האיחוד שלהם 
+\begin_inset Formula $A=\bigcup_{i=1}^{k}\left[a_{i},b_{i}\right]$
+\end_inset
+
+ )נניח שהם זרים זה לזה(.
+\begin_inset Newline newline
+\end_inset
+
+מחלקת ההיפותזות 
+\begin_inset Formula ${\cal H}_{k-intervals}$
+\end_inset
+
+ כוללת את הפונקציות
+\begin_inset Formula 
+\[
+h_{A}(x)=\begin{cases}
+0 & x\notin A\\
+1 & x\in A
+\end{cases}
+\]
+
+\end_inset
+
+נטען כי 
+\begin_inset Formula $\text{VC-dim}\left({\cal H}_{k-intervals}\right)=2k$
+\end_inset
+
+.
+ נקח 
+\begin_inset Formula 
+\[
+C=\left\{ x_{1},...,x_{2k}\right\} 
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $h_{A}\in{\cal H}_{k-intervals}$
+\end_inset
+
+ אשר מקיימת
+\begin_inset Formula 
+\[
+h_{A}\left(x_{1}\right)=1,h_{A}\left(x_{2}\right)=0,h_{A}\left(x_{3}\right)=1,...,h_{A}\left(x_{2k-1}\right)=1,h_{A}\left(x_{2k}\right)=0
+\]
+
+\end_inset
+
+נשים לב שיש 
+\begin_inset Formula $k$
+\end_inset
+
+ איברים אותם 
+\begin_inset Formula $h_{A}$
+\end_inset
+
+ שולחת ל-
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
  
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ובין כל שני איברים כאלה יש איבר שנשלח ל-
+\numeric on
+0
+\numeric off
+.
+ כלומר צריך 
+\begin_inset Formula $k$
+\end_inset
+
+ אינטרוולים ב-
+\begin_inset Formula $A$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $h_{A}$
+\end_inset
+
+ אחרת צריך פחות אינטרוולים.
+\begin_inset Newline newline
+\end_inset
+
+נראה כי 
+\begin_inset Formula $\text{VC-dim}\left({\cal H}_{k-intervals}\right)<2k+1$
+\end_inset
+
+.
+ נניח בשלילה ש- 
+\begin_inset Formula $\text{VC-dim}\left({\cal H}_{k-intervals}\right)\geq2k+1$
+\end_inset
+
+.
+ אז קיימת קבוצה 
+\begin_inset Formula $C=\left\{ x_{1}<...<x_{2k+1}\right\} \subseteq\mathbb{R}$
+\end_inset
+
+ שמנותצת ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula ${\cal H}_{k-intervals}$
+\end_inset
+
+.
+ בפרט קיימת הפונקציה 
+\begin_inset Formula $h_{A}\in{\cal H}$
+\end_inset
+
+ כך ש- 
+\begin_inset Formula $A=\bigcup_{i=1}^{k}\left[a_{i},b_{i}\right]$
+\end_inset
+
+, אשר מקיימת
+\begin_inset Formula 
+\[
+h_{A}\left(x_{1}\right)=1,h_{A}\left(x_{2}\right)=0,h_{A}\left(x_{3}\right)=1,...,h_{A}\left(x_{2k}\right)=0,h_{A}\left(x_{2k+1}\right)=1
+\]
+
+\end_inset
+
+נשים לב שיש 
+\begin_inset Formula $k+1$
+\end_inset
+
+ איברים ש-
+\begin_inset Formula $h_{A}$
+\end_inset
+
+ שולחת ל-
+\numeric on
+1
+\numeric off
+.
+ בין כל שני איברים ש-
+\begin_inset Formula $h_{A}$
+\end_inset
+
+ שולחת ל-
+\numeric on
+1
+\numeric off
+, יש איבר שהיא שולחת ל-
+\numeric on
+0
+\numeric off
+.
+ כלומר יש סה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $k+1$
+\end_inset
+
+ אינטרוולים 
+\series bold
+זרים 
+\series default
+ב-
+\begin_inset Formula $A$
+\end_inset
+
+, בסתירה לכך שיש 
+\begin_inset Formula $k$
+\end_inset
+
+ בלבד כאלו.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+כעת נניח ש-
+\begin_inset Formula $A$
+\end_inset
+
+ היא כל איחוד סופי של אינטרוולים, כלומר 
+\begin_inset Formula $k$
+\end_inset
+
+ לא מוגבל.
+ אזי 
+\begin_inset Formula $\text{VC-dim}\left({\cal H}_{intervals}\right)=\infty$
+\end_inset
+
+.
+ 
+\bar under
+נוכיח
+\bar default
+: מתקיים
+\begin_inset Formula 
+\[
+{\cal H}_{intervals}=\bigcup_{k\in\mathbb{N}}{\cal H}_{k-intervals}
+\]
+
+\end_inset
+
+נניח בשלילה ש- 
+\begin_inset Formula $\text{VC-dim}\left({\cal H}_{intervals}\right)=2k-1$
+\end_inset
+
+ עבור 
+\begin_inset Formula $2\leq k\in\mathbb{N}$
+\end_inset
+
+ כלשהו..
+ אבל קודם הוכחנו כי 
+\begin_inset Formula $\text{VC-dim}\left({\cal H}_{k-intervals}\right)=2k$
+\end_inset
+
+ לכן קיימת 
+\begin_inset Formula $C\subset\mathbb{R}$
+\end_inset
+
+ שמנותצת ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula ${\cal H}_{k-intervals}$
+\end_inset
+
+ וכיוון שמתקיים ש- 
+\begin_inset Formula ${\cal H}_{k-intervals}\subset{\cal H}_{intervals}$
+\end_inset
+
+, בפרט 
+\begin_inset Formula $C$
+\end_inset
+
+ מנותצת ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula ${\cal H}_{intervals}$
+\end_inset
+
+ - כלומר 
+\begin_inset Formula $\text{VC-dim}\left({\cal H}_{intervals}\right)\geq2k$
+\end_inset
+
+ בסתירה להנחה.
 \end_layout
 
 \begin_layout Section*
@@ -820,13 +1641,1819 @@ C=\left\{ \left(x_{1},...,x_{n}\right)\in\left\{ 0,1\right\} ^{n}\mid\forall i\i
 :
 \end_layout
 
-\begin_layout Description
-א.
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+7
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נתון כי 
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+ היא בעלת תכונת 
+\begin_inset Formula $UC$
+\end_inset
+
+.
+ יהיו 
+\begin_inset Formula $\delta,\varepsilon>0$
+\end_inset
+
+.
+ מתקיים, לכל 
+\begin_inset Formula $m\geq m_{{\cal H}}^{UC}\left(\frac{\varepsilon}{2},\delta\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+{\cal D}^{m}\left(\left\{ S\in\left({\cal X}\times{\cal Y}\right)^{m}\mid S\text{ is }\frac{\varepsilon}{2}\text{ representative}\right\} \right)\geq1-\delta
+\]
+
+\end_inset
+
+נוכיח את הטענה הבאה: יהיו 
+\begin_inset Formula ${\cal H},{\cal D},\ell$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $S\in\left({\cal X}\times{\cal Y}\right)^{m}$
+\end_inset
+
+ היא 
+\begin_inset Formula $\frac{\varepsilon}{2}\text{ representative}$
+\end_inset
+
+ אז בהנתן 
+\begin_inset Formula $h_{S}\in\underset{h\in{\cal H}}{\text{ERM}}\left(S\right)$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+L_{{\cal D}}\left(h_{S}\right)\leq\min_{h\in{\cal H}}L_{{\cal D}}\left(h\right)+\varepsilon
+\]
+
+\end_inset
+
+הוכחה: מכך ש-
+\begin_inset Formula $S$
+\end_inset
+
+ היא 
+\begin_inset Formula $\frac{\varepsilon}{2}\text{ representative}$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\forall h\in{\cal H}\,\,\left|L_{S}\left(h\right)-L_{{\cal {\cal D}}}\left(h\right)\right|<\frac{\varepsilon}{2}
+\]
+
+\end_inset
+
+נסמן 
+\begin_inset Formula $h_{S}\in\min_{h\in{\cal H}}L_{S}\left(h\right)$
+\end_inset
+
+, 
+\begin_inset Formula $h^{*}\in\min_{h\in{\cal H}}L_{{\cal D}}\left(h\right)$
+\end_inset
+
+.
+ מתקיים
+\begin_inset Formula 
+\[
+\left|L_{S}\left(h^{*}\right)-L_{{\cal {\cal D}}}\left(h^{*}\right)\right|<\frac{\varepsilon}{2}\iff-\frac{\varepsilon}{2}<L_{S}\left(h^{*}\right)-L_{{\cal {\cal D}}}\left(h^{*}\right)<\frac{\varepsilon}{2}\Longrightarrow\left(*\right)L_{S}\left(h^{*}\right)<L_{{\cal {\cal D}}}\left(h^{*}\right)+\frac{\varepsilon}{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left|L_{S}\left(h_{S}\right)-L_{{\cal {\cal D}}}\left(h_{S}\right)\right|<\frac{\varepsilon}{2}\iff-\frac{\varepsilon}{2}<L_{S}\left(h_{S}\right)-L_{{\cal {\cal D}}}\left(h_{S}\right)<\frac{\varepsilon}{2}\Longrightarrow L_{{\cal {\cal D}}}\left(h_{S}\right)<L_{S}\left(h_{S}\right)+\frac{\varepsilon}{2}\leq L_{S}\left(h^{*}\right)+\frac{\varepsilon}{2}\overset{\left(*\right)}{<}L_{{\cal {\cal D}}}\left(h^{*}\right)+\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\min_{h\in{\cal H}}L_{{\cal D}}\left(h\right)+\varepsilon
+\]
+
+\end_inset
+
+מהטענה שהוכחנו נקבל:
+\begin_inset Formula 
+\[
+\left\{ S\in\left({\cal X}\times{\cal Y}\right)^{m}\mid S\text{ is }\frac{\varepsilon}{2}\text{ representative}\right\} \subseteq\left\{ S\in\left({\cal X}\times{\cal Y}\right)^{m}\mid L_{{\cal D}}\left(h_{S}\right)\leq\min_{h\in{\cal H}}L_{{\cal D}}\left(h\right)+\varepsilon\right\} 
+\]
+
+\end_inset
+
+ולכן לכל 
+\begin_inset Formula $m\geq m_{{\cal H}}^{UC}\left(\frac{\varepsilon}{2},\delta\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+{\cal D}^{m}\left(\left\{ S\in\left({\cal X}\times{\cal Y}\right)^{m}\mid L_{{\cal D}}\left(h_{S}\right)\leq\min_{h\in{\cal H}}L_{{\cal D}}\left(h\right)+\varepsilon\right\} \right)\geq{\cal D}^{m}\left(\left\{ S\in\left({\cal X}\times{\cal Y}\right)^{m}\mid S\text{ is }\frac{\varepsilon}{2}\text{ representative}\right\} \right)\geq1-\delta
+\]
+
+\end_inset
+
+כלומר 
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+ היא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Agnostic-PAC
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ עם פונ' 
+\begin_inset Formula $m_{{\cal H}}$
+\end_inset
+
+.
+ כיוון ש- 
+\begin_inset Formula $m_{{\cal H}}$
+\end_inset
+
+ מחזירה את מספר הדגימות המינימלי, מתקיים
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $m_{{\cal H}}\left(\varepsilon,\delta\right)\leq m_{{\cal H}}^{UC}\left(\frac{\varepsilon}{2},\delta\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+8
+\numeric off
+:
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+9
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נתון ש- 
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+ היא למידה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+PAC
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עם סיבוכיות מדגם 
+\begin_inset Formula $m_{{\cal H}}$
+\end_inset
+
+.
+ נתונים 
+\begin_inset Formula $0<\varepsilon_{1}\leq\varepsilon_{2}<1$
+\end_inset
+
+ ו-
+\begin_inset Formula $\delta\in\left(0,1\right)$
+\end_inset
+
+.
+ נסמן 
+\begin_inset Formula $m_{{\cal H}}\left(\varepsilon_{1},\delta\right)=m_{1},m_{{\cal H}}\left(\varepsilon_{2},\delta\right)=m_{2}$
+\end_inset
+
+.
+ נסמן ב-
+\begin_inset Formula ${\cal A}$
+\end_inset
+
+ את האלג'.
+ מהגדרת למידות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+PAC
+\lang hebrew
+, לכל התפלגות 
+\begin_inset Formula ${\cal D}$
+\end_inset
+
+ ופונ' תיוג 
+\begin_inset Formula $f$
+\end_inset
+
+ מתקיים שלכל 
+\begin_inset Formula $m\geq m_{1}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D},f}\left({\cal A}\left(S\right)\right)\leq\varepsilon_{1}\right)\geq1-\delta
+\]
+
+\end_inset
+
+כיוון ש- 
+\begin_inset Formula $\varepsilon_{1}\leq\varepsilon_{2}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left\{ S\mid L_{{\cal D},f}\left({\cal A}\left(S\right)\right)\leq\varepsilon_{1}\right\} \subseteq\left\{ S\mid L_{{\cal D},f}\left({\cal A}\left(S\right)\right)\leq\varepsilon_{2}\right\} $
+\end_inset
+
+ ולכן
+\begin_inset Formula 
+\[
+\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D},f}\left({\cal A}\left(S\right)\right)\leq\varepsilon_{2}\right)\geq\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D},f}\left({\cal A}\left(S\right)\right)\leq\varepsilon_{1}\right)\geq1-\delta
+\]
+
+\end_inset
+
+תכונה זו גם נכונה לכל 
+\begin_inset Formula $m\geq m_{2}$
+\end_inset
+
+.
+ מהמינימליות של 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $m_{2}\leq m_{1}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נתונים 
+\begin_inset Formula $0<\delta_{1}\leq\delta_{2}<1$
+\end_inset
+
+ ו-
+\begin_inset Formula $\varepsilon\in\left(0,1\right)$
+\end_inset
+
+.
+ נסמן 
+\begin_inset Formula $m_{{\cal H}}\left(\varepsilon,\delta_{2}\right)=m_{2},m_{{\cal H}}\left(\varepsilon,\delta_{1}\right)=m_{1}$
+\end_inset
+
+.
+ נסמן ב-
+\begin_inset Formula ${\cal A}$
+\end_inset
+
+ את האלג'.
+ מהגדרת למידות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+PAC
+\lang hebrew
+, לכל התפלגות 
+\begin_inset Formula ${\cal D}$
+\end_inset
+
+ ופונ' תיוג 
+\begin_inset Formula $f$
+\end_inset
+
+ מתקיים שלכל 
+\begin_inset Formula $m\geq m_{1}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D},f}\left({\cal A}\left(S\right)\right)>\varepsilon\right)\leq\delta_{1}\leq\delta_{2}
+\]
+
+\end_inset
+
+התכונה 
+\begin_inset Formula $\mathbb{P}_{S\sim{\cal D}^{m}}\left(L_{{\cal D},f}\left({\cal A}\left(S\right)\right)>\varepsilon\right)\leq\delta_{2}$
+\end_inset
+
+ גם נכונה לכל 
+\begin_inset Formula $m\geq m_{2}$
+\end_inset
+
+ וממינימליות 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $m_{2}\leq m_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+נתון 
+\begin_inset Formula ${\cal H}_{1}\subseteq{\cal H}_{2}$
+\end_inset
+
+.
+ נניח בשלילה כי
+\begin_inset Formula 
+\[
+d=\text{VC-dim}\left({\cal H}_{2}\right)<\text{VC-dim}\left({\cal H}_{1}\right)=k
+\]
+
+\end_inset
+
+אז קיימת ב-
+\begin_inset Formula ${\cal H}_{1}$
+\end_inset
+
+ תת קבוצה בגודל 
+\begin_inset Formula $k$
+\end_inset
+
+ שמנותצת ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula ${\cal H}_{1}$
+\end_inset
+
+ וכיוון ש- 
+\begin_inset Formula $d<k$
+\end_inset
+
+, בהכרח קבוצה זו לא קיימת ב-
+\begin_inset Formula ${\cal H}_{2}$
+\end_inset
+
+.
+ אך זו סתירה כי 
+\begin_inset Formula ${\cal H}_{1}\subseteq{\cal H}_{2}$
+\end_inset
+
+.
  
 \end_layout
 
-\begin_layout Description
-ב.
+\begin_layout Subsection*
+\begin_inset Formula $\text{\textbf{AdaBoost}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+סעיפים
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+13-16
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עם רעש
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+13
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q13_noise0.png
+	lyxscale 60
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+14
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q14_noise0.png
+	lyxscale 60
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+15
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q15_noise0.png
+	lyxscale 60
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+ה-
+\begin_inset Formula $T$
+\end_inset
+
+
+\series bold
+ 
+\series default
+שמזער את השגיאה הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+257
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עם שגיאה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+.
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+16
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q16_noise0.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+ניתן לראות שסביב העיגול הכחול המשקלים גבוהים יותר - זהו איזור בו המסווג
+ לא בטוח בהחלטתו )איזור בו יש ריכוז גבוה של שתי המחלקות( וכנראה טעה הרב
+ פעמים במהלך האיטרציות ולכן המשקלים גדולים.
+\begin_inset Newline newline
+\end_inset
+
+לגבי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+האיזורים האדומים עם משקלים גדולים יותר - 
+\end_layout
+
+\begin_layout Subsection*
+סעיפים
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+13-16
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עם רעש
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0.01
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+13
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q13_noise0.01.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+14
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q14_noise0.01.png
+	lyxscale 60
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+15
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q15_noise0.01.png
+	lyxscale 60
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+ה-
+\begin_inset Formula $T$
+\end_inset
+
+
+\series bold
+ 
+\series default
+שמזער את השגיאה הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+26
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עם שגיאה 
+\begin_inset Formula $0.025$
+\end_inset
+
+.
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+16
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q16_noise0.01.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+הנקודות הכחולות על הרקע האדום הם בעצם רעש ואנו רואים שהמסווג מתקשה לסווג
+ אותן, ובגרף זה ניתן לראות בהתאם שהמשקלים שהוא נותן לנקודות האלה גדולים
+ יחסית.
+ זה גם נכון לנקודות האדומות שנמצאות בתוך העיגול הכחול.
+\end_layout
+
+\begin_layout Subsection*
+סעיפים
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+13-16
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עם רעש
+\family roman
+\series bold
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0.4
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+13
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q13_noise0.4.png
+	lyxscale 60
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+הדאטה רועש, 
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+14
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q14_noise0.4.png
+	lyxscale 60
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+15
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q15_noise0.4.png
+	lyxscale 60
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+ה-
+\begin_inset Formula $T$
+\end_inset
+
+
+\series bold
+ 
+\series default
+שמזער את השגיאה הינו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+12
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עם שגיאה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0.355
+\numeric off
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+סעיף
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+16
+\numeric off
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Q16_noise0.4.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+ככל שהדאטה רועש יותר כך המסווג טועה יותר.
  
 \end_layout
 
