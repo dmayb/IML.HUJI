@@ -1436,7 +1436,7 @@ h_{A}\left(x_{1}\right)=1,h_{A}\left(x_{2}\right)=0,h_{A}\left(x_{3}\right)=1,..
 \begin_inset Formula $h_{A}$
 \end_inset
 
- אחרת צריך פחות אינטרוולים.
+ אחר צריך פחות אינטרוולים.
 \begin_inset Newline newline
 \end_inset
 
@@ -1568,7 +1568,7 @@ h_{A}\left(x_{1}\right)=1,h_{A}\left(x_{2}\right)=0,h_{A}\left(x_{3}\right)=1,..
 \begin_inset Formula $2\leq k\in\mathbb{N}$
 \end_inset
 
- כלשהו..
+ כלשהו.
  אבל קודם הוכחנו כי 
 \begin_inset Formula $\text{VC-dim}\left({\cal H}_{k-intervals}\right)=2k$
 \end_inset
@@ -1639,6 +1639,246 @@ h_{A}\left(x_{1}\right)=1,h_{A}\left(x_{2}\right)=0,h_{A}\left(x_{3}\right)=1,..
 6
 \numeric off
 :
+\end_layout
+
+\begin_layout Standard
+נטען כי 
+\begin_inset Formula $\text{VC-dim}\left({\cal H}_{\text{con}}\right)=d$
+\end_inset
+
+.
+ נראה כי ישנה קבוצה מנותצת מגודל 
+\begin_inset Formula $d$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+נגדיר את הקבוצה 
+\begin_inset Formula $C=\left\{ x^{1},..,x^{d}\right\} $
+\end_inset
+
+ כאשר לכל 
+\begin_inset Formula $i\in d$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $x^{i}=e_{i}$
+\end_inset
+
+ )וקטור יחידה(.
+ 
+\begin_inset Newline newline
+\end_inset
+
+לכל 
+\begin_inset Formula $I\subseteq[d]$
+\end_inset
+
+ נגדיר את הפונקציה:
+\begin_inset Formula 
+\[
+h_{I}\left(x^{i}\right)=\begin{cases}
+1 & i\in I\\
+0 & i\notin I
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $h_{I}\in{\cal H}_{\text{con}}$
+\end_inset
+
+: לכל 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ נכתוב את הליטרל 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ ועבור 
+\begin_inset Formula $i\in\left[d\right]\setminus I$
+\end_inset
+
+ נכתוב 
+\begin_inset Formula $\bar{x_{i}}$
+\end_inset
+
+ונצרף את כל הליטרלים ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $\wedge$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $h_{I}$
+\end_inset
+
+ הן כל הפונקציות הנחוצות להראות ש-
+\begin_inset Formula $C$
+\end_inset
+
+ מנותצת.
+ לכן 
+\begin_inset Formula $VCdim({\cal H}_{con})\geq d$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+נניח בשלילה כי 
+\begin_inset Formula $\text{VC-dim}\left({\cal H}_{\text{con}}\right)>d$
+\end_inset
+
+.
+ אז קיימת קבוצה 
+\begin_inset Formula $C=\left\{ x^{1},...,x^{d+1}\right\} \subset{\cal X}$
+\end_inset
+
+ אשר מנותצת ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula ${\cal H}_{\text{con}}$
+\end_inset
+
+.
+ בפרט לכל 
+\begin_inset Formula $i,j\in\left[d+1\right]$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $h_{i}\in{\cal H}_{\text{con}}$
+\end_inset
+
+ כך ש
+\begin_inset Formula 
+\[
+h_{i}\left(x^{j}\right)=\begin{cases}
+0 & i=j\\
+1 & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+מהגדרה זו, לכל 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ קיים ליטרל 
+\begin_inset Formula $\ell_{i}$
+\end_inset
+
+ אשר הוא שקר על 
+\begin_inset Formula $x^{i}$
+\end_inset
+
+ ואמת על כל 
+\begin_inset Formula $x^{j}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $j\neq i$
+\end_inset
+
+.
+ מתוך הליטרלים 
+\begin_inset Formula $\ell_{1},...,\ell_{d+1}$
+\end_inset
+
+ משובך היונים קיימים שני ליטרלים המתאימים לאותו משתנה בוליאני.
+ נסמנם 
+\begin_inset Formula $\ell_{i},\ell_{j}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $i\neq j\in\left[d+1\right]$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+אם 
+\begin_inset Formula $\ell_{i}=\ell_{j}$
+\end_inset
+
+, כיוון ש- 
+\begin_inset Formula $\ell_{j}$
+\end_inset
+
+ נותן אמת על 
+\begin_inset Formula $x^{i}$
+\end_inset
+
+ נקבל שגם 
+\begin_inset Formula $\ell_{i}$
+\end_inset
+
+ נותן אמת על 
+\begin_inset Formula $x^{i}$
+\end_inset
+
+, בסתירה להגדרתו.
+\begin_inset Newline newline
+\end_inset
+
+אם 
+\begin_inset Formula $\ell_{i}\neq\ell_{j}$
+\end_inset
+
+, יהי 
+\begin_inset Formula $k\in\left[d+1\right]$
+\end_inset
+
+ כך ש- 
+\begin_inset Formula $k\notin\left\{ i,j\right\} $
+\end_inset
+
+, אזי לא יתכן שגם 
+\begin_inset Formula $\ell_{i}$
+\end_inset
+
+ וגם 
+\begin_inset Formula $\ell_{j}$
+\end_inset
+
+ יתנו אמת על 
+\begin_inset Formula $x^{k}$
+\end_inset
+
+ וזו בסתירה להגדרתם.
+ 
+\begin_inset Newline newline
+\end_inset
+
+סה
+\begin_inset Quotes erd
+\end_inset
+
+כ קיבלנו סתירה ולכן 
+\begin_inset Formula $\text{VC-dim}\left({\cal H}_{\text{con}}\right)\leq d$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section*
@@ -1892,6 +2132,231 @@ Agnostic-PAC
 8
 \numeric off
 :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+ איננה למידה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+Agnostic PAC
+\lang hebrew
+.
+ נקח לדוגמא את המחלקה 
+\begin_inset Formula ${\cal H}=\left\{ h:{\cal X}\rightarrow\left\{ \pm1\right\} \right\} $
+\end_inset
+
+.
+ אנו יודעים שהיא איננה למידה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+PAC
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- ולכן גם איננה למידה 
+\lang english
+Agnostic PAC
+\lang hebrew
+.
+ נניח בשלילה שכן.
+ אז קיים אלגוריתם 
+\begin_inset Formula ${\cal A}$
+\end_inset
+
+ ופונקציה 
+\begin_inset Formula $m_{{\cal H}}\left(\varepsilon,\delta\right)$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $\varepsilon,\delta\in\left(0,1\right)$
+\end_inset
+
+ ולכל התפלגות 
+\begin_inset Formula ${\cal D}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $Z$
+\end_inset
+
+, אם 
+\begin_inset Formula $m\geq m_{{\cal H}}\left(\varepsilon,\delta\right)$
+\end_inset
+
+ ו-
+\begin_inset Formula $S\sim{\cal D}^{m}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\mathbb{P}\left({\cal A}\left(S\right)\leq\min_{h\in{\cal H}}L_{{\cal D}}\left(h\right)+\varepsilon\right)\geq1-\delta$
+\end_inset
+
+.
+ בפרט זה נכון לכל התפלגות 
+\begin_inset Formula ${\cal D}$
+\end_inset
+
+ עם פונקציה דטרמיניסטית 
+\begin_inset Formula $f\in{\cal H}$
+\end_inset
+
+ .
+\begin_inset Formula 
+\[
+{\cal D}\left(y\mid x\right)=\begin{cases}
+1 & y=f(x)\\
+0 & else
+\end{cases}
+\]
+
+\end_inset
+
+אפשר לבנות כל התפלגות כזו אפשר לבנות ע
+\begin_inset Quotes erd
+\end_inset
+
+י בחירת התפלגות על 
+\begin_inset Formula ${\cal X}$
+\end_inset
+
+ ובחירת 
+\begin_inset Formula $f\in{\cal H}$
+\end_inset
+
+.
+ כלומר 
+\begin_inset Formula ${\cal H}$
+\end_inset
+
+ למידה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+PAC
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בסתירה.
 \end_layout
 
 \begin_layout Section*
@@ -3202,14 +3667,6 @@ d=\text{VC-dim}\left({\cal H}_{2}\right)<\text{VC-dim}\left({\cal H}_{1}\right)=
 \end_inset
 
 
-\series default
-הדאטה רועש, 
-\series bold
-
-\begin_inset Newline newline
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
@@ -3452,9 +3909,114 @@ d=\text{VC-dim}\left({\cal H}_{2}\right)<\text{VC-dim}\left({\cal H}_{1}\right)=
 \end_inset
 
 
-\series default
-ככל שהדאטה רועש יותר כך המסווג טועה יותר.
+\bar under
+הסבר שאלה
+\family roman
+\shape up
+\size normal
+\emph off
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
  
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+13
+\numeric off
+\bar default
+: 
+\series default
+ככל שיש יותר רעש, אם אנו משתמשים בהרבה 
+\begin_inset Formula $\text{decision stumps}$
+\end_inset
+
+ אנו מקבלים 
+\begin_inset Formula $\text{over-fitting}$
+\end_inset
+
+, ואז השגיאה הכללית גדלה.
+ ובאמת רואים שככל ש-
+\begin_inset Formula $T$
+\end_inset
+
+
+\series bold
+ 
+\series default
+גדל כך שהשגיאה על ה-
+\lang english
+test set
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+גדלה כשיש יותר רעש.
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+\numeric on
+15
+\numeric off
+: ככל שהדאטה רועש יותר כך המסווג טועה יותר.
+ אם נשתמש בהרבה 
+\begin_inset Formula $\text{decision stumps}$
+\end_inset
+
+, כאשר הדאטא מורעש אנחנו מקבלים 
+\begin_inset Formula $\text{over-fitting}$
+\end_inset
+
+ עבור דגימות מורעשות ושגויות ולכן השגיאה גדלה.
+\begin_inset Newline newline
+\end_inset
+
+לכן אנחנו מקבלים תוצאות טובות יותר עבור 
+\begin_inset Formula $T$
+\end_inset
+
+ נמוך יותר כאשר הרעש גבוה.
 \end_layout
 
 \end_body
