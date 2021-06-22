@@ -1,3 +1,8 @@
+# IML.HUJI 0.8.0 (22-06-2021)
+## Added
+- Chapter 8 - Kernel Methods
+
+
 # IML.HUJI 0.7.0 (26-05-2021)
 ## Added
 - Chapter 7 - Unsupervised Learning
