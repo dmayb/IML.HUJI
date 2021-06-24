@@ -1,0 +1,660 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\begin_preamble
+\date{}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+\size large
+כותרת
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+:
+\end_layout
+
+\begin_layout Description
+א.
+ נוכיח שעבור 
+\begin_inset Formula $h^{*}\in\underset{{\cal H}_{k}}{\text{ERM}}\left(S_{\text{all}}\right)$
+\end_inset
+
+ מתקיים בהסתברות של לפחות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $1-\delta$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+L\left(h^{*}\right)\leq\min_{h\in{\cal H}_{k}}L\left(h\right)+\sqrt{\frac{2\ln\left(\frac{2\left|{\cal H}_{k}\right|}{\delta}\right)}{m}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+ב.
+ 
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+כיוון ש- 
+\begin_inset Formula $X^{T}X=I_{d}$
+\end_inset
+
+, 
+\begin_inset Formula $X$
+\end_inset
+
+ הפיכה, ולכן הפתרון ל-
+\lang english
+LS
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא
+\begin_inset Formula 
+\[
+\hat{w}^{LS}=\left(X^{T}X\right)^{-1}X^{T}y=\left(=I_{n}\right)^{-1}X^{T}y=X^{T}y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+א.
+ בהרצאה ראינו שניתן להגיע למשוואה הבאה בדרך לפתרון
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+ridge
+\lang hebrew
+:
+\series bold
+
+\begin_inset Formula 
+\[
+X^{T}y=\left(X^{T}X+\lambda I\right)\hat{w}^{ridge}=\left(I+\lambda I\right)\hat{w}^{ridge}\hat{w}^{ridge}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow\hat{w}^{ridge}=\frac{1}{1+\lambda}X^{T}y=\frac{\hat{w}^{LS}}{1+\lambda}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+ב.
+ בעיית 
+\begin_inset Formula 
+\[
+\eta_{\sqrt{\lambda}}\left(\hat{w}^{LS}\right)_{i}=\eta_{\sqrt{\lambda}}\left(X^{T}y\right)_{i}=\begin{cases}
+\left(X^{T}y\right)_{i} & \left|\left(X^{T}y\right)_{i}\right|\geq\sqrt{\lambda}\\
+0 & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+\boldsymbol{1}\left[\left|\left(X^{T}y\right)_{1}\right|\geq\sqrt{\lambda}\right]\cdot\left(X^{T}y\right)_{1}\\
+\vdots\\
+\boldsymbol{1}\left[\left|\left(X^{T}y\right)_{d}\right|\geq\sqrt{\lambda}\right]\cdot\left(X^{T}y\right)_{d}
+\end{array}\right)
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $i\in\left[d\right]$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+:
+\end_layout
+
+\begin_layout Description
+א.
+ בהרצאה ראינו:
+\begin_inset Formula 
+\[
+\hat{w}=\left(X^{T}X\right)^{-1}X^{T}y
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X^{T}y=\left(X^{T}X+\lambda I\right)\hat{w}\left(\lambda\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longrightarrow\hat{w}\left(\lambda\right)=\left(X^{T}X+\lambda I\right)^{-1}X^{T}y
+\]
+
+\end_inset
+
+מתקיים:
+\begin_inset Formula 
+\begin{align*}
+A_{\lambda}\hat{w} & =\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)\left(\left(X^{T}X\right)^{-1}X^{T}y\right)\\
+ & =\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(\left(X^{T}X\right)\left(X^{T}X\right)^{-1}\right)X^{T}y\\
+ & =\left(X^{T}X+\lambda I_{d}\right)^{-1}I_{d}X^{T}y\\
+ & =\left(X^{T}X+\lambda I_{d}\right)^{-1}X^{T}y=\hat{w}\left(\lambda\right)
+\end{align*}
+
+\end_inset
+
+כדרוש
+\end_layout
+
+\begin_layout Description
+ב.
+ 
+\begin_inset Formula $A_{\lambda}$
+\end_inset
+
+ לא מקרית ולכן
+\begin_inset Formula 
+\[
+\mathbb{E}\left(\hat{w}\left(\lambda\right)\right)=\mathbb{E}\left(A_{\lambda}\hat{w}\right)=A_{\lambda}\mathbb{E}\left(\hat{w}\right)=A_{\lambda}w=\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)w
+\]
+
+\end_inset
+
+עבור 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $A_{\lambda}w=\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)w\neq w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+ג.
+ אנו יודעים שמתקיים:
+\begin_inset Formula 
+\[
+\text{Var}\left(\hat{w}\right)=\sigma^{2}\left(X^{T}X\right)^{-1}
+\]
+
+\end_inset
+
+מתקיים
+\begin_inset Formula 
+\[
+\text{Var}\left(\hat{w}\left(\lambda\right)\right)=\text{Var}\left(A_{\lambda}\hat{w}\right)=A_{\lambda}\text{Var}\left(\hat{w}\right)A_{\lambda}^{T}=A_{\lambda}\sigma^{2}\left(X^{T}X\right)^{-1}A_{\lambda}^{T}=\sigma^{2}A_{\lambda}\left(X^{T}X\right)^{-1}A_{\lambda}^{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+ד.
+ בהרצאה ראינו שמתקיים
+\begin_inset Formula 
+\[
+\mathbb{E}\left(\left\Vert \hat{y}-y^{*}\right\Vert ^{2}\right)=\mathbb{E}\left(\|\hat{y}-\overline{y}\|^{2}\right)+\left\Vert \overline{y}-y^{*}\right\Vert ^{2}=\text{Var}\left(\hat{y}\right)+\text{Bias}\left(\hat{y}\right)^{2}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ היא ההיפותזה האמיתית, 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+ היא היפותזה שבוחר האלגוריתם, 
+\begin_inset Formula $\overline{y}=\mathbb{E}\left(\hat{y}\right)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+אצלנו מתקיים 
+\begin_inset Formula $y^{*}=w$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{y}=\hat{w}\left(\lambda\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\overline{y}=\mathbb{E}\left(\hat{w}\left(\lambda\right)\right)$
+\end_inset
+
+.
+ נקבל
+\begin_inset Formula 
+\[
+\text{Bias}\left(\lambda\right)^{2}=\left\Vert \mathbb{E}\left(\hat{w}\left(\lambda\right)\right)-w\right\Vert ^{2}=\left\Vert A_{\lambda}w-w\right\Vert ^{2}=\left\Vert \left(A_{\lambda}-I\right)w\right\Vert ^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{Var}\left(\lambda\right)=\mathbb{E}\left(\|\hat{w}\left(\lambda\right)-w\|^{2}\right)=
+\]
+
+\end_inset
+
+לכן
+\begin_inset Formula 
+\[
+\text{MSE}\left(\lambda\right)=\text{Bias}\left(\lambda\right)^{2}+\text{Var}\left(\lambda\right)=\left\Vert \left(A_{\lambda}-I\right)w\right\Vert ^{2}+
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+:
+\end_layout
+
+\begin_layout Description
+א.
+ 
+\end_layout
+
+\begin_layout Description
+ב.
+ 
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+:
+\end_layout
+
+\begin_layout Description
+א.
+ 
+\end_layout
+
+\begin_layout Description
+ב.
+ 
+\end_layout
+
+\begin_layout Section*
+
+\size large
+שאלה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+6
+\numeric off
+:
+\end_layout
+
+\begin_layout Description
+א.
+ 
+\end_layout
+
+\begin_layout Description
+ב.
+ 
+\end_layout
+
+\end_body
+\end_document
