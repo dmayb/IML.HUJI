@@ -44,8 +44,8 @@ def KFold_cross_validation(k, DX, Dy, sigma):
             A.fit(X[s], y[s])
             y_predicted_validation = A.predict(X[si])
             y_predicted_train = A.predict(X[s])
-            error_train += np.sqrt(np.sum((y[s] - y_predicted_train) ** 2))
-            error_validation += np.sqrt(np.sum((y[si] - y_predicted_validation)**2))
+            error_train += np.mean((y[s] - y_predicted_train) ** 2)
+            error_validation += np.mean((y[si] - y_predicted_validation)**2)
         errors_validation[i] = error_validation / k
         errors_train[i] = error_train / k
     plt.figure()
@@ -54,15 +54,16 @@ def KFold_cross_validation(k, DX, Dy, sigma):
     plt.legend()
     plt.suptitle("loss of KFold validation&training K=" + str(k) + " sigma=" + str(sigma))
     plt.savefig("polynomialKFold" + str(k) + "_s=" + str(sigma))
-    return degrees[np.argmin(errors_validation)]
+    return degrees[np.argmin(errors_validation)], np.min(errors_validation)
 
 
 def q4(sigma, ks):
     print("sigma =", sigma)
     DX, Dy, TX, Ty = draw_samples(sigma)
     for k in ks:
-        bestDeg = KFold_cross_validation(k, DX, Dy, sigma)
+        bestDeg, valError = KFold_cross_validation(k, DX, Dy, sigma)
         print("best degree k= " + str(k) + ": ", bestDeg)
+        print("validation error for k= " + str(k) + ": ", valError)
         A = LinearRegression(fit_intercept=bestDeg)
         DX_fit = PolynomialFeatures(bestDeg).fit_transform(DX.reshape(-1, 1))
         TX_fit = PolynomialFeatures(bestDeg).fit_transform(TX.reshape(-1, 1))

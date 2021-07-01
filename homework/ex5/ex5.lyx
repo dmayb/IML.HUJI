@@ -88,7 +88,66 @@
 
 \series bold
 \size large
-כותרת
+תרגיל
+\family roman
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\family roman
+\shape up
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+IML
+\family roman
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ - מאי ביבי
 \end_layout
 
 \begin_layout Section*
@@ -168,12 +227,160 @@ L\left(h^{*}\right)\leq\min_{h\in{\cal H}_{k}}L\left(h\right)+\sqrt{\frac{2\ln\l
 
 \end_inset
 
+בתרגול הוכחנו שלכל היפותזה 
+\begin_inset Formula $h$
+\end_inset
 
+ ולכל 
+\begin_inset Formula $\delta$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\mathbb{P}\left(\left|L_{S_{all}}(h)-L_{\mathcal{D}}(h)\right|\leqslant\sqrt{\frac{\ln(2/\delta)}{2m}}\right)\geqslant1-\delta
+\]
+
+\end_inset
+
+בפרט עבור כל 
+\begin_inset Formula $h_{i}\in{\cal H}_{k}$
+\end_inset
+
+, עבור 
+\begin_inset Formula $\frac{\delta}{\left|{\cal H}_{k}\right|}$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\mathbb{P}\left(\left|L_{S_{all}}\left(h_{i}\right)-L_{\mathcal{D}}\left(h_{i}\right)\right|\geq\sqrt{\frac{\ln\left(\frac{2\left|{\cal H}_{k}\right|}{\delta}\right)}{2m}}\right)\leq\frac{\delta}{\left|{\cal H}_{k}\right|}
+\]
+
+\end_inset
+
+מחסם האיחוד, לכל 
+\begin_inset Formula $h_{i}\in{\cal H}_{k}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbb{P}\left(\left|L_{S_{all}}\left(h_{i}\right)-L_{\mathcal{D}}\left(h_{i}\right)\right|\geq\sqrt{\frac{2\ln\left(\frac{2\left|{\cal H}_{k}\right|}{\delta}\right)}{2m}}\right)\leq\mathbb{P}\left(\bigcup_{h_{i}\in{\cal H}_{k}}\left|L_{S_{all}}\left(h_{i}\right)-L_{\mathcal{D}}\left(h_{i}\right)\right|\geq\sqrt{\frac{\ln\left(\frac{2\left|{\cal H}_{k}\right|}{\delta}\right)}{2m}}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\leq\sum_{h_{i}\in\left|{\cal H}_{k}\right|}\mathbb{P}\left(\left|L_{S_{all}}\left(h_{i}\right)-L_{\mathcal{D}}\left(h_{i}\right)\right|\geq\sqrt{\frac{\ln\left(\frac{2\left|{\cal H}_{k}\right|}{\delta}\right)}{2m}}\right)\leq\sum_{h_{i}\in\left|{\cal H}_{k}\right|}\frac{\delta}{\left|{\cal H}_{k}\right|}=\left|{\cal H}_{k}\right|\frac{\delta}{\left|{\cal H}_{k}\right|}=\delta
+\]
+
+\end_inset
+
+סה
+\begin_inset Quotes erd
+\end_inset
+
+כ קיבלנו שלכל 
+\begin_inset Formula $h_{i}\in{\cal H}_{k}$
+\end_inset
+
+ מתקיים עם הסתברות של לפחות 
+\begin_inset Formula $1-\delta$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left|L_{S_{all}}\left(h_{i}\right)-L_{\mathcal{D}}\left(h_{i}\right)\right|\geq\sqrt{\frac{2\ln\left(\frac{2\left|{\cal H}_{k}\right|}{\delta}\right)}{2m}}
+\]
+
+\end_inset
+
+לכן עבור 
+\begin_inset Formula $h_{i}\in{\cal H}_{k}$
+\end_inset
+
+, מתקיים עם הסתברות של לפחות 
+\begin_inset Formula $1-\delta$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+L_{\mathcal{D}}\left(h^{*}\right)\leqslant L_{S_{all}}\left(h^{*}\right)+\sqrt{\frac{\ln\left(2\left|\mathcal{H}_{k}\right|/\delta\right)}{2m}}\leqslant L_{S_{all}}\left(h_{i}\right)+\sqrt{\frac{\ln\left(2\left|\mathcal{H}_{k}\right|/\delta\right)}{2m}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+L_{\mathcal{D}}\left(h_{i}\right)+2\sqrt{\frac{\ln\left(2\left|\mathcal{H}_{k}\right|/\delta\right)}{2m}}=L_{\mathcal{D}}\left(h_{i}\right)+\sqrt{\frac{2\ln\left(2\left|\mathcal{H}_{k}\right|/\delta\right)}{m}}
+\]
+
+\end_inset
+
+ובפרט עבור 
+\begin_inset Formula $h_{i}=\min_{h\in{\cal H}_{k}}L\left(h\right)$
+\end_inset
+
+ נקבל
+\begin_inset Formula 
+\[
+\mathbb{P}\left(L\left(h^{*}\right)\leq\min_{h\in{\cal H}_{k}}L\left(h\right)+\sqrt{\frac{2\ln\left(\frac{2\left|{\cal H}_{k}\right|}{\delta}\right)}{m}}\right)\geqslant1-\delta
+\]
+
+\end_inset
+
+כדרוש.
 \end_layout
 
 \begin_layout Description
 ב.
- 
+ מהסעיף הקודם
+\begin_inset Formula 
+\[
+\mathbb{P}\left(L_{\mathcal{D}}\left(h^{*}\right)\leqslant\min_{h\in\mathcal{H}}L_{\mathcal{D}}(h)+\sqrt{\frac{2\ln(4k/\delta)}{\alpha m}}\right)\geqslant1-\frac{\delta}{2}
+\]
+
+\end_inset
+
+ולכל 
+\begin_inset Formula $i\in\left[k\right]$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\mathbb{P}\left(L_{\mathcal{D}}\left(h_{i}\right)\leqslant\min_{h\in\mathcal{H}_{i}}L_{\mathcal{D}}(h)+\sqrt{\frac{2\ln\left(4\left|\mathcal{H}_{i}\right|/\delta\right)}{(1-\alpha)m}}\right)\geqslant1-\frac{\delta}{2}
+\]
+
+\end_inset
+
+לכן, עם הסתברות של לפחות 
+\begin_inset Formula $1-\delta$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+L_{\mathcal{D}}\left(h^{*}\right)\leqslant L_{\mathcal{D}}\left(h_{j}\right)+\sqrt{\frac{2\ln(4k/\delta)}{\alpha m}}\leqslant\min_{h\in\mathcal{H}_{i}}L_{\mathcal{D}}(h)+\sqrt{\frac{2\ln\left(4\left|\mathcal{H}_{i}\right|/\delta\right)}{(1-\alpha)m}}+\sqrt{\frac{2\ln(4k/\delta)}{\alpha m}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\min_{h\in\mathcal{H}_{k}}L_{\mathcal{D}}(h)+\sqrt{\frac{2\ln\left(4\left|\mathcal{H}_{i}\right|/\delta\right)}{(1-\alpha)m}}+\sqrt{\frac{2\ln(4k/\delta)}{\alpha m}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -312,25 +519,52 @@ X^{T}y=\left(X^{T}X+\lambda I\right)\hat{w}^{ridge}=\left(I+\lambda I\right)\hat
 
 \begin_layout Description
 ב.
- בעיית 
+ יהי 
+\begin_inset Formula $w\in\mathbb{R}^{d}$
+\end_inset
+
+.
+ מתקיים
 \begin_inset Formula 
 \[
-\eta_{\sqrt{\lambda}}\left(\hat{w}^{LS}\right)_{i}=\eta_{\sqrt{\lambda}}\left(X^{T}y\right)_{i}=\begin{cases}
-\left(X^{T}y\right)_{i} & \left|\left(X^{T}y\right)_{i}\right|\geq\sqrt{\lambda}\\
-0 & \text{else}
-\end{cases}
+\left\Vert y-Xw\right\Vert ^{2}=\left\Vert X^{T}y-X^{T}Xw\right\Vert ^{2}=\left\Vert \hat{w}^{LS}-w\right\Vert ^{2}=\sum_{i=1}^{d}\left(\hat{w}_{i}^{LS}-w_{i}\right)^{2}
 \]
 
 \end_inset
 
-
+בעיית ה-
+\lang english
+subset selection
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היא
 \begin_inset Formula 
 \[
-\left(\begin{array}{c}
-\boldsymbol{1}\left[\left|\left(X^{T}y\right)_{1}\right|\geq\sqrt{\lambda}\right]\cdot\left(X^{T}y\right)_{1}\\
-\vdots\\
-\boldsymbol{1}\left[\left|\left(X^{T}y\right)_{d}\right|\geq\sqrt{\lambda}\right]\cdot\left(X^{T}y\right)_{d}
-\end{array}\right)
+\text{arg}\min_{w\in\mathbb{R}^{d}}\left\Vert y-Xw\right\Vert ^{2}+\lambda\left\Vert w\right\Vert _{0}=\text{arg}\min_{w\in\mathbb{R}^{d}}\sum_{i=1}^{d}\left(\hat{w}_{i}^{LS}-w_{i}\right)^{2}+\lambda\left\Vert w_{i}\right\Vert _{0}=\text{arg}\min_{w\in\mathbb{R}^{d}}\sum_{i=1}^{d}\left(\hat{w}_{i}^{LS}-w_{i}\right)^{2}+\lambda\cdot\boldsymbol{1}_{w_{i}\neq0}
 \]
 
 \end_inset
@@ -339,7 +573,60 @@ X^{T}y=\left(X^{T}X+\lambda I\right)\hat{w}^{ridge}=\left(I+\lambda I\right)\hat
 \begin_inset Formula $i\in\left[d\right]$
 \end_inset
 
- מתקיים
+ 
+\begin_inset Formula 
+\[
+\text{arg}\min_{w_{i}\in\mathbb{R}}\left(\hat{w}_{i}^{LS}-w_{i}\right)^{2}+\lambda\cdot\boldsymbol{1}_{w_{i}\neq0}
+\]
+
+\end_inset
+
+נשים לב שעבור 
+\begin_inset Formula $\left(\hat{w}_{i}^{LS}\right)^{2}>\lambda$
+\end_inset
+
+ אנחנו נרצה 
+\begin_inset Formula $w_{i}=\hat{w}_{i}^{LS}$
+\end_inset
+
+ ואז 
+\begin_inset Formula 
+\[
+\left(\hat{w}_{i}^{LS}-w_{i}\right)^{2}+\lambda\cdot\boldsymbol{1}_{w_{i}\neq0}=\lambda
+\]
+
+\end_inset
+
+ וזה באמת המינימום במקרה זה.
+ עבור 
+\begin_inset Formula $\left(\hat{w}_{i}^{LS}\right)^{2}\leq\lambda$
+\end_inset
+
+, נרצה 
+\begin_inset Formula $w_{i}=0$
+\end_inset
+
+, ואז נקבל 
+\begin_inset Formula 
+\[
+\left(\hat{w}_{i}^{LS}-w_{i}\right)^{2}+\lambda\cdot\boldsymbol{1}_{w_{i}\neq0}=\hat{w}_{i}^{LS}
+\]
+
+\end_inset
+
+וזה באמת המינימום במקרה זה.
+ ונשים לב ששני המרים שתיארו הם בדיוק:
+\begin_inset Formula 
+\[
+\eta_{\sqrt{\lambda}}\left(\hat{w}^{LS}\right)_{i}=\begin{cases}
+\hat{w}_{i}^{LS} & \left|\hat{w}_{i}^{LS}\right|\geq\sqrt{\lambda}\\
+0 & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -475,11 +762,11 @@ A_{\lambda}\hat{w} & =\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)\
 \begin_inset Formula $y^{*}$
 \end_inset
 
- היא ההיפותזה האמיתית, 
+ הם ערכי האמת, 
 \begin_inset Formula $\hat{y}$
 \end_inset
 
- היא היפותזה שבוחר האלגוריתם, 
+ הוא הפתרון שבוחר האלגוריתם ו- 
 \begin_inset Formula $\overline{y}=\mathbb{E}\left(\hat{y}\right)$
 \end_inset
 
@@ -511,7 +798,7 @@ A_{\lambda}\hat{w} & =\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)\
 
 \begin_inset Formula 
 \[
-\text{Var}\left(\lambda\right)=\mathbb{E}\left(\|\hat{w}\left(\lambda\right)-w\|^{2}\right)=
+\text{Var}\left(\lambda\right)=\text{Tr}\left(\text{Var}\left(\hat{w}\left(\lambda\right)\right)\right)=\text{Tr}\left(\sigma^{2}A_{\lambda}\left(X^{T}X\right)^{-1}A_{\lambda}^{T}\right)=\sigma^{2}\text{Tr}\left(A_{\lambda}\left(X^{T}X\right)^{-1}A_{\lambda}^{T}\right)
 \]
 
 \end_inset
@@ -519,12 +806,143 @@ A_{\lambda}\hat{w} & =\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)\
 לכן
 \begin_inset Formula 
 \[
-\text{MSE}\left(\lambda\right)=\text{Bias}\left(\lambda\right)^{2}+\text{Var}\left(\lambda\right)=\left\Vert \left(A_{\lambda}-I\right)w\right\Vert ^{2}+
+\text{MSE}\left(\lambda\right)=\text{Bias}\left(\lambda\right)^{2}+\text{Var}\left(\lambda\right)=\left\Vert \left(A_{\lambda}-I\right)w\right\Vert ^{2}+\sigma^{2}\text{Tr}\left(A_{\lambda}\left(X^{T}X\right)^{-1}A_{\lambda}^{T}\right)
+\]
+
+\end_inset
+
+נגזור ונציב 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{d}{d\lambda}\text{Bias}\left(\lambda\right)^{2}\Biggr|_{\lambda=0}=\frac{d}{d\lambda}\left(\left\Vert \left(A_{\lambda}-I\right)w\right\Vert ^{2}\right)\Biggr|_{\lambda=0}=\frac{d}{d\lambda}\left(\sum_{i}\sum_{j}\left(\left(A_{\lambda}-I\right)_{i,j}w_{j}\right)^{2}\right)\Biggr|_{\lambda=0}
 \]
 
 \end_inset
 
 
+\begin_inset Formula 
+\[
+=2\sum_{i}\sum_{j}\left(A_{\lambda}-I\right)_{i,j}w_{j}\Biggr|_{\lambda=0}\cdot\frac{d}{d\lambda}\sum_{j}\left(A_{\lambda}-I\right)_{i,j}w_{j}\Biggr|_{\lambda=0}=2\sum_{i}\sum_{j}0_{i,j}w_{j}\Biggr|_{\lambda=0}\cdot\frac{d}{d\lambda}\sum_{j}\left(A_{\lambda}-I\right)_{i,j}w_{j}\Biggr|_{\lambda=0}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{d}{d\lambda}\text{Var}\left(\lambda\right)\Biggr|_{\lambda=0}=\frac{d}{d\lambda}\sigma^{2}\text{Tr}\left(A_{\lambda}\left(X^{T}X\right)^{-1}A_{\lambda}^{T}\right)\Biggr|_{\lambda=0}=\frac{d}{d\lambda}\sigma^{2}\sum_{i}\left(A_{\lambda}\left(X^{T}X\right)^{-1}A_{\lambda}^{T}\right)_{i,i}\Biggr|_{\lambda=0}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{d}{d\lambda}\sigma^{2}\sum_{i}\left(\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)\left(X^{T}X\right)^{-1}\left(\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)\right)^{T}\right)_{i,i}\Biggr|_{\lambda=0}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{d}{d\lambda}\sigma^{2}\sum_{i}\left(\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)^{T}\left(X^{T}X+\lambda I_{d}\right)^{-1T}\right)_{i,i}\Biggr|_{\lambda=0}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{d}{d\lambda}\sigma^{2}\sum_{i}\left(\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)\left(X^{T}X+\lambda I_{d}\right)^{-1}\right)_{i,i}\Biggr|_{\lambda=0}...<0
+\]
+
+\end_inset
+
+לא כל כך ידעתי איך להמשיך..
+\begin_inset Formula 
+\[
+\frac{d}{d\lambda}\text{MSE}\left(\lambda\right)\Biggr|_{\lambda=0}=\frac{d}{d\lambda}\Biggr|_{\lambda=0}\text{Bias}\left(\lambda\right)^{2}+\frac{d}{d\lambda}\text{Var}\left(\lambda\right)\Biggr|_{\lambda=0}<0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+ה.
+ הראינו שהנגזרת של 
+\begin_inset Formula $\text{MSE}\left(\lambda\right)$
+\end_inset
+
+ בנקודה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היא שלילית, כלומר הפונקציה בירידה ולכן קיים 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\text{MSE}\left(\lambda\right)<\text{MSE}\left(0\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section*
@@ -560,14 +978,339 @@ A_{\lambda}\hat{w} & =\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)\
 :
 \end_layout
 
-\begin_layout Description
-א.
- 
-\end_layout
+\begin_layout Standard
 
-\begin_layout Description
-ב.
+\series bold
+רעש עם 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\lang english
+K-fold
+\lang hebrew
+ ולדיציה עם 
+\begin_inset Formula $k=2$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename polynomialKFold2_s=1.png
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\lang english
+K-fold
+\lang hebrew
+ ולדיציה עם 
+\begin_inset Formula $k=5$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename polynomialKFold5_s=1.png
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+הדרגה עם השגיאה הכי נמוכה היא 
+\begin_inset Formula $d=5$
+\end_inset
+
+, וזה הגיוני כי הפולינום שלנו מדרגה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
  
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+שגיאת הולדיציה עבור 
+\begin_inset Formula $d=5$
+\end_inset
+
+ היא 
+\begin_inset Formula $1.0435$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+שגיאת ה-
+\lang english
+test
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עבור 
+\begin_inset Formula $d=5$
+\end_inset
+
+ היא 
+\begin_inset Formula $22.1962$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+רעש עם 
+\begin_inset Formula $\sigma=5$
+\end_inset
+
+:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\lang english
+K-fold
+\lang hebrew
+ ולדיציה עם 
+\begin_inset Formula $k=2$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename polynomialKFold2_s=5.png
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\lang english
+K-fold
+\lang hebrew
+ ולדיציה עם 
+\begin_inset Formula $k=5$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename polynomialKFold5_s=5.png
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+הדרגה עם השגיאה הכי נמוכה היא 
+\begin_inset Formula $d=5$
+\end_inset
+
+, וזה הגיוני כי הפולינום שלנו מדרגה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+שגיאת הולדיציה עבור 
+\begin_inset Formula $d=5$
+\end_inset
+
+ היא 
+\begin_inset Formula $24.5348$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+שגיאת ה-
+\lang english
+test
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עבור 
+\begin_inset Formula $d=5$
+\end_inset
+
+ היא 
+\begin_inset Formula $107.4876$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+כצפוי לדאטה עם יותר רעש, קיבלתי שגיאות גדולות יותר.
+ אך עדיין קיבלנו 
+\begin_inset Formula $d=5$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -603,23 +1346,22 @@ A_{\lambda}\hat{w} & =\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)\
 :
 \end_layout
 
-\begin_layout Description
-א.
- 
-\end_layout
+\begin_layout Standard
+שיחקתי עם הערכים כדי לראות מתי השגיאה נמוכה יותר.
+ בדקתי ערכי 
+\begin_inset Formula $\lambda$
+\end_inset
 
-\begin_layout Description
-ב.
- 
-\end_layout
+ קטנים מאוד, כלומר מעט רגולריזציה, וגם ערכי 
+\begin_inset Formula $\lambda>1$
+\end_inset
 
-\begin_layout Section*
-
-\size large
-שאלה
+, הרבה רגולריזציה.
+ לכן בדקתי ערכים בין
 \family roman
 \series medium
 \shape up
+\size normal
 \emph off
 \bar no
 \strikeout off
@@ -632,6 +1374,7 @@ A_{\lambda}\hat{w} & =\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)\
 \family default
 \series default
 \shape default
+\size default
 \emph default
 \numeric on
 \bar default
@@ -641,19 +1384,248 @@ A_{\lambda}\hat{w} & =\left(X^{T}X+\lambda I_{d}\right)^{-1}\left(X^{T}X\right)\
 \uwave default
 \noun default
 \color inherit
-6
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
 \numeric off
-:
-\end_layout
-
-\begin_layout Description
-א.
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
  
-\end_layout
-
-\begin_layout Description
-ב.
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ל-
+\numeric on
+2
+\numeric off
+.
  
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename linearKFold.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename bestLambdas.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename linearRegressionErros.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ניתן לראות כי ה-
+\begin_inset Formula $\lambda$
+\end_inset
+
+ הכי טובה עבור
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+ridge
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היא קטנה מאוד, כלומר אנחנו מאוד מתקרבים לרגרסיה לינארית רגילה.
+ אך השגיאה של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+ridge
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+קטנה יותר משל הרגרסיה הרגילה, כלומר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+ridge
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כן משפר את השגיאה.
 \end_layout
 
 \end_body
